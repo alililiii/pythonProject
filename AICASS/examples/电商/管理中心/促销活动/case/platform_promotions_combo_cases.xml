@@ -1,342 +1,835 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cases step_wait="1" tags="platform-promotions,combo,add-edit,system-manager">
-  <case execute="否" id="PROMO_ADD_COMBO_001" title="商城业务指定区域、指定客户、指定店铺、指定品质，满立折不叠加" description="商城业务 + 北京市 + 指定参与客户 C0012278 + 满 100 打 8 折 + 不设上限 + 不叠加 + 指定可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P0">
+<?xml version='1.0' encoding='UTF-8'?>
+<cases step_wait="1" tags="platform-promotions,excel-scenarios,add-edit,scenario,system-manager">
+  <case execute="否" id="PC-001" title="商城-满立减-设一条-不限区域-全部客户-叠加-不限店铺-按品类" description="商城满立减测试001 | 商城业务 | F2B - 工厂件 | 满立减 | 将满立减平台分摊从“50%”修正为5元，并补充分摊类型列" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_001.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_001.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_001.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_001.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_002" title="商城业务不限区域、全部客户、不限店铺、不限商品，满立折不叠加" description="商城业务最小可保存路径，范围均保持不限或全部，满 100 打 8 折，不设上限，不叠加。" component_type="界面" priority="P0">
+  <case execute="否" id="PC-002" title="询价-满立减-设一条-按区域-未交易客户-不叠加-指定参与店铺1个-按品类指定品质" description="询价满立减测试002 | 询价业务 | B2b-1 号车间 | 满立减 | 清空未交易客户场景下冗余客户配置；补充区域/品质/品类明细；按60%换算平台分摊4.8元" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_002.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_002.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_002.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_002.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_003" title="商城业务排除客户和排除店铺，满立减叠加" description="商城业务 +B2b-基础业务 + 不限区域 + 指定不参与客户 C0012278 + 满 100 减 10 + 营销费用上限 1000 + 叠加 + 指定不可参与店铺 GZJD0001。" component_type="界面" priority="P0">
+  <case execute="否" id="PC-003" title="商城-满立折-设两条-不限区域-已交易客户-叠加-指定参与店铺3个含例外-按品类指定品牌" description="商城满立折测试003 | 商城业务 | B2b - 共享仓 | 满立折 | 折扣值改为纯数字；清空已交易客户场景下不应填写的客户配置；补充品牌/品类明细" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_003.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_003.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_003.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_003.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_004" title="询价业务指定区域、指定客户、指定店铺、指定品质，满立折叠加" description="询价业务 + 北京市 + 指定参与客户 C0012278 + 满 100 打 8 折 + 营销费用上限 1000 + 叠加 + 指定可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P0">
+  <case execute="否" id="PC-004" title="询价-满立减-设一条-不限区域-指定可参与客户-不叠加-不限店铺-按品类指定品质" description="询价满立减测试004 | 询价业务 | B2b - 商家 SaaS | 满立减 | 删除无法确认真实性的占位客户编码，改为已知可用客户；按70%换算平台分摊14元，并补充品质明细" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_004.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_004.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_004.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_004.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_005" title="询价业务不限范围，满立减不叠加" description="询价业务 + 不限区域 + 全部客户 + 满 100 减 10 + 不设上限 + 不叠加 + 不限店铺 + 不限商品维度。" component_type="界面" priority="P0">
+  <case execute="否" id="PC-005" title="询价-满立减-指定参与车辆品牌-指定不参与客户分组-叠加-指定不参与店铺4组-按品类指定品牌" description="询价满立减测试005 | 询价业务 | B2b-B2b 公共 | 满立减 | 将客户配置方式修正为分组配置；补充车辆品牌/品牌/品类明细；按55%换算平台分摊8.25元" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_005.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_005.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_005.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_005.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_006" title="商城业务按区域设置但客户全部，指定可参与店铺，指定品质" description="商城业务 + 北京市 + 全部客户 + 满 100 打 8 折 + 不设上限 + 不叠加 + 指定可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-006" title="商城-满立折-设两条-按区域-指定可参与客户1组-不叠加-指定参与店铺1个-按品类" description="商城满立折测试006 | 商城业务 | 出海 - 俄罗斯 | 满立折 | 折扣值改为纯数字；补充区域明细；统一店铺配置文案为“按店铺清单配置”" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_006.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_006.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_006.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_006.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_007" title="商城业务指定参与客户但不限店铺，指定品质" description="商城业务 + 不限区域 + 指定参与客户 C0012278 + 满 100 打 8 折 + 不设上限 + 不叠加 + 不限店铺 + 指定品质原厂件。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-007" title="询价-满立减-指定不参与车辆品牌-全部客户-叠加-不限店铺-按商品指定非促销商品" description="询价满立减测试007 | 询价业务 | B2b - 共享仓 | 满立减 | 补充车辆品牌和商品明细；按商品配置时将品质/品牌/品类列改为不适用；按65%换算平台分摊7.8元" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_007.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_007.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_007.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_007.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_008" title="商城业务排除客户但指定可参与店铺" description="商城业务 + 北京市 + 指定不参与客户 C0012278 + 满 100 减 10 + 不设上限 + 不叠加 + 指定可参与店铺 GZJD0001 + 不限品质。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-008" title="商城-满立减-设两条-按区域-指定可参与客户含例外-不叠加-指定参与店铺3个-指定促销商品" description="商城满立减测试008 | 商城业务 | B2b-1 号车间 | 满立减 | 补充区域和商品明细；将客户清单改为已知可验证客户；按50%/60%换算平台分摊2.5/6元" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_008.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_008.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_008.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_008.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_009" title="商城业务全部客户但指定不可参与店铺" description="商城业务 + 不限区域 + 全部客户 + 满 100 打 8 折 + 营销费用上限 1000 + 叠加 + 指定不可参与店铺 GZJD0001 + 不限商品维度。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-009" title="询价-满立折-设一条-不限区域-已交易客户-叠加-指定参与店铺4分组-按品类指定品质品牌" description="询价满立折测试009 | 询价业务 | F2B - 原厂件 | 满立折 | 折扣值85折修正为8.5；清空已交易客户场景下冗余客户配置；补充品质/品牌/品类明细" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_009.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_009.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_009.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_009.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_010" title="询价业务排除客户和排除店铺，指定品质" description="询价业务 + 北京市 + 指定不参与客户 C0012278 + 满 100 减 10 + 营销费用上限 1000 + 叠加 + 指定不可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-010" title="商城-满立减-设两条-按区域-指定不参与客户1组-不叠加-指定不参与店铺1个-按品类指定品质" description="商城满立减测试010 | 商城业务 | F2B - 原厂件 | 满立减 | 补充区域/品类明细；按55%/65%换算平台分摊金额" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_010.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_010.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_010.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_010.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_011" title="指定品质后再指定品牌" description="商城业务 + 不限区域 + 全部客户 + 满立折 + 不限店铺 + 指定品质原厂件 + 指定品牌，验证品牌选项和回显。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-011" title="询价-满立减-指定参与车辆品牌-未交易客户-叠加-不限店铺-按品类指定品质品牌" description="询价满立减测试011 | 询价业务 | B2b - 商家 SaaS | 满立减 | 清空未交易客户场景下冗余客户配置；补充车辆品牌/品质/品牌/品类明细；按60%换算平台分摊10.8元" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_011.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_011.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_011.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_011.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_012" title="指定品类保存" description="商城业务 + 不限区域 + 全部客户 + 满立折 + 不限店铺 + 不限品质 + 不限品牌 + 指定品类。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-012" title="商城-满立折-设一条-按区域-全部客户-不叠加-指定参与店铺4组含例外-按商品-指定促销商品" description="商城满立折测试012 | 商城业务 | B2b - 油品 | 满立折 | 折扣值92折修正为9.2；补充区域和商品明细；按商品配置时去掉冗余品质/品牌/品类筛选列" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_012.script"/>
-      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_012.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="success" tag="excel,success,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_012.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="success" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectSuccess.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_012.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_013" title="按区域设置但未选择具体区域应校验失败" description="商城业务 + 按区域设置但区域为空 + 其他必填合法，保存时应提示必须选择活动区域。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-N01" title="【负向】基础信息-业务线为空（必填校验）" description="商城满立减测试N01 | 商城业务 | 满立减 | 修正满立减分摊值为金额；保留业务线为空作为真实必填校验场景" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_013.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_013.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N01.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N01.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_014" title="指定参与客户但未添加客户应校验失败" description="商城业务 + 指定参与客户但客户为空 + 其他必填合法，保存时应提示必须选择参与客户。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-N02" title="【负向】基础信息-活动名称为空（必填校验）" description="商城业务 | B2b - 数据 &amp; 广告 | 满立减 | 原“促销类型为空”不符合页面默认值逻辑，改为真实存在的活动名称必填校验" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_014.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_014.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N02.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N02.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_015" title="指定可参与店铺但未添加店铺应校验失败" description="商城业务 + 指定可参与店铺但店铺为空 + 其他必填合法，保存时应提示必须选择可参与店铺。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-N03" title="【负向】促销玩法-满立减订单金额为0（需&gt;0）" description="商城满立减N03 | 商城业务 | F2B - 原厂件 | 满立减 | 保留原负向意图，仅将满立减分摊值修正为金额" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_015.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_015.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N03.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N03.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_016" title="指定品质但未选择品质应校验失败" description="商城业务 + 按品类配置 + 指定品质但品质为空 + 其他必填合法，保存时应提示必须选择品质。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-N04" title="【负向】促销玩法-满立减立减值为0（需&gt;0）" description="商城满立减N04 | 商城业务 | B2b-1 号车间 | 满立减 | 为避免混淆，将平台分摊同步改为0元，突出“立减值为0”的单一校验点" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_016.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_016.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N04.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N04.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_017" title="满立折折扣为 10 应校验失败" description="商城业务 + 满 100 打 10 折 + 其他必填合法，保存时应提示折扣范围 0.01 到 9.99。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-N05" title="【负向】促销玩法-满立折折扣值超过9.99" description="商城满立折N05 | 商城业务 | B2b - 共享仓 | 满立折 | 原“110%”格式不符合页面输入规则，改为真实超上限数值10.5" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_017.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_017.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N05.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N05.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_018" title="满立折折扣为 0 应校验失败" description="商城业务 + 满 100 打 0 折 + 其他必填合法，保存时应提示折扣范围 0.01 到 9.99。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-N06" title="【负向】促销玩法-满立折折扣值填写负数" description="商城满立折N06 | 商城业务 | B2b - 商家 SaaS | 满立折 | 原“-5%”格式不符合页面输入规则，改为真实负数输入场景" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_018.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_018.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N06.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N06.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_019" title="满立减金额大于订单金额应校验失败" description="商城业务 + 满 100 减 120 + 其他必填合法，保存时应提示优惠金额不能大于订单金额或被后端规则拒绝。" component_type="界面" priority="P1">
+  <case execute="否" id="PC-N07" title="【负向】促销玩法-设两条规则但只填写第一档" description="商城满立减N07 | 商城业务 | B2b-B2b 公共 | 满立减 | 用分号占位表示第二档为空，改造成页面真实可触发的多档未填完整场景" component_type="界面" priority="P1">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_019.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_019.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N07.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N07.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="否" id="PROMO_ADD_COMBO_020" title="营销费用上限为 0 应校验失败" description="商城业务 + 营销费用上限 0 + 其他必填合法，保存时应提示营销费用上限必须大于 0。" component_type="界面" priority="P2">
+  <case execute="否" id="PC-N08" title="【负向】促销玩法-满立减平台分摊金额超过立减金额" description="商城满立减N08 | 商城业务 | 出海 - 沙特 | 满立减 | 原“第二档满额≤第一档”缺少代码侧校验，改为真实存在的“平台分摊金额不能超过立减金额”校验" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoCombo.COMBO_020.script"/>
-      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_020.png"/>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N08.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N08.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N09" title="【负向】促销玩法-开启营销费用上限但金额为0" description="商城满立减N09 | 商城业务 | B2b - 数据 &amp; 广告 | 满立减 | 原“上限小于立减值”并非页面真实校验，改为真实存在的“营销费用预算必填且大于0”场景" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N09.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N09.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N10" title="【负向】促销玩法-设两条规则但第二档平台分摊为空" description="商城满立减N10 | 商城业务 | B2b-1 号车间 | 满立减 | 原“只填一档上限值”不符合页面字段结构，改为真实存在的第二档平台分摊缺失场景" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N10.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N10.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N11" title="【负向】促销玩法-满立折平台分摊比例超过100%" description="商城满立折N11 | 商城业务 | F2B - 国际品牌件 | 满立折 | 原场景把“超过100%”误放在满立减上，现修正为满立折场景" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N11.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N11.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N12" title="【负向】活动对象-指定可参与客户但未选客户清单" description="商城满立减N12 | 商城业务 | B2b - 基础业务 | 满立减 | 保留原负向意图，仅修正满立减分摊表达" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N12.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N12.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N13" title="【负向】活动对象-指定可参与客户但未选配置方式" description="商城满立减N13 | 商城业务 | F2B - 公共 | 满立减 | 保留数据层负向构造：已有客户值但未选择配置方式" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N13.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N13.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N14" title="【负向】活动对象-按区域设置但未选具体区域" description="商城满立减N14 | 商城业务 | B2b - 集团业务 | 满立减 | 补充“活动区域明细”列，并在该负向场景中明确留空" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N14.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N14.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N15" title="【负向】活动店铺-指定可参与店铺但未选店铺清单" description="商城满立减N15 | 商城业务 | B2b - 小狮物流 | 满立减 | 保留原负向意图，仅修正满立减分摊表达" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N15.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N15.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N16" title="【负向】活动店铺-指定可参与店铺但未选配置方式" description="商城满立减N16 | 商城业务 | 出海 - C 端 | 满立减 | 保留数据层负向构造：已有店铺值但未选择配置方式" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N16.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N16.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N17" title="【负向】活动店铺-开启例外店铺配置但未填写例外店铺" description="商城满立减N17 | 商城业务 | B2b - 中端车 | 满立减 | 把例外状态写明，避免原表“有例外但未选”语义不清" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N17.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N17.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N18" title="【负向】活动对象-开启例外客户配置但未填写例外客户" description="商城满立减N18 | 商城业务 | B2b - 轮胎 | 满立减 | 将客户清单改为已知可用客户，并把例外状态写明" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p1" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N18.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N18.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N19" title="【负向】活动商品-按品类配置指定品类但未选品类" description="商城满立减N19 | 商城业务 | F2B - 工厂件 | 满立减 | 原场景未显式标明“指定品类”，现补全为真实校验场景：类型选了指定品类但明细为空" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N19.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N19.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+  <case execute="否" id="PC-N20" title="【负向】活动商品-按品类配置指定品牌但未选品牌" description="商城满立减N20 | 商城业务 | B2b - 商家 SaaS | 满立减 | 原场景品牌列为空但未显式标明“指定品牌”，现补全为真实校验场景" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="load scenario engine" group="prepare" tag="engine,page">
+        <test_step action="evaluate" data="PromoScript.ScenarioEngine.script" />
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="fill Excel scenario data" group="negative" tag="excel,negative,p0" depends="S001">
+        <test_step action="evaluate" data="PromoCombo.PC_N20.script" />
+      </scenario>
+      <scenario id="S003" title="assert save result" group="negative" tag="save,assertion" depends="S002">
+        <test_step action="evaluate" data="PromoScript.SaveExpectValidation.script" />
+      </scenario>
+      <scenario id="S004" title="capture evidence" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/PC_N20.png" />
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close" />
     </post_process>
   </case>
 </cases>

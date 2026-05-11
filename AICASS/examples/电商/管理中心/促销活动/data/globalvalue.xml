@@ -1,29 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <globalvalue>
   <group name="DefaultValue">
-    <var name="BrowserType" value="chromium"/>
-    <var name="WaitTime" value="10"/>
-    <var name="Headless" value="false"/>
+    <var name="BrowserType" value="chromium" />
+    <var name="WaitTime" value="10" />
+    <var name="Headless" value="false" />
   </group>
   <group name="Env">
-    <var name="base_url" value="https://ec-hwbeta.casstime.com"/>
-    <var name="admin_url" value="https://ec-hwbeta.casstime.com/admin#"/>
-    <var name="platform_promotion_add_url" value="https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&amp;iframeUrl=/admin/merchant#/platform-promotions/add-edit"/>
+    <var name="base_url" value="https://ec-hwbeta.casstime.com" />
+    <var name="admin_url" value="https://ec-hwbeta.casstime.com/admin#" />
+    <var name="platform_promotion_add_url" value="https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&amp;iframeUrl=/admin/merchant#/platform-promotions/add-edit" />
   </group>
   <group name="Login">
-    <var name="username" value="mandy"/>
-    <var name="password" value="Init@1125!@#$"/>
+    <var name="username" value="mandy" />
+    <var name="password" value="Init@1125!@#$" />
   </group>
   <group name="PromoData">
-    <var name="customer_code" value="C0012278"/>
-    <var name="store_code" value="GZJD0001"/>
-    <var name="region_name" value="北京市"/>
-    <var name="quality_name" value="原厂件"/>
-    <var name="discount_threshold" value="100"/>
-    <var name="discount_value" value="8"/>
-    <var name="reduction_threshold" value="100"/>
-    <var name="reduction_value" value="10"/>
-    <var name="platform_share" value="40"/>
-    <var name="marketing_budget_limit" value="1000"/>
+    <var name="customer_trial" value="C0437311 小泽维修厂(试点)" />
+    <var name="customer_non_trial" value="C0385195 小泽维修厂(非试点)" />
+    <var name="customer_groups" value="PRMANSTO;SYSTOMAN;OTHERPP" />
+    <var name="store_primary" value="4400056296 小泽供应商1-店铺1" />
+    <var name="store_secondary" value="4400051923 小泽供应2-店铺1" />
+    <var name="store_third" value="4400050889 小泽供应商3-店铺1" />
+    <var name="store_fourth" value="4400055631 小泽供应商4-店铺1" />
+    <var name="store_groups" value="GRPS01;GRPS02;GRPS03;GRPS04" />
+    <var name="vehicle_brands" value="大众;奥迪;斯柯达;宝马;奔驰" />
+    <var name="quality_names" value="原厂;品牌件;原厂件" />
+    <var name="part_brands" value="博世;NGK;电装" />
+    <var name="category_names" value="火花塞;燃油滤清器" />
+    <var name="product_skus" value="SKU002|PN002|测试商品2|电装|品牌件|火花塞;SKU001|PN001|测试商品1|博世|原厂|火花塞;SKU003|PN003|测试商品3|博世|原厂|火花塞;SKU004|PN004|测试商品4|NGK|原厂件|火花塞" />
+    <var name="reduction_rule" value="100;10;5" />
+    <var name="discount_rule" value="100;9.5;40" />
+    <var name="marketing_budget_limit" value="1000" />
   </group>
 </globalvalue>

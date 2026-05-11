@@ -1,0 +1,144 @@
+{
+  "case": "PC-001",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "type",
+      "model": "PassportLogin",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "loginModePassword": "click",
+        "username": "mandy",
+        "password": "Init@1125!@#$.Password",
+        "agreement": "click",
+        "submit": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例/S001",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "status": "scenario-engine-ready"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 6,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例/S001",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "status": "page-ready",
+        "iframeSrc": "/admin/merchant#/platform-promotions/add-edit",
+        "sections": [
+          "基础信息",
+          "活动对象",
+          "促销玩法",
+          "活动店铺",
+          "活动商品"
+        ]
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 7,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例/S002",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "status": "scenario-configured",
+        "caseId": "PC-001",
+        "activityName": "自动化-平台促销-商城满立减测试001-1778490799423",
+        "time": {
+          "start": "2026-05-11 17:13:19",
+          "end": "2026-05-11 17:23:19"
+        },
+        "ruleInfo": {
+          "mode": "table",
+          "count": 1,
+          "rows": 1
+        }
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 8,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例/S003",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "status": "save-submitted",
+        "activityName": "自动化-平台促销-商城满立减测试001-1778490799423",
+        "onList": true,
+        "created": false
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 9,
+      "action": "screenshot",
+      "model": "",
+      "phase": "用例/S004",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": null,
+      "named_writes": {}
+    },
+    {
+      "index": 10,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

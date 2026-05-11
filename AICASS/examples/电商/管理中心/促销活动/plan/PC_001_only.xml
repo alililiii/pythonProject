@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="PC_001_only" title="只执行 PC-001" kind="suite" default_execute="否">
+  <case id="PC-001" execute="是"/>
+</test_plan>

@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<test_plan id="promo_excel_scenarios" title="Excel PC scenarios disabled by default" kind="suite" default_execute="否">
+  <case id="PC-001" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-002" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-003" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-004" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-005" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-006" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-007" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-008" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-009" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-010" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-011" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-012" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N01" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N02" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N03" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N04" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N05" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N06" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N07" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N08" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N09" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N10" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N11" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N12" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N13" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N14" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N15" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N16" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N17" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N18" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N19" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+  <case id="PC-N20" execute="否">
+    <scenario id="S001" execute="否" />
+    <scenario id="S002" execute="否" />
+    <scenario id="S003" execute="否" />
+    <scenario id="S004" execute="否" />
+  </case>
+</test_plan>

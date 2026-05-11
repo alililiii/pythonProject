@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="7" passed="1" failed="0" skipped="6" errors="0" pass_rate="14.3%" total_time="23.55s" average_time="3.36s" start_time="2026-05-11 17:13:29" end_time="2026-05-11 17:13:29"/>
+  <results>
+    <result case_id="PROMO_ADD_001" title="登录后直接访问平台促销活动新增页" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-11 17:13:29"/>
+    <result case_id="PROMO_ADD_002" title="未登录访问平台促销活动新增页应被认证拦截" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-11 17:13:29"/>
+    <result case_id="PROMO_ADD_004" title="平台促销活动新增页静态元素完整性" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-11 17:13:29"/>
+    <result case_id="PROMO_ADD_005" title="空表单保存必填校验" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-11 17:13:29"/>
+    <result case_id="PROMO_ADD_006" title="促销玩法动态联动校验" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-11 17:13:29"/>
+    <result case_id="PROMO_ADD_007" title="范围类单选项切换联动校验" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-11 17:13:29"/>
+    <result case_id="PC-001" title="商城-满立减-设一条-不限区域-全部客户-叠加-不限店铺-按品类" status="PASS" execution_time="23.545" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\PC-001_20260511_171306_01.webm" updated_at="2026-05-11 17:13:29">
+      <recordings>
+        <recording index="1" path="recordings\PC-001_20260511_171306_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+  </results>
+</testresult>

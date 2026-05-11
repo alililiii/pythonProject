@@ -1,124 +1,126 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cases step_wait="1" tags="platform-promotions,add-edit,system-manager">
+<?xml version='1.0' encoding='UTF-8'?>
+<cases step_wait="1" tags="platform-promotions,add-edit,scenario,system-manager">
   <case execute="是" id="PROMO_ADD_001" title="登录后直接访问平台促销活动新增页" description="使用管理中心账号登录后访问平台促销活动新增页，验证管理中心主框架 iframeCon 加载 merchant 子应用并展示核心表单分区。" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoScript.PageLoadReady.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_001_page_ready.png"/>
+      <scenario id="S001" title="verify main expectation" group="page" tag="page,p0">
+        <test_step action="evaluate" data="PromoScript.PageLoadReady.script" />
+      </scenario>
+      <scenario id="S002" title="capture evidence" group="evidence" tag="screenshot" depends="S001">
+        <test_step action="screenshot" data="screenshots/PROMO_ADD_001.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
   <case execute="是" id="PROMO_ADD_002" title="未登录访问平台促销活动新增页应被认证拦截" description="清理浏览器状态后直接访问新增页，不应展示促销活动配置表单，应进入统一登录或认证拦截状态。" component_type="界面" priority="P0">
     <test_case>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="3"/>
-      <test_step action="evaluate" data="PromoScript.UnauthenticatedBlocked.script"/>
+      <scenario id="S001" title="verify main expectation" group="auth" tag="auth,p0">
+        <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+        <test_step action="wait" data="3" />
+        <test_step action="evaluate" data="PromoScript.UnauthenticatedBlocked.script" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
   <case execute="是" id="PROMO_ADD_004" title="平台促销活动新增页静态元素完整性" description="校验基础信息、活动对象、促销玩法、活动店铺、活动商品、取消和保存等核心静态元素。" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoScript.StaticElementsReady.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_004_static_elements.png"/>
+      <scenario id="S001" title="verify main expectation" group="page" tag="page,p0">
+        <test_step action="evaluate" data="PromoScript.StaticElementsReady.script" />
+      </scenario>
+      <scenario id="S002" title="capture evidence" group="evidence" tag="screenshot" depends="S001">
+        <test_step action="screenshot" data="screenshots/PROMO_ADD_004.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="是" id="PROMO_ADD_014_031" title="默认选项和促销条件表格校验" description="校验业务范围、活动区域、活动对象、促销类型、营销费用、叠加规则、店铺和商品范围默认态，以及满立折促销条件表格字段。" component_type="界面" priority="P0">
+  <case execute="是" id="PROMO_ADD_005" title="空表单保存必填校验" description="点击保存后验证活动名称、活动时间、业务线和促销条件等必填项提示，且表单不应成功提交。" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoScript.DefaultOptionsAndRuleTable.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_014_031_default_options.png"/>
+      <scenario id="S001" title="verify main expectation" group="validation" tag="validation,p0">
+        <test_step action="evaluate" data="PromoScript.RequiredValidation.script" />
+      </scenario>
+      <scenario id="S002" title="capture evidence" group="evidence" tag="screenshot" depends="S001">
+        <test_step action="screenshot" data="screenshots/PROMO_ADD_005.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="是" id="PROMO_ADD_006_010_017_032" title="空表单保存必填校验" description="点击保存后验证活动名称、活动时间、业务线和促销条件等必填项提示，且表单不应成功提交。" component_type="界面" priority="P0">
+  <case execute="是" id="PROMO_ADD_006" title="促销玩法动态联动校验" description="校验满立折合法配置、平台分摊比例自动计算店铺比例、新增一项配置，以及切换满立减后的字段变化。" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoScript.RequiredValidation.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_REQUIRED_validation.png"/>
+      <scenario id="S001" title="verify main expectation" group="interaction" tag="interaction,p0">
+        <test_step action="evaluate" data="PromoScript.PromotionRuleInteractions.script" />
+      </scenario>
+      <scenario id="S002" title="capture evidence" group="evidence" tag="screenshot" depends="S001">
+        <test_step action="screenshot" data="screenshots/PROMO_ADD_006.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="是" id="PROMO_ADD_033_044_045_049" title="促销玩法动态联动校验" description="校验满立折合法配置、平台分摊比例自动计算店铺比例、新增一项配置，以及切换满立减后的字段变化。" component_type="界面" priority="P0">
+  <case execute="是" id="PROMO_ADD_007" title="范围类单选项切换联动校验" description="切换按区域设置、指定参与客户、指定可参与店铺、指定品质等范围类配置，验证对应选择控件出现。" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoScript.PromotionRuleInteractions.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_rule_interactions.png"/>
+      <scenario id="S001" title="verify main expectation" group="interaction" tag="interaction,p0">
+        <test_step action="evaluate" data="PromoScript.ScopeSwitchInteractions.script" />
+      </scenario>
+      <scenario id="S002" title="capture evidence" group="evidence" tag="screenshot" depends="S001">
+        <test_step action="screenshot" data="screenshots/PROMO_ADD_007.png" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
-
-  <case execute="是" id="PROMO_ADD_021_026_061_078" title="范围类单选项切换联动校验" description="切换按区域设置、指定参与客户、指定可参与店铺、指定品质等范围类配置，验证对应选择控件出现。" component_type="界面" priority="P0">
-    <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
-    </pre_process>
-    <test_case>
-      <test_step action="evaluate" data="PromoScript.ScopeSwitchInteractions.script"/>
-      <test_step action="screenshot" data="screenshots/PROMO_ADD_scope_interactions.png"/>
-    </test_case>
-    <post_process>
-      <test_step action="close"/>
-    </post_process>
-  </case>
-
   <case execute="否" id="PROMO_ADD_093" title="取消返回平台促销活动列表" description="点击取消后应返回列表或上一页；默认关闭，避免和真实编辑态数据混淆。" component_type="界面" priority="P0">
     <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
-      <test_step action="wait" data="5"/>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="5" />
     </pre_process>
     <test_case>
-      <test_step action="evaluate" data="PromoScript.CancelReturn.script"/>
+      <scenario id="S001" title="verify main expectation" group="cancel" tag="cancel,p0">
+        <test_step action="evaluate" data="PromoScript.CancelReturn.script" />
+      </scenario>
     </test_case>
     <post_process>
-      <test_step action="close"/>
+      <test_step action="close" />
     </post_process>
   </case>
 </cases>
