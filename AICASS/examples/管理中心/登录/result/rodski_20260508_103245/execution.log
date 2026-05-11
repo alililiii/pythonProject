@@ -1,0 +1,87 @@
+2026-05-08 10:32:45,737 [INFO] 执行用例 1/3: LOGIN_001 - 未登录直接访问管理中心首页应被认证拦截
+2026-05-08 10:32:45,737 [DEBUG]   [1] navigate
+2026-05-08 10:32:45,738 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'http://localhost:9805/systemMgr/admin'
+2026-05-08 10:32:45,738 [INFO] 执行关键字: navigate(data=http://localhost:9805/systemMgr/admin)
+2026-05-08 10:32:45,738 [INFO] 导航: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:48,447 [ERROR] navigate 失败: http://localhost:9805/systemMgr/admin, 错误: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:9805/systemMgr/admin
+Call log:
+  - navigating to "http://localhost:9805/systemMgr/admin", waiting until "load"
+
+2026-05-08 10:32:48,447 [ERROR] ❌ 驱动操作失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:48,447 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:48,447 [ERROR] 用例阶段失败: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+  keyword: navigate
+2026-05-08 10:32:48,593 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\screenshots\LOGIN_001_20260508_103248_failure.png
+2026-05-08 10:32:48,594 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\screenshots\LOGIN_001_20260508_103248_failure.png
+2026-05-08 10:32:48,594 [DEBUG]   [1] close
+2026-05-08 10:32:48,594 [INFO] 执行关键字: close()
+2026-05-08 10:32:48,594 [INFO] 关闭浏览器
+2026-05-08 10:32:48,841 [DEBUG] close 成功
+2026-05-08 10:32:48,842 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-08 10:32:48,842 [DEBUG]   history[0]=True
+2026-05-08 10:32:48,842 [INFO] 浏览器已关闭
+2026-05-08 10:32:48,843 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\execution_summary.json
+2026-05-08 10:32:48,843 [INFO]   FAIL (3.106s)
+2026-05-08 10:32:48,843 [ERROR]   错误: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+  keyword: navigate
+2026-05-08 10:32:48,843 [INFO] 用例 2/3: 驱动已关闭，重新创建浏览器...
+2026-05-08 10:32:48,843 [INFO] 驱动已关闭，重新创建驱动...
+2026-05-08 10:32:49,412 [INFO] 驱动重新创建成功
+2026-05-08 10:32:49,412 [INFO] 新浏览器已启动
+2026-05-08 10:32:49,412 [INFO] 执行用例 2/3: LOGIN_002 - 使用有效账号登录后进入管理中心首页
+2026-05-08 10:32:49,412 [DEBUG]   [1] navigate
+2026-05-08 10:32:49,412 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'http://localhost:9805/systemMgr/admin'
+2026-05-08 10:32:49,413 [INFO] 执行关键字: navigate(data=http://localhost:9805/systemMgr/admin)
+2026-05-08 10:32:49,413 [INFO] 导航: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:52,062 [ERROR] navigate 失败: http://localhost:9805/systemMgr/admin, 错误: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:9805/systemMgr/admin
+Call log:
+  - navigating to "http://localhost:9805/systemMgr/admin", waiting until "load"
+
+2026-05-08 10:32:52,062 [ERROR] ❌ 驱动操作失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:52,062 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:52,063 [ERROR] 用例阶段失败: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+  keyword: navigate
+2026-05-08 10:32:52,220 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\screenshots\LOGIN_002_20260508_103252_failure.png
+2026-05-08 10:32:52,221 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\screenshots\LOGIN_002_20260508_103252_failure.png
+2026-05-08 10:32:52,221 [DEBUG]   [1] close
+2026-05-08 10:32:52,221 [INFO] 执行关键字: close()
+2026-05-08 10:32:52,221 [INFO] 关闭浏览器
+2026-05-08 10:32:52,409 [DEBUG] close 成功
+2026-05-08 10:32:52,409 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-08 10:32:52,409 [DEBUG]   history[0]=True
+2026-05-08 10:32:52,409 [INFO] 浏览器已关闭
+2026-05-08 10:32:52,410 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\execution_summary.json
+2026-05-08 10:32:52,410 [INFO]   FAIL (2.998s)
+2026-05-08 10:32:52,410 [ERROR]   错误: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+  keyword: navigate
+2026-05-08 10:32:52,410 [INFO] 用例 3/3: 驱动已关闭，重新创建浏览器...
+2026-05-08 10:32:52,410 [INFO] 驱动已关闭，重新创建驱动...
+2026-05-08 10:32:53,009 [INFO] 驱动重新创建成功
+2026-05-08 10:32:53,009 [INFO] 新浏览器已启动
+2026-05-08 10:32:53,009 [INFO] 执行用例 3/3: LOGIN_003 - 登录后点击退出应清除会话并离开管理中心首页
+2026-05-08 10:32:53,009 [DEBUG]   [1] navigate
+2026-05-08 10:32:53,009 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'http://localhost:9805/systemMgr/admin'
+2026-05-08 10:32:53,010 [INFO] 执行关键字: navigate(data=http://localhost:9805/systemMgr/admin)
+2026-05-08 10:32:53,010 [INFO] 导航: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:55,622 [ERROR] navigate 失败: http://localhost:9805/systemMgr/admin, 错误: Page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:9805/systemMgr/admin
+Call log:
+  - navigating to "http://localhost:9805/systemMgr/admin", waiting until "load"
+
+2026-05-08 10:32:55,622 [ERROR] ❌ 驱动操作失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:55,622 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+2026-05-08 10:32:55,622 [ERROR] 用例阶段失败: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+  keyword: navigate
+2026-05-08 10:32:55,764 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\screenshots\LOGIN_003_20260508_103255_failure.png
+2026-05-08 10:32:55,764 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\screenshots\LOGIN_003_20260508_103255_failure.png
+2026-05-08 10:32:55,764 [DEBUG]   [1] close
+2026-05-08 10:32:55,764 [INFO] 执行关键字: close()
+2026-05-08 10:32:55,764 [INFO] 关闭浏览器
+2026-05-08 10:32:55,968 [DEBUG] close 成功
+2026-05-08 10:32:55,968 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-08 10:32:55,968 [DEBUG]   history[0]=True
+2026-05-08 10:32:55,968 [INFO] 浏览器已关闭
+2026-05-08 10:32:55,968 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_103245\execution_summary.json
+2026-05-08 10:32:55,968 [INFO]   FAIL (2.959s)
+2026-05-08 10:32:55,968 [ERROR]   错误: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: http://localhost:9805/systemMgr/admin
+  keyword: navigate
+2026-05-08 10:32:55,989 [INFO] 结果已写入 rodski_20260508_103245/result.xml: 总计 3 条, 通过 0 条, 失败 3 条, 通过率 0.0%

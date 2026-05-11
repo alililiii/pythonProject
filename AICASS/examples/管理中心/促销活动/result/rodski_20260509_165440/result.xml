@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="1" passed="0" failed="1" skipped="0" errors="0" pass_rate="0.0%" total_time="27.70s" average_time="27.70s" start_time="2026-05-09 16:55:08" end_time="2026-05-09 16:55:08"/>
+  <results>
+    <result case_id="PROMO_ADD_COMBO_003" title="商城业务排除客户和排除店铺，满立减叠加" status="FAIL" execution_time="27.695" retries="0" start_time="" end_time="" error_type="" error_message="[SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: ?????????: 活动列表活动分析&#10;活动名称：&#10;零件号：&#10;活动状态：&#10;请选择&#10;业务范围：&#10;请选择&#10;促销类型：&#10;请选择&#10;配件品牌：&#10;请选择配件品牌&#10;品类：&#10;活动时间：&#10;查询重置展开&#10;新增活动下载活动清单&#10;为您找到 59 条记录&#10;序号&#10;&#9;&#10;活动名称&#10;&#9;&#10;业务线&#10;&#9;&#10;业务范围&#10;&#9;&#10;促销类型&#10;&#9;&#10;促销条件&#10;&#9;&#10;促销分摊&#10;&#9;&#10;营销费用(￥)&#10;&#9;&#10;商品范围&#10;&#9;&#10;配件品牌&#10;&#9;&#10;品类&#10;&#9;&#10;活动状态&#10;&#9;&#10;活动时间&#10;&#9;&#10;操作人&#10;&#9;&#10;操作账号&#10;&#9;&#10;更新时间&#10;&#9;&#10;操作&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#9;&#10; &#10;&#10;1&#9;&#10;自动化-平台促销-组合-17&#10;    at eval (eval at evaluate (:234:30), &lt;anonymous&gt;:34:29)&#10;    at async &lt;anonymous&gt;:260:30&#10;  keyword: evaluate" screenshot_path="screenshots/PROMO_ADD_COMBO_003_20260509_165507_failure.png" recording_path="recordings\PROMO_ADD_COMBO_003_20260509_165440_01.webm" updated_at="2026-05-09 16:55:08">
+      <recordings>
+        <recording index="1" path="recordings\PROMO_ADD_COMBO_003_20260509_165440_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+  </results>
+</testresult>

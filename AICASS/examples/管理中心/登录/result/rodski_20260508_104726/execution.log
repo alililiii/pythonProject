@@ -1,0 +1,237 @@
+2026-05-08 10:47:26,445 [INFO] 执行用例 1/3: LOGIN_001 - 未登录直接访问管理中心首页应被认证拦截
+2026-05-08 10:47:26,446 [DEBUG]   [1] navigate
+2026-05-08 10:47:26,446 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'https://ec-hwbeta.casstime.com/admin#'
+2026-05-08 10:47:26,446 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#)
+2026-05-08 10:47:26,446 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#
+2026-05-08 10:47:29,421 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/admin#
+2026-05-08 10:47:29,422 [DEBUG] navigate 成功
+2026-05-08 10:47:29,422 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-08 10:47:29,422 [DEBUG]   history[0]=True
+2026-05-08 10:47:29,615 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_001_01_用例_20260508_104729.png
+2026-05-08 10:47:29,615 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_001_01_用例_20260508_104729.png
+2026-05-08 10:47:29,615 [DEBUG] 步骤等待 0.001s
+2026-05-08 10:47:29,616 [DEBUG]   [2] wait
+2026-05-08 10:47:29,617 [INFO] 执行关键字: wait(data=2)
+2026-05-08 10:47:29,617 [INFO] 等待: 2秒
+2026-05-08 10:47:31,617 [DEBUG] wait 成功
+2026-05-08 10:47:31,617 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-08 10:47:31,617 [DEBUG]   history[1]=True
+2026-05-08 10:47:31,618 [DEBUG]   [3] evaluate
+2026-05-08 10:47:31,618 [INFO] 执行关键字: evaluate(data=(() => { const text = document.body ? document.body.innerText : ''; const hasHomeFrame = !!document.querySelector('#iframeCon'); const hasLoginControl = !!document.querySelector('input[name="username"], input[name="password"], input[type="password"]'); const looksLikeLogin = hasLoginControl || /login|passport|登录|登入/i.test(location.href + ' ' + text); if (hasHomeFrame) { throw new Error('未登录访问 /systemMgr/admin 时不应进入管理中心首页'); } if (looksLikeLogin || text.trim() === '') { return 'unauthenticated-blocked'; } return 'unauthenticated-blocked-with-message'; })())
+2026-05-08 10:47:31,618 [INFO] 执行 JS: (() => { const text = document.body ? document.body.innerText : ''; const hasHomeFrame = !!document.querySelector('#iframeCon'); const hasLoginControl = !!document.querySelector('input[name="username"
+2026-05-08 10:47:31,628 [INFO] JS 结果: unauthenticated-blocked
+2026-05-08 10:47:31,628 [DEBUG] evaluate 成功
+2026-05-08 10:47:31,628 [INFO] [STEP] action=evaluate model=- status=OK source=evaluate
+2026-05-08 10:47:31,628 [DEBUG]   history[2]='unauthenticated-blocked'
+2026-05-08 10:47:31,801 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_001_02_用例_20260508_104731.png
+2026-05-08 10:47:31,802 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_001_02_用例_20260508_104731.png
+2026-05-08 10:47:31,802 [DEBUG] 步骤等待 0.001s
+2026-05-08 10:47:31,803 [DEBUG]   [1] close
+2026-05-08 10:47:31,804 [INFO] 执行关键字: close()
+2026-05-08 10:47:31,804 [INFO] 关闭浏览器
+2026-05-08 10:47:32,191 [DEBUG] close 成功
+2026-05-08 10:47:32,191 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-08 10:47:32,191 [DEBUG]   history[3]=True
+2026-05-08 10:47:32,191 [INFO] 浏览器已关闭
+2026-05-08 10:47:32,192 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\execution_summary.json
+2026-05-08 10:47:32,192 [INFO]   PASS (5.746s)
+2026-05-08 10:47:32,192 [INFO] 用例 2/3: 驱动已关闭，重新创建浏览器...
+2026-05-08 10:47:32,192 [INFO] 驱动已关闭，重新创建驱动...
+2026-05-08 10:47:32,797 [INFO] 驱动重新创建成功
+2026-05-08 10:47:32,797 [INFO] 新浏览器已启动
+2026-05-08 10:47:32,797 [INFO] 执行用例 2/3: LOGIN_002 - 使用有效账号登录后进入管理中心首页
+2026-05-08 10:47:32,798 [DEBUG]   [1] navigate
+2026-05-08 10:47:32,798 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'https://ec-hwbeta.casstime.com/admin#'
+2026-05-08 10:47:32,798 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#)
+2026-05-08 10:47:32,798 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#
+2026-05-08 10:47:36,512 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/admin#
+2026-05-08 10:47:36,512 [DEBUG] navigate 成功
+2026-05-08 10:47:36,512 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-08 10:47:36,512 [DEBUG]   history[0]=True
+2026-05-08 10:47:36,694 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_002_01_用例_20260508_104736.png
+2026-05-08 10:47:36,695 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_002_01_用例_20260508_104736.png
+2026-05-08 10:47:36,695 [DEBUG] 步骤等待 0.001s
+2026-05-08 10:47:36,696 [DEBUG]   [2] wait
+2026-05-08 10:47:36,696 [INFO] 执行关键字: wait(data=2)
+2026-05-08 10:47:36,696 [INFO] 等待: 2秒
+2026-05-08 10:47:38,696 [DEBUG] wait 成功
+2026-05-08 10:47:38,696 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-08 10:47:38,696 [DEBUG]   history[1]=True
+2026-05-08 10:47:38,697 [DEBUG]   [3] type
+2026-05-08 10:47:38,697 [INFO] 执行关键字: type(model=PassportLogin, data=ValidCredential)
+2026-05-08 10:47:38,697 [INFO] 批量输入: 模型=PassportLogin, DataID=ValidCredential
+2026-05-08 10:47:38,697 [DEBUG] username: name=username <- 'mandy'
+2026-05-08 10:47:38,697 [DEBUG] 输入文本: name=username -> [name="username"]
+2026-05-08 10:47:53,726 [DEBUG] 尝试清空后输入...
+2026-05-08 10:47:56,753 [DEBUG] 尝试 JavaScript 输入...
+2026-05-08 10:47:56,763 [DEBUG]   ↳ 定位器 name=username 成功 (priority=1)
+2026-05-08 10:47:56,763 [DEBUG] password: name=password <- '***'
+2026-05-08 10:47:56,763 [DEBUG] 输入文本: name=password -> [name="password"]
+2026-05-08 10:48:11,780 [DEBUG] 尝试清空后输入...
+2026-05-08 10:48:14,801 [DEBUG] 尝试 JavaScript 输入...
+2026-05-08 10:48:14,807 [DEBUG]   ↳ 定位器 name=password 成功 (priority=1)
+2026-05-08 10:48:14,807 [DEBUG] submit: click css=input.btn-submit
+2026-05-08 10:48:14,807 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-08 10:48:14,841 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-08 10:48:14,841 [DEBUG] agreement: click css=#privacy-agreement-list
+2026-05-08 10:48:14,841 [DEBUG] 点击元素: css=#privacy-agreement-list -> #privacy-agreement-list
+2026-05-08 10:48:14,933 [DEBUG]   ↳ 定位器 css=#privacy-agreement-list 成功 (priority=1)
+2026-05-08 10:48:14,933 [DEBUG] type 成功
+2026-05-08 10:48:14,933 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-08 10:48:14,933 [DEBUG]   history[2]={'username': 'mandy', 'password': 'Init@1125!@#$.Password', 'submit': 'click', 'agreement': 'click'}
+2026-05-08 10:48:15,196 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_002_02_用例_20260508_104814.png
+2026-05-08 10:48:15,196 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_002_02_用例_20260508_104814.png
+2026-05-08 10:48:15,196 [DEBUG] 步骤等待 0.001s
+2026-05-08 10:48:15,198 [DEBUG]   [4] wait
+2026-05-08 10:48:15,198 [INFO] 执行关键字: wait(data=5)
+2026-05-08 10:48:15,198 [INFO] 等待: 5秒
+2026-05-08 10:48:20,199 [DEBUG] wait 成功
+2026-05-08 10:48:20,200 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-08 10:48:20,200 [DEBUG]   history[3]=True
+2026-05-08 10:48:20,200 [DEBUG]   [5] evaluate
+2026-05-08 10:48:20,200 [INFO] 执行关键字: evaluate(data=(() => { const text = document.body ? document.body.innerText : ''; const userLogin = document.querySelector('#userLogin')?.value || ''; const hasFrame = !!document.querySelector('#iframeCon'); const hasLogo = text.includes('开思') && text.includes('管理中心'); if ((hasFrame || hasLogo) && (userLogin === 'mandy' || text.includes('管理中心'))) { return 'login-success'; } throw new Error('登录后未进入管理中心首页，currentUrl=' + location.href + ', userLogin=' + userLogin); })())
+2026-05-08 10:48:20,200 [INFO] 执行 JS: (() => { const text = document.body ? document.body.innerText : ''; const userLogin = document.querySelector('#userLogin')?.value || ''; const hasFrame = !!document.querySelector('#iframeCon'); const 
+2026-05-08 10:48:20,204 [ERROR] ❌ 驱动操作失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 登录后未进入管理中心首页，currentUrl=https://ec-hwbeta.casstime.com/passport/login, userLogin=
+    at eval (eval at evaluate (:234:30), <anonymous>:1:370)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:456)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-08 10:48:20,204 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 登录后未进入管理中心首页，currentUrl=https://ec-hwbeta.casstime.com/passport/login, userLogin=
+    at eval (eval at evaluate (:234:30), <anonymous>:1:370)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:456)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-08 10:48:20,205 [ERROR] 用例阶段失败: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 登录后未进入管理中心首页，currentUrl=https://ec-hwbeta.casstime.com/passport/login, userLogin=
+    at eval (eval at evaluate (:234:30), <anonymous>:1:370)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:456)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-08 10:48:22,505 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_002_20260508_104820_failure.png
+2026-05-08 10:48:22,505 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_002_20260508_104820_failure.png
+2026-05-08 10:48:22,505 [DEBUG]   [1] close
+2026-05-08 10:48:22,505 [INFO] 执行关键字: close()
+2026-05-08 10:48:22,505 [INFO] 关闭浏览器
+2026-05-08 10:48:22,747 [DEBUG] close 成功
+2026-05-08 10:48:22,747 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-08 10:48:22,747 [DEBUG]   history[4]=True
+2026-05-08 10:48:22,747 [INFO] 浏览器已关闭
+2026-05-08 10:48:22,748 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\execution_summary.json
+2026-05-08 10:48:22,748 [INFO]   FAIL (49.95s)
+2026-05-08 10:48:22,748 [ERROR]   错误: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 登录后未进入管理中心首页，currentUrl=https://ec-hwbeta.casstime.com/passport/login, userLogin=
+    at eval (eval at evaluate (:234:30), <anonymous>:1:370)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:456)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-08 10:48:22,748 [INFO] 用例 3/3: 驱动已关闭，重新创建浏览器...
+2026-05-08 10:48:22,748 [INFO] 驱动已关闭，重新创建驱动...
+2026-05-08 10:48:23,316 [INFO] 驱动重新创建成功
+2026-05-08 10:48:23,316 [INFO] 新浏览器已启动
+2026-05-08 10:48:23,316 [INFO] 执行用例 3/3: LOGIN_003 - 登录后点击退出应清除会话并离开管理中心首页
+2026-05-08 10:48:23,316 [DEBUG]   [1] navigate
+2026-05-08 10:48:23,317 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'https://ec-hwbeta.casstime.com/admin#'
+2026-05-08 10:48:23,317 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#)
+2026-05-08 10:48:23,317 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#
+2026-05-08 10:48:25,305 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/admin#
+2026-05-08 10:48:25,305 [DEBUG] navigate 成功
+2026-05-08 10:48:25,305 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-08 10:48:25,305 [DEBUG]   history[0]=True
+2026-05-08 10:48:25,483 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_003_01_用例_20260508_104825.png
+2026-05-08 10:48:25,483 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_003_01_用例_20260508_104825.png
+2026-05-08 10:48:25,483 [DEBUG] 步骤等待 0.001s
+2026-05-08 10:48:25,484 [DEBUG]   [2] wait
+2026-05-08 10:48:25,484 [INFO] 执行关键字: wait(data=2)
+2026-05-08 10:48:25,484 [INFO] 等待: 2秒
+2026-05-08 10:48:27,485 [DEBUG] wait 成功
+2026-05-08 10:48:27,485 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-08 10:48:27,485 [DEBUG]   history[1]=True
+2026-05-08 10:48:27,485 [DEBUG]   [3] type
+2026-05-08 10:48:27,485 [INFO] 执行关键字: type(model=PassportLogin, data=ValidCredential)
+2026-05-08 10:48:27,485 [INFO] 批量输入: 模型=PassportLogin, DataID=ValidCredential
+2026-05-08 10:48:27,485 [DEBUG] username: name=username <- 'mandy'
+2026-05-08 10:48:27,485 [DEBUG] 输入文本: name=username -> [name="username"]
+2026-05-08 10:48:42,505 [DEBUG] 尝试清空后输入...
+2026-05-08 10:48:45,528 [DEBUG] 尝试 JavaScript 输入...
+2026-05-08 10:48:45,553 [DEBUG]   ↳ 定位器 name=username 成功 (priority=1)
+2026-05-08 10:48:45,553 [DEBUG] password: name=password <- '***'
+2026-05-08 10:48:45,553 [DEBUG] 输入文本: name=password -> [name="password"]
+2026-05-08 10:49:00,582 [DEBUG] 尝试清空后输入...
+2026-05-08 10:49:03,605 [DEBUG] 尝试 JavaScript 输入...
+2026-05-08 10:49:03,614 [DEBUG]   ↳ 定位器 name=password 成功 (priority=1)
+2026-05-08 10:49:03,615 [DEBUG] submit: click css=input.btn-submit
+2026-05-08 10:49:03,615 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-08 10:49:03,691 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-08 10:49:03,691 [DEBUG] agreement: click css=#privacy-agreement-list
+2026-05-08 10:49:03,691 [DEBUG] 点击元素: css=#privacy-agreement-list -> #privacy-agreement-list
+2026-05-08 10:49:03,842 [DEBUG]   ↳ 定位器 css=#privacy-agreement-list 成功 (priority=1)
+2026-05-08 10:49:03,842 [DEBUG] type 成功
+2026-05-08 10:49:03,842 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-08 10:49:03,842 [DEBUG]   history[2]={'username': 'mandy', 'password': 'Init@1125!@#$.Password', 'submit': 'click', 'agreement': 'click'}
+2026-05-08 10:49:04,165 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_003_02_用例_20260508_104903.png
+2026-05-08 10:49:04,166 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_003_02_用例_20260508_104903.png
+2026-05-08 10:49:04,166 [DEBUG] 步骤等待 0.001s
+2026-05-08 10:49:04,167 [DEBUG]   [4] wait
+2026-05-08 10:49:04,167 [INFO] 执行关键字: wait(data=5)
+2026-05-08 10:49:04,167 [INFO] 等待: 5秒
+2026-05-08 10:49:09,168 [DEBUG] wait 成功
+2026-05-08 10:49:09,169 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-08 10:49:09,169 [DEBUG]   history[3]=True
+2026-05-08 10:49:09,169 [DEBUG]   [5] type
+2026-05-08 10:49:09,169 [INFO] 执行关键字: type(model=AdminHome, data=LogoutClick)
+2026-05-08 10:49:09,170 [INFO] 批量输入: 模型=AdminHome, DataID=LogoutClick
+2026-05-08 10:49:09,170 [DEBUG] logout: click css=a[href='/logout']
+2026-05-08 10:49:09,170 [DEBUG] 点击元素: css=a[href='/logout'] -> a[href='/logout']
+2026-05-08 10:49:24,186 [DEBUG] 尝试滚动到元素位置...
+2026-05-08 10:49:27,192 [DEBUG] 尝试强制点击...
+2026-05-08 10:49:30,196 [DEBUG] 尝试 JavaScript 点击...
+2026-05-08 10:49:30,202 [ERROR] click_locator 失败: css=a[href='/logout'], 错误: Page.evaluate: SyntaxError: missing ) after argument list
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-08 10:49:30,202 [DEBUG]   ↳ 定位器 css=a[href='/logout'] 异常: [SKI302] 点击失败: css=a[href='/logout']
+  locator: css=a[href='/logout']，尝试下一个...
+2026-05-08 10:49:30,202 [DEBUG] logout: click text=退出
+2026-05-08 10:49:30,202 [DEBUG] 点击元素: text=退出 -> text=退出
+2026-05-08 10:49:45,212 [DEBUG] 尝试滚动到元素位置...
+2026-05-08 10:49:48,231 [DEBUG] 尝试强制点击...
+2026-05-08 10:49:51,240 [DEBUG] 尝试 JavaScript 点击...
+2026-05-08 10:49:51,245 [ERROR] click_locator 失败: text=退出, 错误: Page.evaluate: SyntaxError: Failed to execute 'querySelector' on 'Document': 'text=退出' is not a valid selector.
+    at eval (eval at evaluate (:234:30), <anonymous>:2:53)
+    at eval (eval at evaluate (:234:30), <anonymous>:5:31)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-08 10:49:51,245 [DEBUG]   ↳ 定位器 text=退出 异常: [SKI302] 点击失败: text=退出
+  locator: text=退出，尝试下一个...
+2026-05-08 10:49:51,245 [ERROR] ❌ 驱动操作失败: [SKI302] 元素 'logout' 所有定位器均失败 [css=a[href='/logout'], text=退出]: [SKI302] 点击失败: text=退出
+  locator: text=退出
+2026-05-08 10:49:51,245 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 元素 'logout' 所有定位器均失败 [css=a[href='/logout'], text=退出]: [SKI302] 点击失败: text=退出
+  locator: text=退出
+2026-05-08 10:49:51,245 [ERROR] 用例阶段失败: [SKI313] 关键字 'type' 重试 1 次后仍失败: [SKI302] 元素 'logout' 所有定位器均失败 [css=a[href='/logout'], text=退出]: [SKI302] 点击失败: text=退出
+  locator: text=退出
+  keyword: type
+2026-05-08 10:50:21,260 [ERROR] screenshot 失败: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_003_20260508_104951_failure.png, 错误: Page.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking page screenshot
+  -   - waiting for fonts to load...
+  -   - fonts loaded
+
+2026-05-08 10:50:21,260 [WARNING] 截图失败: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\screenshots\LOGIN_003_20260508_104951_failure.png
+2026-05-08 10:50:21,260 [DEBUG]   [1] close
+2026-05-08 10:50:21,260 [INFO] 执行关键字: close()
+2026-05-08 10:50:21,260 [INFO] 关闭浏览器
+2026-05-08 10:50:21,501 [DEBUG] close 成功
+2026-05-08 10:50:21,501 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-08 10:50:21,501 [DEBUG]   history[4]=True
+2026-05-08 10:50:21,501 [INFO] 浏览器已关闭
+2026-05-08 10:50:21,502 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260508_104726\execution_summary.json
+2026-05-08 10:50:21,502 [INFO]   FAIL (118.186s)
+2026-05-08 10:50:21,502 [ERROR]   错误: [SKI313] 关键字 'type' 重试 1 次后仍失败: [SKI302] 元素 'logout' 所有定位器均失败 [css=a[href='/logout'], text=退出]: [SKI302] 点击失败: text=退出
+  locator: text=退出
+  keyword: type
+2026-05-08 10:50:21,513 [INFO] 结果已写入 rodski_20260508_104726/result.xml: 总计 3 条, 通过 1 条, 失败 2 条, 通过率 33.3%

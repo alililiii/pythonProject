@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+  <model name="PassportLogin" type="ui" driver_type="web">
+    <element name="loginModePassword">
+      <type>tab</type>
+      <location type="css" priority="1">span[type='PASSWORD']</location>
+      <location type="text" priority="2">账号登录</location>
+    </element>
+    <element name="username">
+      <type>input</type>
+      <location type="id" priority="1">userName</location>
+      <location type="name" priority="2">username</location>
+      <location type="css" priority="3">input[name='username']</location>
+      <location type="css" priority="4">input[type='text']</location>
+    </element>
+    <element name="password">
+      <type>input</type>
+      <location type="id" priority="1">password</location>
+      <location type="name" priority="2">password</location>
+      <location type="css" priority="3">input[name='password']</location>
+      <location type="css" priority="4">input[type='password']</location>
+    </element>
+    <element name="agreement">
+      <type>checkbox</type>
+      <location type="css" priority="1">.bre-login-privacy-modal_entry-checkbox</location>
+      <location type="css" priority="2">#privacy-agreement-list .br-checkbox__title</location>
+      <location type="css" priority="3">#privacy-agreement-list</location>
+      <location type="text" priority="4">登录即代表您同意</location>
+    </element>
+    <element name="submit">
+      <type>button</type>
+      <location type="css" priority="1">input.btn-submit</location>
+      <location type="css" priority="2">.btn-submit</location>
+      <location type="text" priority="3">登录</location>
+    </element>
+  </model>
+
+  <model name="AdminHome" type="ui" driver_type="web">
+    <element name="logo">
+      <type>text</type>
+      <location type="css" priority="1">.main-header .logo-lg</location>
+      <location type="css" priority="2">.logo-lg</location>
+    </element>
+    <element name="sidebar">
+      <type>text</type>
+      <location type="css" priority="1">.sidebar-menu</location>
+    </element>
+    <element name="userLogin">
+      <type>input</type>
+      <location type="id" priority="1">userLogin</location>
+    </element>
+    <element name="mainFrame">
+      <type>iframe</type>
+      <location type="id" priority="1">iframeCon</location>
+      <location type="css" priority="2">iframe[name='iframeCon']</location>
+    </element>
+    <element name="logout">
+      <type>link</type>
+      <location type="css" priority="1">a[href='/logout']</location>
+      <location type="text" priority="2">退出</location>
+    </element>
+  </model>
+
+  <model name="PlatformPromotionPage" type="ui" driver_type="web">
+    <element name="activityName">
+      <type>input</type>
+      <location type="xpath" priority="1">//input[contains(@placeholder,'50') or contains(@placeholder,'活动名称')]</location>
+      <location type="xpath" priority="2">//*[contains(normalize-space(.),'活动名称')]/following::input[1]</location>
+    </element>
+    <element name="businessLine">
+      <type>input</type>
+      <location type="xpath" priority="1">//*[contains(normalize-space(.),'业务线')]/following::*[contains(@class,'select') or self::select][1]</location>
+      <location type="xpath" priority="2">//*[contains(@placeholder,'业务线')]</location>
+    </element>
+    <element name="saveButton">
+      <type>button</type>
+      <location type="xpath" priority="1">//button[normalize-space(.)='保存' or .//*[normalize-space(.)='保存']]</location>
+      <location type="xpath" priority="2">//*[self::button or self::span or self::a][normalize-space(.)='保存']</location>
+    </element>
+    <element name="cancelButton">
+      <type>button</type>
+      <location type="xpath" priority="1">//button[normalize-space(.)='取消' or .//*[normalize-space(.)='取消']]</location>
+      <location type="xpath" priority="2">//*[self::button or self::span or self::a][normalize-space(.)='取消']</location>
+    </element>
+  </model>
+</models>

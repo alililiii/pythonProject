@@ -1,0 +1,184 @@
+2026-05-09 16:31:58,327 [INFO] 执行用例 1/1: CODEX_DATE_REACT_PROPS_DIAG - date react props diagnosis
+2026-05-09 16:31:58,831 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\recordings\CODEX_DATE_REACT_PROPS_DIAG_20260509_163158_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-09 16:31:58,831 [DEBUG]   [1] navigate
+2026-05-09 16:31:58,831 [DEBUG] 数据解析: 'GlobalValue.Env.platform_promotion_add_url' -> 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit'
+2026-05-09 16:31:58,832 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit)
+2026-05-09 16:31:58,833 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:32:01,035 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:32:01,035 [DEBUG] navigate 成功
+2026-05-09 16:32:01,035 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-09 16:32:01,035 [DEBUG]   history[0]=True
+2026-05-09 16:32:01,139 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\screenshots\CODEX_DATE_REACT_PROPS_DIAG_01_预处理_20260509_163201.png
+2026-05-09 16:32:01,139 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\screenshots\CODEX_DATE_REACT_PROPS_DIAG_01_预处理_20260509_163201.png
+2026-05-09 16:32:01,139 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:32:11,140 [DEBUG]   [2] wait
+2026-05-09 16:32:11,140 [INFO] 执行关键字: wait(data=2)
+2026-05-09 16:32:11,140 [INFO] 等待: 2秒
+2026-05-09 16:32:13,141 [DEBUG] wait 成功
+2026-05-09 16:32:13,141 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-09 16:32:13,141 [DEBUG]   history[1]=True
+2026-05-09 16:32:13,142 [DEBUG]   [3] type
+2026-05-09 16:32:13,142 [INFO] 执行关键字: type(model=PassportLogin, data=ValidCredential)
+2026-05-09 16:32:13,142 [INFO] 批量输入: 模型=PassportLogin, DataID=ValidCredential
+2026-05-09 16:32:13,142 [DEBUG] loginModePassword: click css=span[type='PASSWORD']
+2026-05-09 16:32:13,142 [DEBUG] 点击元素: css=span[type='PASSWORD'] -> span[type='PASSWORD']
+2026-05-09 16:32:13,204 [DEBUG]   ↳ 定位器 css=span[type='PASSWORD'] 成功 (priority=1)
+2026-05-09 16:32:13,205 [DEBUG] username: id=userName <- 'mandy'
+2026-05-09 16:32:13,205 [DEBUG] 输入文本: id=userName -> #userName
+2026-05-09 16:32:13,231 [DEBUG]   ↳ 定位器 id=userName 成功 (priority=1)
+2026-05-09 16:32:13,231 [DEBUG] password: id=password <- '***'
+2026-05-09 16:32:13,231 [DEBUG] 输入文本: id=password -> #password
+2026-05-09 16:32:13,255 [DEBUG]   ↳ 定位器 id=password 成功 (priority=1)
+2026-05-09 16:32:13,255 [DEBUG] agreement: click css=.bre-login-privacy-modal_entry-checkbox
+2026-05-09 16:32:13,255 [DEBUG] 点击元素: css=.bre-login-privacy-modal_entry-checkbox -> .bre-login-privacy-modal_entry-checkbox
+2026-05-09 16:32:13,317 [DEBUG]   ↳ 定位器 css=.bre-login-privacy-modal_entry-checkbox 成功 (priority=1)
+2026-05-09 16:32:13,317 [DEBUG] submit: click css=input.btn-submit
+2026-05-09 16:32:13,317 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-09 16:32:13,362 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-09 16:32:13,363 [DEBUG] type 成功
+2026-05-09 16:32:13,363 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-09 16:32:13,363 [DEBUG]   history[2]={'loginModePassword': 'click', 'username': 'mandy', 'password': 'Init@1125!@#$.Password', 'agreement': 'click', 'submit': 'click'}
+2026-05-09 16:32:13,450 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\screenshots\CODEX_DATE_REACT_PROPS_DIAG_02_预处理_20260509_163213.png
+2026-05-09 16:32:13,450 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\screenshots\CODEX_DATE_REACT_PROPS_DIAG_02_预处理_20260509_163213.png
+2026-05-09 16:32:13,450 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:32:23,451 [DEBUG]   [4] wait
+2026-05-09 16:32:23,451 [INFO] 执行关键字: wait(data=7)
+2026-05-09 16:32:23,451 [INFO] 等待: 7秒
+2026-05-09 16:32:30,451 [DEBUG] wait 成功
+2026-05-09 16:32:30,452 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-09 16:32:30,452 [DEBUG]   history[3]=True
+2026-05-09 16:32:30,452 [DEBUG]   [1] evaluate
+2026-05-09 16:32:30,452 [DEBUG] 数据解析: 'PromoScript.CodexDateReactPropsDiagnosis.script' -> '(async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const textOf=el=>String(el.innerText||el.textContent||el.value||el.getAttribute('placeholder')||'').replace(/\s+/g,'').trim();
+async function promoDoc(timeout=30000){
+  for(let i=0;i<Math.ceil(timeout/250);i++){
+    const f=document.querySelector('#iframeCon,iframe[name="iframeCon"]');
+    let d=null;
+    try{d=f?(f.contentDocument||f.contentWindow.document):document;}catch(e){d=document;}
+    const txt=d&&d.body?d.body.innerText:'';
+    if(d&&d.body&&(txt.includes('活动时间')||txt.includes('活动名称')))return d;
+    await sleep(250);
+  }
+  throw new Error('promo doc not loaded');
+}
+function summarizeValue(v){
+  if(v==null)return v;
+  if(typeof v==='function')return '[function '+(v.name||'anonymous')+']';
+  if(typeof v!=='object')return String(v).slice(0,120);
+  if(Array.isArray(v))return '[array len '+v.length+']';
+  return '[object keys '+Object.keys(v).slice(0,20).join(',')+']';
+}
+function reactInfo(el){
+  const own=Object.keys(el).filter(k=>k.startsWith('__react')||k.startsWith('_react'));
+  const info={ownKeys:own,levels:[]};
+  for(const k of own){
+    const val=el[k];
+    if(k.includes('Props'))info.props=Object.fromEntries(Object.entries(val||{}).slice(0,40).map(([a,b])=>[a,summarizeValue(b)]));
+    let f=val&&val.memoizedProps!==undefined?val:null;
+    for(let i=0;i<8&&f;i++,f=f.return){
+      info.levels.push({
+        i,
+        tag:f.tag,
+        type:String((f.type&&f.type.name)||f.type||'').slice(0,100),
+        elementType:String((f.elementType&&f.elementType.name)||f.elementType||'').slice(0,100),
+        props:Object.fromEntries(Object.entries(f.memoizedProps||{}).slice(0,40).map(([a,b])=>[a,summarizeValue(b)])),
+        state:summarizeValue(f.memoizedState)
+      });
+    }
+  }
+  return info;
+}
+const doc=await promoDoc();
+const range=Array.from(doc.querySelectorAll('.br-datepicker-range,.br-rangepicker,.br-datepicker')).find(visible);
+const inputs=range?Array.from(range.querySelectorAll('input')).filter(visible):Array.from(doc.querySelectorAll('input')).filter(visible).filter(el=>/日期/.test(el.placeholder||''));
+const out=[];
+for(const input of inputs){
+  const nodes=[];
+  let n=input;
+  for(let i=0;i<6&&n;i++,n=n.parentElement){
+    nodes.push({tag:n.tagName,cls:String(n.className||''),text:textOf(n),placeholder:n.getAttribute('placeholder')||'',value:n.value||'',react:reactInfo(n)});
+  }
+  out.push({input:{placeholder:input.placeholder,value:input.value,readOnly:input.readOnly},nodes});
+}
+return {rangeHtml:range?range.outerHTML.slice(0,3000):'',inputs:out};
+})()'
+2026-05-09 16:32:30,452 [INFO] 执行关键字: evaluate(data=(async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const textOf=el=>String(el.innerText||el.textContent||el.value||el.getAttribute('placeholder')||'').replace(/\s+/g,'').trim();
+async function promoDoc(timeout=30000){
+  for(let i=0;i<Math.ceil(timeout/250);i++){
+    const f=document.querySelector('#iframeCon,iframe[name="iframeCon"]');
+    let d=null;
+    try{d=f?(f.contentDocument||f.contentWindow.document):document;}catch(e){d=document;}
+    const txt=d&&d.body?d.body.innerText:'';
+    if(d&&d.body&&(txt.includes('活动时间')||txt.includes('活动名称')))return d;
+    await sleep(250);
+  }
+  throw new Error('promo doc not loaded');
+}
+function summarizeValue(v){
+  if(v==null)return v;
+  if(typeof v==='function')return '[function '+(v.name||'anonymous')+']';
+  if(typeof v!=='object')return String(v).slice(0,120);
+  if(Array.isArray(v))return '[array len '+v.length+']';
+  return '[object keys '+Object.keys(v).slice(0,20).join(',')+']';
+}
+function reactInfo(el){
+  const own=Object.keys(el).filter(k=>k.startsWith('__react')||k.startsWith('_react'));
+  const info={ownKeys:own,levels:[]};
+  for(const k of own){
+    const val=el[k];
+    if(k.includes('Props'))info.props=Object.fromEntries(Object.entries(val||{}).slice(0,40).map(([a,b])=>[a,summarizeValue(b)]));
+    let f=val&&val.memoizedProps!==undefined?val:null;
+    for(let i=0;i<8&&f;i++,f=f.return){
+      info.levels.push({
+        i,
+        tag:f.tag,
+        type:String((f.type&&f.type.name)||f.type||'').slice(0,100),
+        elementType:String((f.elementType&&f.elementType.name)||f.elementType||'').slice(0,100),
+        props:Object.fromEntries(Object.entries(f.memoizedProps||{}).slice(0,40).map(([a,b])=>[a,summarizeValue(b)])),
+        state:summarizeValue(f.memoizedState)
+      });
+    }
+  }
+  return info;
+}
+const doc=await promoDoc();
+const range=Array.from(doc.querySelectorAll('.br-datepicker-range,.br-rangepicker,.br-datepicker')).find(visible);
+const inputs=range?Array.from(range.querySelectorAll('input')).filter(visible):Array.from(doc.querySelectorAll('input')).filter(visible).filter(el=>/日期/.test(el.placeholder||''));
+const out=[];
+for(const input of inputs){
+  const nodes=[];
+  let n=input;
+  for(let i=0;i<6&&n;i++,n=n.parentElement){
+    nodes.push({tag:n.tagName,cls:String(n.className||''),text:textOf(n),placeholder:n.getAttribute('placeholder')||'',value:n.value||'',react:reactInfo(n)});
+  }
+  out.push({input:{placeholder:input.placeholder,value:input.value,readOnly:input.readOnly},nodes});
+}
+return {rangeHtml:range?range.outerHTML.slice(0,3000):'',inputs:out};
+})())
+2026-05-09 16:32:30,453 [INFO] 执行 JS: (async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const textOf=el=>String(el.innerT
+2026-05-09 16:32:30,508 [INFO] JS 结果: {'rangeHtml': '<div class="br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_"><div class="br-datepicker-input br-datepicker-input-active"><input readonly="" placeholder="开始日期" s
+2026-05-09 16:32:30,508 [DEBUG] evaluate 成功
+2026-05-09 16:32:30,508 [INFO] [STEP] action=evaluate model=- status=OK source=evaluate
+2026-05-09 16:32:30,509 [DEBUG]   history[4]={'rangeHtml': '<div class="br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_"><div class="br-datepicker-input br-datepicker-input-active"><input readonly="" placeholder="开始日期" s
+2026-05-09 16:32:30,605 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\screenshots\CODEX_DATE_REACT_PROPS_DIAG_03_用例_20260509_163230.png
+2026-05-09 16:32:30,605 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\screenshots\CODEX_DATE_REACT_PROPS_DIAG_03_用例_20260509_163230.png
+2026-05-09 16:32:30,605 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:32:40,605 [DEBUG]   [1] close
+2026-05-09 16:32:40,605 [INFO] 执行关键字: close()
+2026-05-09 16:32:40,605 [INFO] 关闭浏览器
+2026-05-09 16:32:42,977 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\recordings\CODEX_DATE_REACT_PROPS_DIAG_20260509_163158_01.webm
+2026-05-09 16:32:43,040 [DEBUG] close 成功
+2026-05-09 16:32:43,040 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-09 16:32:43,041 [DEBUG]   history[5]=True
+2026-05-09 16:32:43,041 [INFO] 浏览器已关闭
+2026-05-09 16:32:43,045 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163158\execution_summary.json
+2026-05-09 16:32:43,045 [INFO]   PASS (44.718s)
+2026-05-09 16:32:43,056 [INFO] 结果已写入 rodski_20260509_163158/result.xml: 总计 1 条, 通过 1 条, 失败 0 条, 通过率 100.0%

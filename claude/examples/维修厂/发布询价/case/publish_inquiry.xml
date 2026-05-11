@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases step_wait="300">
+  <case id="garage_publish_inquiry" title="维修厂发布询价" execute="是" description="维修厂账号登录后，使用 VIN LBVFR790XBSD31722 和配件名称火花塞发布询价，并校验进入询价详情页且生成 B 开头询价单号。" component_type="界面">
+
+    <!-- 预处理：登录。按经验固定为 navigate -> type -> 短 wait -> verify。 -->
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.DefaultValue.ECAgentBuyURL"/>
+      <test_step action="type" model="ECAgentBuyLoginPage" data="ec_agent_buy_login"/>
+      <test_step action="wait" data="1"/>
+      <test_step action="verify" model="LoginSuccessCheck" data="login_success"/>
+    </pre_process>
+
+    <test_case>
+      <test_step action="verify" model="InquiryPageCheck" data="inquiry_page_ready"/>
+
+      <!-- 输入目标 VIN；重复 VIN 弹窗不是每次都出现，所以用 evaluate 做可选处理，避免无弹窗时长时间等待失败。 -->
+      <test_step action="type" model="InquiryVinForm" data="input_target_vin"/>
+      <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);for(let i=0;i&lt;20;i++){const btn=[...document.querySelectorAll('.br-modal button,.br-modal a,[role=dialog] button,[role=dialog] a,button,a')].find(el=>visible(el)&amp;&amp;(norm(el.textContent).includes('不追加，发布新的询价单')||norm(el.textContent).includes('不追加')||norm(el.textContent).includes('发布新询价单')));if(btn){btn.scrollIntoView({block:'center'});btn.click();await sleep(500);return 'duplicate_vin_modal_confirmed';}if(document.querySelector('table textarea, table input:not([disabled])'))return 'no_duplicate_vin_modal';await sleep(250);}return 'duplicate_vin_modal_not_present';})()"/>
+
+      <!-- 输入配件名称：火花塞。 -->
+      <test_step action="type" model="InquiryPartForm" data="input_first_part_name"/>
+
+      <!-- 等待发布按钮可用，并保持平台推荐商家默认路径。 -->
+      <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const enabled=el=>visible(el)&amp;&amp;!el.disabled&amp;&amp;!String(el.className||'').includes('disabled');for(let i=0;i&lt;80;i++){const btn=document.querySelector('.save-inquiry,input.save-inquiry')||[...document.querySelectorAll('button,input,span')].find(el=>visible(el)&amp;&amp;(el.value==='发布询价'||String(el.textContent||'').trim()==='发布询价'));if(enabled(btn))return 'publish_button_ready';await sleep(250);}throw new Error('发布询价按钮未就绪，页面文本='+(document.body.innerText||'').slice(0,300));})()"/>
+      <test_step action="type" model="InquiryPublishAction" data="publish_inquiry"/>
+      <test_step action="wait" data="1"/>
+      <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);for(let i=0;i&lt;20;i++){const btn=[...document.querySelectorAll('.br-modal button,.br-modal a,[role=dialog] button,[role=dialog] a,button,a')].find(el=>visible(el)&amp;&amp;(norm(el.textContent).includes('不追加，发布新询价单')||norm(el.textContent).includes('不追加，发布新的询价单')||norm(el.textContent).includes('不追加')));if(btn){btn.scrollIntoView({block:'center'});btn.click();await sleep(500);return 'publish_duplicate_vin_new_inquiry_clicked';}await sleep(250);}return 'publish_duplicate_vin_modal_not_present';})()"/>
+
+      <!-- 发布成功后等待页面跳转到询价详情页，用 evaluate 轮询等待"询价单："出现，避免固定 wait 不够或 verify 超时。 -->
+      <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));for(let i=0;i&lt;60;i++){const text=document.body.innerText||'';if(text.includes('询价单') &amp;&amp; /B[A-Za-z0-9]{6,}/.test(text))return 'detail_page_loaded';await sleep(500);}throw new Error('询价详情页未加载，页面文本='+(document.body.innerText||'').slice(0,300));})()"/>
+      <test_step action="verify" model="InquiryPublishSuccessCheck" data="publish_success_generated_inquiry_id"/>
+      <test_step action="evaluate" data="(()=>{const text=document.body.innerText||'';if(!text.includes('LBVFR790XBSD31722'))throw new Error('发布成功页未展示目标VIN：LBVFR790XBSD31722');const m=text.match(/询价单[：:\s]*(B[A-Za-z0-9]+)/)||text.match(/\b(B[A-Za-z0-9]{6,})\b/);if(!m)throw new Error('未提取到B开头询价单号，页面文本='+text.slice(0,300));return m[1];})()"/>
+      <test_step action="set" data="published_inquiry_no=${Return[-1]}"/>
+      <test_step action="screenshot" data="01_publish_inquiry_success.png"/>
+    </test_case>
+
+    <post_process>
+      <test_step action="close" data=""/>
+    </post_process>
+  </case>
+</cases>

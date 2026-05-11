@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalvalue>
+  <group name="DefaultValue">
+    <var name="ECAgentBuyURL" value="https://ec-hwbeta.casstime.com/agentBuy/"/>
+    <var name="WaitTime" value="0.2"/>
+  </group>
+</globalvalue>

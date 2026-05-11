@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalvalue>
+  <group name="DefaultValue">
+    <var name="ECAgentBuyURL" value="https://ec-hwbeta.casstime.com/agentBuy/"/>
+    <var name="QuoteListURL" value="https://ec-hwbeta.casstime.com/market/inquirys"/>
+    <var name="OrderTrackingURL" value="https://ec-hwbeta.casstime.com/mall/order#/with-framed/order-track"/>
+    <var name="ECSellerURL" value="https://ec-hwbeta.casstime.com/seller"/>
+    <var name="ECSellerOrderListURL" value="https://ec-hwbeta.casstime.com/seller#/order/list"/>
+    <var name="ECSellerAfterSaleListURL" value="https://ec-hwbeta.casstime.com/seller#/order/afterSale/list"/>
+    <var name="WaitTime" value="0.2"/>
+  </group>
+</globalvalue>

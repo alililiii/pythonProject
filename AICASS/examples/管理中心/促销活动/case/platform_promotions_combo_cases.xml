@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases step_wait="1" tags="platform-promotions,combo,add-edit,system-manager">
+  <case execute="否" id="PROMO_ADD_COMBO_001" title="商城业务指定区域、指定客户、指定店铺、指定品质，满立折不叠加" description="商城业务 + 北京市 + 指定参与客户 C0012278 + 满 100 打 8 折 + 不设上限 + 不叠加 + 指定可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_001.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_001.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_002" title="商城业务不限区域、全部客户、不限店铺、不限商品，满立折不叠加" description="商城业务最小可保存路径，范围均保持不限或全部，满 100 打 8 折，不设上限，不叠加。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_002.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_002.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_003" title="商城业务排除客户和排除店铺，满立减叠加" description="商城业务 +B2b-基础业务 + 不限区域 + 指定不参与客户 C0012278 + 满 100 减 10 + 营销费用上限 1000 + 叠加 + 指定不可参与店铺 GZJD0001。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_003.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_003.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_004" title="询价业务指定区域、指定客户、指定店铺、指定品质，满立折叠加" description="询价业务 + 北京市 + 指定参与客户 C0012278 + 满 100 打 8 折 + 营销费用上限 1000 + 叠加 + 指定可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_004.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_004.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_005" title="询价业务不限范围，满立减不叠加" description="询价业务 + 不限区域 + 全部客户 + 满 100 减 10 + 不设上限 + 不叠加 + 不限店铺 + 不限商品维度。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_005.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_005.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_006" title="商城业务按区域设置但客户全部，指定可参与店铺，指定品质" description="商城业务 + 北京市 + 全部客户 + 满 100 打 8 折 + 不设上限 + 不叠加 + 指定可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_006.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_006.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_007" title="商城业务指定参与客户但不限店铺，指定品质" description="商城业务 + 不限区域 + 指定参与客户 C0012278 + 满 100 打 8 折 + 不设上限 + 不叠加 + 不限店铺 + 指定品质原厂件。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_007.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_007.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_008" title="商城业务排除客户但指定可参与店铺" description="商城业务 + 北京市 + 指定不参与客户 C0012278 + 满 100 减 10 + 不设上限 + 不叠加 + 指定可参与店铺 GZJD0001 + 不限品质。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_008.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_008.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_009" title="商城业务全部客户但指定不可参与店铺" description="商城业务 + 不限区域 + 全部客户 + 满 100 打 8 折 + 营销费用上限 1000 + 叠加 + 指定不可参与店铺 GZJD0001 + 不限商品维度。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_009.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_009.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_010" title="询价业务排除客户和排除店铺，指定品质" description="询价业务 + 北京市 + 指定不参与客户 C0012278 + 满 100 减 10 + 营销费用上限 1000 + 叠加 + 指定不可参与店铺 GZJD0001 + 指定品质原厂件。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_010.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_010.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_011" title="指定品质后再指定品牌" description="商城业务 + 不限区域 + 全部客户 + 满立折 + 不限店铺 + 指定品质原厂件 + 指定品牌，验证品牌选项和回显。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_011.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_011.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_012" title="指定品类保存" description="商城业务 + 不限区域 + 全部客户 + 满立折 + 不限店铺 + 不限品质 + 不限品牌 + 指定品类。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_012.script"/>
+      <test_step action="evaluate" data="PromoScript.SuccessComboSaveAndEcho.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_012.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_013" title="按区域设置但未选择具体区域应校验失败" description="商城业务 + 按区域设置但区域为空 + 其他必填合法，保存时应提示必须选择活动区域。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_013.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_013.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_014" title="指定参与客户但未添加客户应校验失败" description="商城业务 + 指定参与客户但客户为空 + 其他必填合法，保存时应提示必须选择参与客户。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_014.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_014.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_015" title="指定可参与店铺但未添加店铺应校验失败" description="商城业务 + 指定可参与店铺但店铺为空 + 其他必填合法，保存时应提示必须选择可参与店铺。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_015.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_015.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_016" title="指定品质但未选择品质应校验失败" description="商城业务 + 按品类配置 + 指定品质但品质为空 + 其他必填合法，保存时应提示必须选择品质。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_016.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_016.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_017" title="满立折折扣为 10 应校验失败" description="商城业务 + 满 100 打 10 折 + 其他必填合法，保存时应提示折扣范围 0.01 到 9.99。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_017.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_017.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_018" title="满立折折扣为 0 应校验失败" description="商城业务 + 满 100 打 0 折 + 其他必填合法，保存时应提示折扣范围 0.01 到 9.99。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_018.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_018.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_019" title="满立减金额大于订单金额应校验失败" description="商城业务 + 满 100 减 120 + 其他必填合法，保存时应提示优惠金额不能大于订单金额或被后端规则拒绝。" component_type="界面" priority="P1">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_019.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_019.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="否" id="PROMO_ADD_COMBO_020" title="营销费用上限为 0 应校验失败" description="商城业务 + 营销费用上限 0 + 其他必填合法，保存时应提示营销费用上限必须大于 0。" component_type="界面" priority="P2">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.platform_promotion_add_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="ValidCredential"/>
+      <test_step action="wait" data="5"/>
+    </pre_process>
+    <test_case>
+      <test_step action="evaluate" data="PromoCombo.COMBO_020.script"/>
+      <test_step action="evaluate" data="PromoScript.ValidationComboRejected.script"/>
+      <test_step action="screenshot" data="screenshots/PROMO_ADD_COMBO_020.png"/>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+</cases>

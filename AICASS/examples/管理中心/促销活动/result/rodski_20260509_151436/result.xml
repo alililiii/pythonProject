@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="7" passed="0" failed="1" skipped="6" errors="0" pass_rate="0.0%" total_time="49.98s" average_time="7.14s" start_time="2026-05-09 15:15:26" end_time="2026-05-09 15:15:26"/>
+  <results>
+    <result case_id="PROMO_ADD_001" title="登录后直接访问平台促销活动新增页" status="FAIL" execution_time="49.983" retries="0" start_time="" end_time="" error_type="" error_message="[SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: ????????? missing text: 基础信息,活动对象,促销玩法,活动店铺,活动商品&#10;    at requireText (eval at evaluate (:234:30), &lt;anonymous&gt;:11:131)&#10;    at eval (eval at evaluate (:234:30), &lt;anonymous&gt;:32:1)&#10;    at async &lt;anonymous&gt;:260:30&#10;  keyword: evaluate" screenshot_path="screenshots/PROMO_ADD_001_20260509_151522_failure.png" recording_path="recordings\PROMO_ADD_001_20260509_151436_01.webm" updated_at="2026-05-09 15:15:26">
+      <recordings>
+        <recording index="1" path="recordings\PROMO_ADD_001_20260509_151436_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="PROMO_ADD_002" title="未登录访问平台促销活动新增页应被认证拦截" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 15:15:26"/>
+    <result case_id="PROMO_ADD_004" title="平台促销活动新增页静态元素完整性" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 15:15:26"/>
+    <result case_id="PROMO_ADD_014_031" title="默认选项和促销条件表格校验" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 15:15:26"/>
+    <result case_id="PROMO_ADD_006_010_017_032" title="空表单保存必填校验" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 15:15:26"/>
+    <result case_id="PROMO_ADD_033_044_045_049" title="促销玩法动态联动校验" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 15:15:26"/>
+    <result case_id="PROMO_ADD_021_026_061_078" title="范围类单选项切换联动校验" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 15:15:26"/>
+  </results>
+</testresult>

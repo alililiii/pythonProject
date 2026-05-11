@@ -1,0 +1,130 @@
+{
+  "case": "CODEX_DATE_ONCHANGE_PROBE",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "type",
+      "model": "PassportLogin",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "loginModePassword": "click",
+        "username": "mandy",
+        "password": "Init@1125!@#$.Password",
+        "agreement": "click",
+        "submit": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "startText": "2026-05-09 16:34:42",
+        "endText": "2026-05-09 16:44:42",
+        "info": {
+          "level": 5,
+          "tag": 0,
+          "type": "I"
+        },
+        "attempts": [
+          {
+            "before": [
+              {
+                "placeholder": "开始日期",
+                "value": "",
+                "readOnly": true
+              },
+              {
+                "placeholder": "结束日期",
+                "value": "",
+                "readOnly": true
+              }
+            ],
+            "globals": {
+              "moment": "undefined",
+              "dayjs": "undefined"
+            }
+          },
+          {
+            "label": "strings-1arg",
+            "ok": true
+          },
+          {
+            "afterStrings1": []
+          },
+          {
+            "label": "strings-2arg",
+            "ok": true
+          },
+          {
+            "afterStrings2": []
+          },
+          {
+            "label": "dates-1arg",
+            "ok": true
+          },
+          {
+            "afterDates1": []
+          },
+          {
+            "label": "dates-2arg",
+            "ok": true
+          },
+          {
+            "afterDates2": []
+          }
+        ]
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 6,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

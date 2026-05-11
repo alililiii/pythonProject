@@ -1,0 +1,106 @@
+{
+  "case": "PROMO_ADD_COMBO_003",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "type",
+      "model": "PassportLogin",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "loginModePassword": "click",
+        "username": "mandy",
+        "password": "Init@1125!@#$.Password",
+        "agreement": "click",
+        "submit": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "caseId": "PROMO_ADD_COMBO_003",
+        "activityName": "自动化-平台促销-组合-1778317141218-PROMO_ADD_COMBO_003",
+        "time": {
+          "start": "2026-05-09 16:59:01",
+          "end": "2026-05-09 17:09:01"
+        }
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 6,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "status": "combo-save-submitted",
+        "activityName": "自动化-平台促销-组合-1778317141218-PROMO_ADD_COMBO_003",
+        "onList": true,
+        "created": true
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 7,
+      "action": "screenshot",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": null,
+      "named_writes": {}
+    },
+    {
+      "index": 8,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+  <!-- 登录 -->
+  <model name="ECAgentBuyLoginPage">
+    <element name="accountTab">
+      <location type="css" priority="1">span[type=PASSWORD]</location>
+      <location type="xpath" priority="2">(//*[self::span or self::div or self::button][normalize-space(.)='账号登录'] | //*[self::span or self::div or self::button][contains(normalize-space(.),'账号') and contains(normalize-space(.),'登录')])[1]</location>
+      <location type="xpath" priority="3">(//*[self::a or self::span or self::div or self::button][normalize-space(.)='退出'])[1]</location>
+      <desc>账号登录页签</desc>
+    </element>
+    <element name="username">
+      <location type="css">#userName</location>
+      <desc>用户名输入框</desc>
+    </element>
+    <element name="password">
+      <location type="css">#password</location>
+      <desc>密码输入框</desc>
+    </element>
+    <element name="agreeCheckbox" type="web">
+      <location type="css" priority="1">label.br-checkbox .br-checkbox__title</location>
+      <location type="css" priority="2">label.br-checkbox</location>
+      <desc>同意协议复选框</desc>
+    </element>
+    <element name="loginBtn">
+      <location type="css">.btn-submit</location>
+      <desc>登录按钮</desc>
+    </element>
+  </model>
+
+  <model name="LoginSuccessCheck">
+    <element name="publishInquiryTab" type="web">
+      <type>text</type>
+      <location type="xpath" priority="1">//a[normalize-space(.)='发布询价']</location>
+      <location type="xpath" priority="2">//button[normalize-space(.)='发布询价']</location>
+      <location type="xpath" priority="3">//span[normalize-space(.)='发布询价' and not(*)]</location>
+      <location type="xpath" priority="4">//*[self::a or self::button or self::span or self::div][contains(normalize-space(.),'发布询价') and not(.//*[contains(normalize-space(.),'发布询价')])]</location>
+      <desc>登录成功后的发布询价入口</desc>
+    </element>
+  </model>
+
+  <model name="InquiryPageCheck">
+    <element name="publishInquiryTab" type="web">
+      <type>text</type>
+      <location type="xpath" priority="1">//a[normalize-space(.)='发布询价']</location>
+      <location type="xpath" priority="2">//button[normalize-space(.)='发布询价']</location>
+      <location type="xpath" priority="3">//span[normalize-space(.)='发布询价' and not(*)]</location>
+      <location type="xpath" priority="4">//*[self::a or self::button or self::span or self::div][contains(normalize-space(.),'发布询价') and not(.//*[contains(normalize-space(.),'发布询价')])]</location>
+      <desc>发布询价页面入口</desc>
+    </element>
+  </model>
+
+  <!-- 发布询价表单 -->
+  <model name="InquiryVinForm">
+    <element name="vinInput" type="web">
+      <type>input</type>
+      <location type="xpath" priority="1">//input[contains(translate(@placeholder,'vin','VIN'),'VIN')]</location>
+      <location type="css" priority="2">.vin-input</location>
+      <desc>VIN输入框</desc>
+    </element>
+    <element name="vinInputSubmit" type="web">
+      <type>input</type>
+      <location type="xpath" priority="1">//input[contains(translate(@placeholder,'vin','VIN'),'VIN')]</location>
+      <location type="css" priority="2">.vin-input</location>
+      <desc>VIN输入框回车提交</desc>
+    </element>
+  </model>
+
+  <model name="InquiryPartForm">
+    <element name="partNameInputFirst" type="web">
+      <type>textarea</type>
+      <location type="xpath" priority="1">//table//tbody/tr[1]/td[2]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="2">//table//tbody/tr[1]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="3">(//*[self::textarea or self::input][contains(@placeholder,'配件') or contains(@placeholder,'零件') or contains(@placeholder,'OE')])[1]</location>
+      <desc>首个配件名称输入框</desc>
+    </element>
+    <element name="partNameInputFirstSubmit" type="web">
+      <type>textarea</type>
+      <location type="xpath" priority="1">//table//tbody/tr[1]/td[2]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="2">//table//tbody/tr[1]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="3">(//*[self::textarea or self::input][contains(@placeholder,'配件') or contains(@placeholder,'零件') or contains(@placeholder,'OE')])[1]</location>
+      <desc>首个配件名称输入框回车提交</desc>
+    </element>
+  </model>
+
+  <model name="InquiryPublishAction">
+    <element name="publishInquiryBtn" type="web">
+      <type>button</type>
+      <location type="css" priority="1">.save-inquiry</location>
+      <location type="xpath" priority="2">//input[contains(@class,'save-inquiry') and @type='button']</location>
+      <location type="xpath" priority="3">//input[@value='发布询价']</location>
+      <location type="xpath" priority="4">//button[normalize-space(.)='发布询价' or .//*[normalize-space(.)='发布询价']]</location>
+      <location type="xpath" priority="5">//span[normalize-space(.)='发布询价']</location>
+      <desc>发布询价按钮</desc>
+    </element>
+  </model>
+
+  <model name="InquiryPublishSuccessCheck">
+    <element name="inquiryIdLabelWithGeneratedNo" type="web">
+      <type>text</type>
+      <location type="xpath" priority="1">//span[contains(@class,'header_inquiryId') and normalize-space(.)='询价单：']</location>
+      <location type="xpath" priority="2">//span[contains(@class,'inquiryId') and normalize-space(.)='询价单：']</location>
+      <location type="xpath" priority="3">//span[normalize-space(.)='询价单：' and ancestor::div[contains(@class,'bre-align')]]</location>
+      <desc>发布成功后详情页的询价单标签</desc>
+    </element>
+  </model>
+</models>

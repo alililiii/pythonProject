@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="3" passed="2" failed="1" skipped="0" errors="0" pass_rate="66.7%" total_time="85.11s" average_time="28.37s" start_time="2026-05-08 11:01:53" end_time="2026-05-08 11:01:53"/>
+  <results>
+    <result case_id="LOGIN_001" title="未登录直接访问管理中心首页应被认证拦截" status="PASS" execution_time="36.925" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="" updated_at="2026-05-08 11:01:53"/>
+    <result case_id="LOGIN_002" title="使用有效账号登录后进入管理中心首页" status="FAIL" execution_time="22.318" retries="0" start_time="" end_time="" error_type="" error_message="[SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 登录后未进入管理中心首页，currentUrl=https://ec-hwbeta.casstime.com/admin, userLogin=&#10;    at eval (eval at evaluate (:234:30), &lt;anonymous&gt;:1:370)&#10;    at eval (eval at evaluate (:234:30), &lt;anonymous&gt;:1:456)&#10;    at eval (&lt;anonymous&gt;)&#10;    at UtilityScript.evaluate (&lt;anonymous&gt;:234:30)&#10;    at UtilityScript.&lt;anonymous&gt; (&lt;anonymous&gt;:1:44)&#10;  keyword: evaluate" screenshot_path="screenshots/LOGIN_002_20260508_110121_failure.png" recording_path="" updated_at="2026-05-08 11:01:53"/>
+    <result case_id="LOGIN_003" title="登录后点击退出应清除会话并离开管理中心首页" status="PASS" execution_time="25.864" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="" updated_at="2026-05-08 11:01:53"/>
+  </results>
+</testresult>

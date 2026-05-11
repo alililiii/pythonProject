@@ -1,0 +1,47 @@
+{
+  "name": "rodski-tables",
+  "displayName": "RodSki Tables",
+  "description": "Open RodSki data.sqlite files as logical data tables.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:rodskiTables.open",
+    "onCustomEditor:rodskiTables.editor"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "rodskiTables.open",
+        "title": "Open with RodSki Tables"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "rodskiTables.open",
+          "when": "resourceFilename == data.sqlite",
+          "group": "navigation"
+        }
+      ]
+    },
+    "customEditors": [
+      {
+        "viewType": "rodskiTables.editor",
+        "displayName": "RodSki Tables",
+        "selector": [
+          {
+            "filenamePattern": "**/data.sqlite"
+          }
+        ],
+        "priority": "option"
+      }
+    ]
+  }
+}

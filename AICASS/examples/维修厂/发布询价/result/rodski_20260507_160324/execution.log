@@ -1,0 +1,145 @@
+2026-05-07 16:03:24,218 [INFO] 执行用例 1/1: garage_publish_inquiry - 维修厂发布询价
+2026-05-07 16:03:24,218 [DEBUG]   [1] navigate
+2026-05-07 16:03:24,218 [DEBUG] 数据解析: 'GlobalValue.DefaultValue.ECAgentBuyURL' -> 'https://ec-hwbeta.casstime.com/agentBuy/'
+2026-05-07 16:03:24,219 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/agentBuy/)
+2026-05-07 16:03:24,219 [INFO] 导航: https://ec-hwbeta.casstime.com/agentBuy/
+2026-05-07 16:03:27,181 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/agentBuy/
+2026-05-07 16:03:27,181 [DEBUG] navigate 成功
+2026-05-07 16:03:27,181 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-07 16:03:27,181 [DEBUG]   history[0]=True
+2026-05-07 16:03:27,398 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_01_预处理_20260507_160327.png
+2026-05-07 16:03:27,398 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_01_预处理_20260507_160327.png
+2026-05-07 16:03:27,398 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:27,703 [DEBUG]   [2] type
+2026-05-07 16:03:27,703 [INFO] 执行关键字: type(model=ECAgentBuyLoginPage, data=ec_agent_buy_login)
+2026-05-07 16:03:27,703 [INFO] 批量输入: 模型=ECAgentBuyLoginPage, DataID=ec_agent_buy_login
+2026-05-07 16:03:27,704 [DEBUG] accountTab: click css=span[type=PASSWORD]
+2026-05-07 16:03:27,704 [DEBUG] 点击元素: css=span[type=PASSWORD] -> span[type=PASSWORD]
+2026-05-07 16:03:27,779 [DEBUG]   ↳ 定位器 css=span[type=PASSWORD] 成功 (priority=1)
+2026-05-07 16:03:27,780 [DEBUG] username: css=#userName <- '13119909586'
+2026-05-07 16:03:27,780 [DEBUG] 输入文本: css=#userName -> #userName
+2026-05-07 16:03:27,833 [DEBUG]   ↳ 定位器 css=#userName 成功 (priority=1)
+2026-05-07 16:03:27,833 [DEBUG] password: css=#password <- '123456Aa'
+2026-05-07 16:03:27,834 [DEBUG] 输入文本: css=#password -> #password
+2026-05-07 16:03:27,861 [DEBUG]   ↳ 定位器 css=#password 成功 (priority=1)
+2026-05-07 16:03:27,861 [DEBUG] agreeCheckbox: click css=label.br-checkbox .br-checkbox__title
+2026-05-07 16:03:27,861 [DEBUG] 点击元素: css=label.br-checkbox .br-checkbox__title -> label.br-checkbox .br-checkbox__title
+2026-05-07 16:03:27,912 [DEBUG]   ↳ 定位器 css=label.br-checkbox .br-checkbox__title 成功 (priority=1)
+2026-05-07 16:03:27,912 [DEBUG] loginBtn: click css=.btn-submit
+2026-05-07 16:03:27,912 [DEBUG] 点击元素: css=.btn-submit -> .btn-submit
+2026-05-07 16:03:27,956 [DEBUG]   ↳ 定位器 css=.btn-submit 成功 (priority=1)
+2026-05-07 16:03:27,956 [DEBUG] type 成功
+2026-05-07 16:03:27,956 [INFO] [STEP] action=type model=ECAgentBuyLoginPage status=OK source=keyword_result
+2026-05-07 16:03:27,956 [DEBUG]   history[1]={'accountTab': 'click', 'username': '13119909586', 'password': '123456Aa', 'agreeCheckbox': 'click', 'loginBtn': 'click'}
+2026-05-07 16:03:28,195 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_02_预处理_20260507_160327.png
+2026-05-07 16:03:28,196 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_02_预处理_20260507_160327.png
+2026-05-07 16:03:28,196 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:28,497 [DEBUG]   [3] wait
+2026-05-07 16:03:28,497 [INFO] 执行关键字: wait(data=1)
+2026-05-07 16:03:28,498 [INFO] 等待: 1秒
+2026-05-07 16:03:29,499 [DEBUG] wait 成功
+2026-05-07 16:03:29,499 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-07 16:03:29,500 [DEBUG]   history[2]=True
+2026-05-07 16:03:29,502 [DEBUG]   [4] verify
+2026-05-07 16:03:29,502 [INFO] 执行关键字: verify(model=LoginSuccessCheck, data=login_success)
+2026-05-07 16:03:29,503 [INFO] 批量验证: 模型=LoginSuccessCheck, 期望数据=login_success
+2026-05-07 16:03:32,799 [DEBUG] publishInquiryTab: 实际='发布询价', 期望='发布询价' → OK
+2026-05-07 16:03:32,799 [INFO] 批量验证通过: 1 个字段全部匹配
+2026-05-07 16:03:32,800 [DEBUG] verify 成功
+2026-05-07 16:03:32,800 [INFO] [STEP] action=verify model=LoginSuccessCheck status=OK source=keyword_result
+2026-05-07 16:03:32,800 [DEBUG]   history[3]={'publishInquiryTab': '发布询价', '_verify_passed': True, 'passed': True}
+2026-05-07 16:03:32,989 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_03_预处理_20260507_160332.png
+2026-05-07 16:03:32,989 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_03_预处理_20260507_160332.png
+2026-05-07 16:03:32,989 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:33,290 [DEBUG]   [1] verify
+2026-05-07 16:03:33,290 [INFO] 执行关键字: verify(model=InquiryPageCheck, data=inquiry_page_ready)
+2026-05-07 16:03:33,290 [INFO] 批量验证: 模型=InquiryPageCheck, 期望数据=inquiry_page_ready
+2026-05-07 16:03:33,299 [DEBUG] publishInquiryTab: 实际='发布询价', 期望='发布询价' → OK
+2026-05-07 16:03:33,299 [INFO] 批量验证通过: 1 个字段全部匹配
+2026-05-07 16:03:33,299 [DEBUG] verify 成功
+2026-05-07 16:03:33,300 [INFO] [STEP] action=verify model=InquiryPageCheck status=OK source=keyword_result
+2026-05-07 16:03:33,300 [DEBUG]   history[4]={'publishInquiryTab': '发布询价', '_verify_passed': True, 'passed': True}
+2026-05-07 16:03:33,446 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_04_用例_20260507_160333.png
+2026-05-07 16:03:33,447 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_04_用例_20260507_160333.png
+2026-05-07 16:03:33,447 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:33,747 [DEBUG]   [2] type
+2026-05-07 16:03:33,747 [INFO] 执行关键字: type(model=InquiryVinForm, data=input_target_vin)
+2026-05-07 16:03:33,747 [INFO] 批量输入: 模型=InquiryVinForm, DataID=input_target_vin
+2026-05-07 16:03:33,747 [DEBUG] vinInput: xpath=//input[contains(translate(@placeholder,'vin','VIN'),'VIN')] <- 'LBVFR790XBSD31722'
+2026-05-07 16:03:33,748 [DEBUG] 输入文本: xpath=//input[contains(translate(@placeholder,'vin','VIN'),'VIN')] -> //input[contains(translate(@placeholder,'vin','VIN'),'VIN')]
+2026-05-07 16:03:33,778 [DEBUG]   ↳ 定位器 xpath=//input[contains(translate(@placeholder,'vin','VIN'),'VIN')] 成功 (priority=1)
+2026-05-07 16:03:33,779 [DEBUG] vinInputSubmit: 按键 'Enter'
+2026-05-07 16:03:33,803 [DEBUG]   ↳ 定位器 xpath=//input[contains(translate(@placeholder,'vin','VIN'),'VIN')] 成功 (priority=1)
+2026-05-07 16:03:33,803 [DEBUG] type 成功
+2026-05-07 16:03:33,803 [INFO] [STEP] action=type model=InquiryVinForm status=OK source=keyword_result
+2026-05-07 16:03:33,803 [DEBUG]   history[5]={'vinInput': 'LBVFR790XBSD31722', 'vinInputSubmit': 'key_press【Enter】'}
+2026-05-07 16:03:34,046 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_05_用例_20260507_160333.png
+2026-05-07 16:03:34,046 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_05_用例_20260507_160333.png
+2026-05-07 16:03:34,046 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:34,346 [DEBUG]   [3] evaluate
+2026-05-07 16:03:34,347 [INFO] 执行关键字: evaluate(data=(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);for(let i=0;i<20;i++){const btn=[...document.querySelectorAll('.br-modal button,.br-modal a,[role=dialog] button,[role=dialog] a,button,a')].find(el=>visible(el)&&(norm(el.textContent).includes('不追加，发布新的询价单')||norm(el.textContent).includes('不追加')||norm(el.textContent).includes('发布新询价单')));if(btn){btn.scrollIntoView({block:'center'});btn.click();await sleep(500);return 'duplicate_vin_modal_confirmed';}if(document.querySelector('table textarea, table input:not([disabled])'))return 'no_duplicate_vin_modal';await sleep(250);}return 'duplicate_vin_modal_not_present';})())
+2026-05-07 16:03:34,348 [INFO] 执行 JS: (async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRect
+2026-05-07 16:03:34,870 [INFO] JS 结果: duplicate_vin_modal_confirmed
+2026-05-07 16:03:34,871 [DEBUG] evaluate 成功
+2026-05-07 16:03:34,871 [INFO] [STEP] action=evaluate model=- status=OK source=evaluate
+2026-05-07 16:03:34,871 [DEBUG]   history[6]='duplicate_vin_modal_confirmed'
+2026-05-07 16:03:35,027 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_06_用例_20260507_160334.png
+2026-05-07 16:03:35,028 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_06_用例_20260507_160334.png
+2026-05-07 16:03:35,028 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:35,328 [DEBUG]   [4] type
+2026-05-07 16:03:35,329 [INFO] 执行关键字: type(model=InquiryPartForm, data=input_first_part_name)
+2026-05-07 16:03:35,329 [INFO] 批量输入: 模型=InquiryPartForm, DataID=input_first_part_name
+2026-05-07 16:03:35,329 [DEBUG] partNameInputFirst: xpath=//table//tbody/tr[1]/td[2]//*[self::textarea or self::input][not(@disabled)] <- '火花塞'
+2026-05-07 16:03:35,329 [DEBUG] 输入文本: xpath=//table//tbody/tr[1]/td[2]//*[self::textarea or self::input][not(@disabled)] -> //table//tbody/tr[1]/td[2]//*[self::textarea or self::input][not(@disabled)]
+2026-05-07 16:03:35,368 [DEBUG]   ↳ 定位器 xpath=//table//tbody/tr[1]/td[2]//*[self::textarea or self::input][not(@disabled)] 成功 (priority=1)
+2026-05-07 16:03:35,368 [DEBUG] partNameInputFirstSubmit: 按键 'Enter'
+2026-05-07 16:03:35,384 [DEBUG]   ↳ 定位器 xpath=//table//tbody/tr[1]/td[2]//*[self::textarea or self::input][not(@disabled)] 成功 (priority=1)
+2026-05-07 16:03:35,384 [DEBUG] type 成功
+2026-05-07 16:03:35,385 [INFO] [STEP] action=type model=InquiryPartForm status=OK source=keyword_result
+2026-05-07 16:03:35,385 [DEBUG]   history[7]={'partNameInputFirst': '火花塞', 'partNameInputFirstSubmit': 'key_press【Enter】'}
+2026-05-07 16:03:35,517 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_07_用例_20260507_160335.png
+2026-05-07 16:03:35,517 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_07_用例_20260507_160335.png
+2026-05-07 16:03:35,517 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:35,818 [DEBUG]   [5] evaluate
+2026-05-07 16:03:35,818 [INFO] 执行关键字: evaluate(data=(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const enabled=el=>visible(el)&&!el.disabled&&!String(el.className||'').includes('disabled');for(let i=0;i<80;i++){const btn=document.querySelector('.save-inquiry,input.save-inquiry')||[...document.querySelectorAll('button,input,span')].find(el=>visible(el)&&(el.value==='发布询价'||String(el.textContent||'').trim()==='发布询价'));if(enabled(btn))return 'publish_button_ready';await sleep(250);}throw new Error('发布询价按钮未就绪，页面文本='+(document.body.innerText||'').slice(0,300));})())
+2026-05-07 16:03:35,818 [INFO] 执行 JS: (async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const enabled=el=>visible(el)&&!el.d
+2026-05-07 16:03:35,830 [INFO] JS 结果: publish_button_ready
+2026-05-07 16:03:35,831 [DEBUG] evaluate 成功
+2026-05-07 16:03:35,831 [INFO] [STEP] action=evaluate model=- status=OK source=evaluate
+2026-05-07 16:03:35,831 [DEBUG]   history[8]='publish_button_ready'
+2026-05-07 16:03:35,971 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_08_用例_20260507_160335.png
+2026-05-07 16:03:35,971 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_08_用例_20260507_160335.png
+2026-05-07 16:03:35,971 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:36,272 [DEBUG]   [6] type
+2026-05-07 16:03:36,272 [INFO] 执行关键字: type(model=InquiryPublishAction, data=publish_inquiry)
+2026-05-07 16:03:36,272 [INFO] 批量输入: 模型=InquiryPublishAction, DataID=publish_inquiry
+2026-05-07 16:03:36,272 [DEBUG] publishInquiryBtn: click css=.save-inquiry
+2026-05-07 16:03:36,272 [DEBUG] 点击元素: css=.save-inquiry -> .save-inquiry
+2026-05-07 16:03:36,328 [DEBUG]   ↳ 定位器 css=.save-inquiry 成功 (priority=1)
+2026-05-07 16:03:36,328 [DEBUG] type 成功
+2026-05-07 16:03:36,328 [INFO] [STEP] action=type model=InquiryPublishAction status=OK source=keyword_result
+2026-05-07 16:03:36,328 [DEBUG]   history[9]={'publishInquiryBtn': 'click'}
+2026-05-07 16:03:36,462 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_09_用例_20260507_160336.png
+2026-05-07 16:03:36,462 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_09_用例_20260507_160336.png
+2026-05-07 16:03:36,462 [DEBUG] 步骤等待 0.3s
+2026-05-07 16:03:36,762 [DEBUG]   [7] evaluate
+2026-05-07 16:03:36,763 [INFO] 执行关键字: evaluate(data=(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const findNewInquiryBtn=()=>[...document.querySelectorAll('.br-modal button,.br-modal a,[role=dialog] button,[role=dialog] a,button,a')].find(el=>visible(el)&&(norm(el.textContent).includes('不追加，发布新询价单')||norm(el.textContent).includes('不追加，发布新的询价单')||norm(el.textContent).includes('不追加')));for(let i=0;i<40;i++){const btn=findNewInquiryBtn();if(btn){btn.scrollIntoView({block:'center'});btn.click();await sleep(500);return 'publish_duplicate_vin_new_inquiry_clicked';}const text=document.body.innerText||'';if(text.includes('询价单：')||/\bB[A-Za-z0-9]{6,}\b/.test(text))return 'publish_success_without_duplicate_modal';await sleep(250);}return 'publish_duplicate_vin_modal_not_present';})())
+2026-05-07 16:03:36,764 [INFO] 执行 JS: (async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRect
+2026-05-07 16:03:37,399 [ERROR] ❌ 驱动操作失败: [SKI302] JavaScript 执行失败: Page.evaluate: Execution context was destroyed, most likely because of a navigation.
+2026-05-07 16:03:37,399 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Execution context was destroyed, most likely because of a navigation.
+2026-05-07 16:03:37,399 [ERROR] 用例阶段失败: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Execution context was destroyed, most likely because of a navigation.
+  keyword: evaluate
+2026-05-07 16:03:37,759 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_20260507_160337_failure.png
+2026-05-07 16:03:37,759 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\screenshots\garage_publish_inquiry_20260507_160337_failure.png
+2026-05-07 16:03:37,759 [DEBUG]   [1] close
+2026-05-07 16:03:37,760 [INFO] 执行关键字: close()
+2026-05-07 16:03:37,760 [INFO] 关闭浏览器
+2026-05-07 16:03:38,119 [DEBUG] close 成功
+2026-05-07 16:03:38,119 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-07 16:03:38,119 [DEBUG]   history[10]=True
+2026-05-07 16:03:38,119 [INFO] 浏览器已关闭
+2026-05-07 16:03:38,120 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\维修厂\发布询价\result\rodski_20260507_160324\execution_summary.json
+2026-05-07 16:03:38,120 [INFO]   FAIL (13.902s)
+2026-05-07 16:03:38,120 [ERROR]   错误: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Execution context was destroyed, most likely because of a navigation.
+  keyword: evaluate
+2026-05-07 16:03:38,134 [INFO] 结果已写入 rodski_20260507_160324/result.xml: 总计 1 条, 通过 0 条, 失败 1 条, 通过率 0.0%

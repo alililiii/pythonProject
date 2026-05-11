@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1
+  },
+  "results": [
+    {
+      "case_id": "PROMO_COMBO_AUTO_001",
+      "title": "组合新增-商城业务-北京市-指定参与客户-满立折-指定可参与店铺-原厂件",
+      "status": "FAIL",
+      "execution_time": 16.581,
+      "error": "[SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 真实保存组合用例默认关闭。启用前需确认业务线、北京市/C0012278/GZJD0001/原厂件在测试环境可选，并补充保存后列表查询与清理步骤。combo={\"businessScope\":\"商城业务\",\"areaMode\":\"按区域设置\",\"area\":\"北京市\",\"customerMode\":\"指定参与客户\",\"customerCode\":\"C0012278\",\"promotionType\":\"满立折\",\"condition\":\"满100打8折\",\"marketingFee\":\"不设上限\",\"stackRule\":\"不叠加\",\"storeMode\":\"指定可参与店铺\",\"storeCode\":\"GZJD0001\",\"productScope\":\"按品类配置\",\"qualityMode\":\"指定品质\",\"quality\":\"原厂件\",\"brandMode\":\"不限品牌\",\"categoryMode\":\"不限品类\"}\n    at eval (eval at evaluate (:234:30), <anonymous>:1:369)\n    at eval (eval at evaluate (:234:30), <anonymous>:1:488)\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:234:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n  keyword: evaluate",
+      "screenshot_path": "screenshots/PROMO_COMBO_AUTO_001_20260508_172806_failure.png",
+      "recording_path": ""
+    }
+  ]
+}

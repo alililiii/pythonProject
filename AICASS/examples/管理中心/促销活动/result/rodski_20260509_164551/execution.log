@@ -1,0 +1,29 @@
+2026-05-09 16:45:51,492 [INFO] 执行用例 1/1: PROMO_ADD_COMBO_003_TABLE_PROBE - PROMO_ADD_COMBO_003 table probe
+2026-05-09 16:45:52,214 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_164551\recordings\PROMO_ADD_COMBO_003_TABLE_PROBE_20260509_164551_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-09 16:45:52,214 [DEBUG]   [1] navigate
+2026-05-09 16:45:52,215 [DEBUG] 数据解析: 'GlobalValue.Env.platform_promotion_add_url' -> 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit'
+2026-05-09 16:45:52,215 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit)
+2026-05-09 16:45:52,215 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:45:55,258 [ERROR] navigate 失败: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit, 错误: Page.goto: net::ERR_NETWORK_ACCESS_DENIED at https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+Call log:
+  - navigating to "https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit", waiting until "load"
+
+2026-05-09 16:45:55,258 [ERROR] ❌ 驱动操作失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:45:55,258 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:45:55,258 [ERROR] 预处理失败: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+  keyword: navigate
+2026-05-09 16:45:55,340 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_164551\screenshots\PROMO_ADD_COMBO_003_TABLE_PROBE_20260509_164555_failure.png
+2026-05-09 16:45:55,341 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_164551\screenshots\PROMO_ADD_COMBO_003_TABLE_PROBE_20260509_164555_failure.png
+2026-05-09 16:45:55,341 [DEBUG]   [1] close
+2026-05-09 16:45:55,341 [INFO] 执行关键字: close()
+2026-05-09 16:45:55,341 [INFO] 关闭浏览器
+2026-05-09 16:45:56,137 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_164551\recordings\PROMO_ADD_COMBO_003_TABLE_PROBE_20260509_164551_01.webm
+2026-05-09 16:45:56,199 [DEBUG] close 成功
+2026-05-09 16:45:56,199 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-09 16:45:56,200 [DEBUG]   history[0]=True
+2026-05-09 16:45:56,200 [INFO] 浏览器已关闭
+2026-05-09 16:45:56,200 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_164551\execution_summary.json
+2026-05-09 16:45:56,201 [INFO]   FAIL (4.709s)
+2026-05-09 16:45:56,201 [ERROR]   错误: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+  keyword: navigate
+2026-05-09 16:45:56,211 [INFO] 结果已写入 rodski_20260509_164551/result.xml: 总计 1 条, 通过 0 条, 失败 1 条, 通过率 0.0%

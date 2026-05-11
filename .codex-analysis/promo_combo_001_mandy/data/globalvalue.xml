@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalvalue>
+  <group name="DefaultValue">
+    <var name="BrowserType" value="chromium"/>
+    <var name="WaitTime" value="12"/>
+    <var name="Headless" value="false"/>
+  </group>
+  <group name="Env">
+    <var name="base_url" value="https://ec-hwbeta.casstime.com"/>
+    <var name="promo_add_url" value="https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&amp;iframeUrl=/admin/merchant#/platform-promotions/add-edit"/>
+  </group>
+  <group name="Login">
+    <var name="username" value="mandy"/>
+    <var name="password" value="Init@1125!@#$"/>
+  </group>
+  <group name="PromotionCombo">
+    <var name="area" value="北京市"/>
+    <var name="customer_code" value="C0012278"/>
+    <var name="store_code" value="GZJD0001"/>
+    <var name="quality" value="原厂件"/>
+    <var name="full_amount" value="100"/>
+    <var name="discount" value="8"/>
+    <var name="minus_amount" value="10"/>
+    <var name="platform_share" value="40"/>
+    <var name="fee_limit" value="1000"/>
+    <var name="activity_name_prefix" value="自动化-平台促销-组合"/>
+  </group>
+</globalvalue>

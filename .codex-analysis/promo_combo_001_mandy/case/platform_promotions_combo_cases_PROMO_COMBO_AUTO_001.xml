@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cases step_wait="1" tags="platform-promotions,combo,real-save-template">
+  <case execute="是" id="PROMO_COMBO_AUTO_001" title="组合新增-商城业务-北京市-指定参与客户-满立折-指定可参与店铺-原厂件" description="真实保存组合：商城业务 + 按区域设置北京市 + 指定参与客户 C0012278 + 满100打8折 + 不设上限 + 不叠加 + 指定可参与店铺 GZJD0001 + 指定品质原厂件。默认关闭，避免误造数。" component_type="界面" priority="P0">
+    <test_case>
+      <test_step action="navigate" data="GlobalValue.Env.promo_add_url" />
+      <test_step action="wait" data="2" />
+      <test_step action="type" model="PassportLogin" data="ValidCredential" />
+      <test_step action="wait" data="12" />
+      <test_step action="evaluate" data="(() =&gt; { const combo = { businessScope: '商城业务', areaMode: '按区域设置', area: '北京市', customerMode: '指定参与客户', customerCode: 'C0012278', promotionType: '满立折', condition: '满100打8折', marketingFee: '不设上限', stackRule: '不叠加', storeMode: '指定可参与店铺', storeCode: 'GZJD0001', productScope: '按品类配置', qualityMode: '指定品质', quality: '原厂件', brandMode: '不限品牌', categoryMode: '不限品类' }; throw new Error('真实保存组合用例默认关闭。启用前需确认业务线、北京市/C0012278/GZJD0001/原厂件在测试环境可选，并补充保存后列表查询与清理步骤。combo=' + JSON.stringify(combo)); })()" />
+    </test_case>
+    <post_process>
+      <test_step action="close" />
+    </post_process>
+  </case>
+</cases>

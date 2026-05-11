@@ -1,0 +1,255 @@
+{
+  "case": "PROMO_ADD_COMBO_003_TABLE_PROBE",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "type",
+      "model": "PassportLogin",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "loginModePassword": "click",
+        "username": "mandy",
+        "password": "Init@1125!@#$.Password",
+        "agreement": "click",
+        "submit": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "caseId": "PROMO_ADD_COMBO_003",
+        "activityName": "自动化-平台促销-组合-1778316822629-PROMO_ADD_COMBO_003",
+        "time": {
+          "start": "2026-05-09 16:53:42",
+          "end": "2026-05-09 17:03:42"
+        }
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 6,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "body": "基础信息\n*活动名称：\n*活动时间：\n活动持续 0 天 0 小时 10 分\n*业务范围：\n商城业务\n询价业务\n选择指定业务后业务范围不可更改\n*业务线：\nB2b-基础业务\n活动对象\n*活动区域：\n不限区域\n按区域设置\n*活动对象：\n全部客户\n指定参与客户\n指定不参与客户\n按客户清单配置\n按客户分组配置\n添加维修厂\n清空全部\n深圳市大德之星汽车服务有限公司1\n适用于针对店铺部分客户做活动的场景，同时支持设置例外客户\n例外客户配置-禁止参与活动\n（配置的客户将会被排除，适用于某些客户同时存在于多个分组中且不方便移出组内的场景）\n促销玩法\n*促销类型：\n满立折\n满立减\n*促销条件：\n示例：设置满100元立减10元，当客户订单金额为100时，订单实付金额90，优惠金额10元。平台分摊4元，店铺分摊金额6元（10-4=6）\n序号\t订单金额\t立减金额\t平台分摊金额\t店铺分摊金额（自动计算）\t操作\n1\t\t\t\t6.00\t\n新增一项配置\n*营销费用：\n不设上限\n营销费用上限\n活动整体营销费用，达到上限活动自动停止\n促销叠加规则\n*促销叠加规则：\n不叠加\n叠加\n活动店铺\n*活动店铺：\n不限店铺\n指定可参与店铺\n指定不可参与店铺\n按店铺清单配置\n按店铺分组配置\n添加店铺\n清空全部\n广州际达汽配（诺鸿）\n适用于针对店铺部分店铺做活动的场景，同时支持设置例外店铺\n例外店铺配置-禁止参与活动\n（配置的店铺将会被排除，适用于某些店铺同时存在于多个分组中且不方便移出组内的场景）\n活动商品\n*商品范围：\n按品类配置\n按商品（指定零件号）配置\n适用品质：\n不限品质\n指定品质\n指定品质后仅展示对应品质的品牌\n适用配件品牌：\n不限品牌\n指定品牌\n适用品类：\n不限品类\n指定品类\n取消\n保存\n全选\nB2b-B2b公共\nB2b-基础业务\nB2b-集团业务\nB2b-小狮物流\nB2b-数据&广告\nB2b-商家SaaS\nB2b-1号车间\nB2b-油品\nB2b-轮胎\nB2b-中端车\nB2b-共享仓\nF2B-公共\nF2B-工厂件\nF2B-国际品牌件\nF2B-原厂件\n出海-出海公共\n出海-俄罗斯\n出海-沙特\n出海-C端",
+        "tables": [
+          {
+            "ti": 0,
+            "text": "序号订单金额立减金额平台分摊金额店铺分摊金额（自动计算）操作16.00",
+            "html": "<table style=\"table-layout: auto;\"><colgroup><col style=\"width: 50px;\"><col style=\"width: 150px;\"><col style=\"width: 150px;\"><col style=\"width: 150px;\"><col style=\"width: 180px;\"><col style=\"width: 60px;\"></colgroup><thead class=\"br-table-thead\"><tr><th class=\"br-table-cell   \" style=\"text-align: center;\">序号</th><th class=\"br-table-cell   \">订单金额</th><th class=\"br-table-cell   \">立减金额</th><th class=\"br-table-cell   \">平台分摊金额</th><th class=\"br-table-cell   \" style=\"text-align: center;\">店铺分摊金额（自动计算）</th><th class=\"br-table-cell   \" style=\"text-align: center;\">操作</th></tr></thead><tbody class=\"br-table-tbody\"><tr data-row-key=\"291085b7765c44d6b99f5605e8144295\" class=\"br-table-row br-table-row-level-0\"><td class=\"br-table-cell   \" style=\"text-align: center;\">1</td><td class=\"br-table-cell   \"><div class=\"NumberInput_inputBox__uHAmx\" style=\"height: 32px;\"><input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"100\" inputmode=\"numeric\" style=\"\"></div></td><td class=\"br-table-cell   \"><div class=\"NumberInput_inputBox__uHAmx\" style=\"height: 32px;\"><input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"10\" inputmode=\"numeric\" style=\"\"></div></td><td class=\"br-table-cell   \"><div class=\"NumberInput_inputBox__uHAmx\" style=\"height: 32px;\"><input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"4\" inputmode=\"numeric\" style=\"\"></div></td><td class=\"br-table-cell   \" style=\"text-align: center;\"><span>6.00</span></td><td class=\"br-table-cell   \" style=\"text-align: center;\"></td></tr></tbody></table>",
+            "headers": [
+              {
+                "i": 0,
+                "text": "序号",
+                "html": "<th class=\"br-table-cell   \" style=\"text-align: center;\">序号</th>"
+              },
+              {
+                "i": 1,
+                "text": "订单金额",
+                "html": "<th class=\"br-table-cell   \">订单金额</th>"
+              },
+              {
+                "i": 2,
+                "text": "立减金额",
+                "html": "<th class=\"br-table-cell   \">立减金额</th>"
+              },
+              {
+                "i": 3,
+                "text": "平台分摊金额",
+                "html": "<th class=\"br-table-cell   \">平台分摊金额</th>"
+              },
+              {
+                "i": 4,
+                "text": "店铺分摊金额（自动计算）",
+                "html": "<th class=\"br-table-cell   \" style=\"text-align: center;\">店铺分摊金额（自动计算）</th>"
+              },
+              {
+                "i": 5,
+                "text": "操作",
+                "html": "<th class=\"br-table-cell   \" style=\"text-align: center;\">操作</th>"
+              }
+            ],
+            "rows": [
+              {
+                "ri": 0,
+                "cells": [
+                  {
+                    "ci": 0,
+                    "text": "序号",
+                    "inputs": []
+                  },
+                  {
+                    "ci": 1,
+                    "text": "订单金额",
+                    "inputs": []
+                  },
+                  {
+                    "ci": 2,
+                    "text": "立减金额",
+                    "inputs": []
+                  },
+                  {
+                    "ci": 3,
+                    "text": "平台分摊金额",
+                    "inputs": []
+                  },
+                  {
+                    "ci": 4,
+                    "text": "店铺分摊金额（自动计算）",
+                    "inputs": []
+                  },
+                  {
+                    "ci": 5,
+                    "text": "操作",
+                    "inputs": []
+                  }
+                ],
+                "inputs": []
+              },
+              {
+                "ri": 1,
+                "cells": [
+                  {
+                    "ci": 0,
+                    "text": "1",
+                    "inputs": []
+                  },
+                  {
+                    "ci": 1,
+                    "text": "",
+                    "inputs": [
+                      {
+                        "value": "100",
+                        "placeholder": "请输入",
+                        "cls": "NumberInput_input__1lYoA",
+                        "type": "text",
+                        "html": "<input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"100\" inputmode=\"numeric\" style=\"\">"
+                      }
+                    ]
+                  },
+                  {
+                    "ci": 2,
+                    "text": "",
+                    "inputs": [
+                      {
+                        "value": "10",
+                        "placeholder": "请输入",
+                        "cls": "NumberInput_input__1lYoA",
+                        "type": "text",
+                        "html": "<input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"10\" inputmode=\"numeric\" style=\"\">"
+                      }
+                    ]
+                  },
+                  {
+                    "ci": 3,
+                    "text": "",
+                    "inputs": [
+                      {
+                        "value": "4",
+                        "placeholder": "请输入",
+                        "cls": "NumberInput_input__1lYoA",
+                        "type": "text",
+                        "html": "<input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"4\" inputmode=\"numeric\" style=\"\">"
+                      }
+                    ]
+                  },
+                  {
+                    "ci": 4,
+                    "text": "6.00",
+                    "inputs": []
+                  },
+                  {
+                    "ci": 5,
+                    "text": "",
+                    "inputs": []
+                  }
+                ],
+                "inputs": [
+                  {
+                    "ii": 0,
+                    "value": "100",
+                    "placeholder": "请输入",
+                    "cls": "NumberInput_input__1lYoA",
+                    "type": "text",
+                    "html": "<input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"100\" inputmode=\"numeric\" style=\"\">"
+                  },
+                  {
+                    "ii": 1,
+                    "value": "10",
+                    "placeholder": "请输入",
+                    "cls": "NumberInput_input__1lYoA",
+                    "type": "text",
+                    "html": "<input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"10\" inputmode=\"numeric\" style=\"\">"
+                  },
+                  {
+                    "ii": 2,
+                    "value": "4",
+                    "placeholder": "请输入",
+                    "cls": "NumberInput_input__1lYoA",
+                    "type": "text",
+                    "html": "<input class=\"NumberInput_input__1lYoA\" placeholder=\"请输入\" type=\"text\" value=\"4\" inputmode=\"numeric\" style=\"\">"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 7,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

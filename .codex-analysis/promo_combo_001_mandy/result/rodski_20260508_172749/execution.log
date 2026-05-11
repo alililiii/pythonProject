@@ -1,0 +1,89 @@
+2026-05-08 17:27:49,769 [INFO] 执行用例 1/1: PROMO_COMBO_AUTO_001 - 组合新增-商城业务-北京市-指定参与客户-满立折-指定可参与店铺-原厂件
+2026-05-08 17:27:49,769 [DEBUG]   [1] navigate
+2026-05-08 17:27:49,769 [DEBUG] 数据解析: 'GlobalValue.Env.promo_add_url' -> 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit'
+2026-05-08 17:27:49,769 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit)
+2026-05-08 17:27:49,770 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-08 17:27:51,789 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-08 17:27:51,789 [DEBUG] navigate 成功
+2026-05-08 17:27:51,789 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-08 17:27:51,789 [DEBUG]   history[0]=True
+2026-05-08 17:27:51,894 [DEBUG] 截图成功: D:\Documents\pythonProject\.codex-analysis\promo_combo_001_mandy\result\rodski_20260508_172749\screenshots\PROMO_COMBO_AUTO_001_01_用例_20260508_172751.png
+2026-05-08 17:27:51,894 [DEBUG] 步骤截图: D:\Documents\pythonProject\.codex-analysis\promo_combo_001_mandy\result\rodski_20260508_172749\screenshots\PROMO_COMBO_AUTO_001_01_用例_20260508_172751.png
+2026-05-08 17:27:51,894 [DEBUG] 步骤等待 0.001s
+2026-05-08 17:27:51,895 [DEBUG]   [2] wait
+2026-05-08 17:27:51,895 [INFO] 执行关键字: wait(data=2)
+2026-05-08 17:27:51,895 [INFO] 等待: 2秒
+2026-05-08 17:27:53,896 [DEBUG] wait 成功
+2026-05-08 17:27:53,896 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-08 17:27:53,896 [DEBUG]   history[1]=True
+2026-05-08 17:27:53,896 [DEBUG]   [3] type
+2026-05-08 17:27:53,896 [INFO] 执行关键字: type(model=PassportLogin, data=ValidCredential)
+2026-05-08 17:27:53,896 [INFO] 批量输入: 模型=PassportLogin, DataID=ValidCredential
+2026-05-08 17:27:53,896 [DEBUG] loginModePassword: click css=span[type='PASSWORD']
+2026-05-08 17:27:53,896 [DEBUG] 点击元素: css=span[type='PASSWORD'] -> span[type='PASSWORD']
+2026-05-08 17:27:53,955 [DEBUG]   ↳ 定位器 css=span[type='PASSWORD'] 成功 (priority=1)
+2026-05-08 17:27:53,955 [DEBUG] username: id=userName <- 'mandy'
+2026-05-08 17:27:53,955 [DEBUG] 输入文本: id=userName -> #userName
+2026-05-08 17:27:53,973 [DEBUG]   ↳ 定位器 id=userName 成功 (priority=1)
+2026-05-08 17:27:53,973 [DEBUG] password: id=password <- 'Init@1125!@#$'
+2026-05-08 17:27:53,973 [DEBUG] 输入文本: id=password -> #password
+2026-05-08 17:27:53,988 [DEBUG]   ↳ 定位器 id=password 成功 (priority=1)
+2026-05-08 17:27:53,988 [DEBUG] agreement: click css=.bre-login-privacy-modal_entry-checkbox
+2026-05-08 17:27:53,989 [DEBUG] 点击元素: css=.bre-login-privacy-modal_entry-checkbox -> .bre-login-privacy-modal_entry-checkbox
+2026-05-08 17:27:54,036 [DEBUG]   ↳ 定位器 css=.bre-login-privacy-modal_entry-checkbox 成功 (priority=1)
+2026-05-08 17:27:54,036 [DEBUG] submit: click css=input.btn-submit
+2026-05-08 17:27:54,036 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-08 17:27:54,081 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-08 17:27:54,081 [DEBUG] type 成功
+2026-05-08 17:27:54,081 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-08 17:27:54,081 [DEBUG]   history[2]={'loginModePassword': 'click', 'username': 'mandy', 'password': 'Init@1125!@#$', 'agreement': 'click', 'submit': 'click'}
+2026-05-08 17:27:54,173 [DEBUG] 截图成功: D:\Documents\pythonProject\.codex-analysis\promo_combo_001_mandy\result\rodski_20260508_172749\screenshots\PROMO_COMBO_AUTO_001_02_用例_20260508_172754.png
+2026-05-08 17:27:54,173 [DEBUG] 步骤截图: D:\Documents\pythonProject\.codex-analysis\promo_combo_001_mandy\result\rodski_20260508_172749\screenshots\PROMO_COMBO_AUTO_001_02_用例_20260508_172754.png
+2026-05-08 17:27:54,173 [DEBUG] 步骤等待 0.001s
+2026-05-08 17:27:54,174 [DEBUG]   [4] wait
+2026-05-08 17:27:54,174 [INFO] 执行关键字: wait(data=12)
+2026-05-08 17:27:54,174 [INFO] 等待: 12秒
+2026-05-08 17:28:06,174 [DEBUG] wait 成功
+2026-05-08 17:28:06,175 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-08 17:28:06,175 [DEBUG]   history[3]=True
+2026-05-08 17:28:06,175 [DEBUG]   [5] evaluate
+2026-05-08 17:28:06,175 [INFO] 执行关键字: evaluate(data=(() => { const combo = { businessScope: '商城业务', areaMode: '按区域设置', area: '北京市', customerMode: '指定参与客户', customerCode: 'C0012278', promotionType: '满立折', condition: '满100打8折', marketingFee: '不设上限', stackRule: '不叠加', storeMode: '指定可参与店铺', storeCode: 'GZJD0001', productScope: '按品类配置', qualityMode: '指定品质', quality: '原厂件', brandMode: '不限品牌', categoryMode: '不限品类' }; throw new Error('真实保存组合用例默认关闭。启用前需确认业务线、北京市/C0012278/GZJD0001/原厂件在测试环境可选，并补充保存后列表查询与清理步骤。combo=' + JSON.stringify(combo)); })())
+2026-05-08 17:28:06,175 [INFO] 执行 JS: (() => { const combo = { businessScope: '商城业务', areaMode: '按区域设置', area: '北京市', customerMode: '指定参与客户', customerCode: 'C0012278', promotionType: '满立折', condition: '满100打8折', marketingFee: '不设上限', stac
+2026-05-08 17:28:06,219 [ERROR] ❌ 驱动操作失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 真实保存组合用例默认关闭。启用前需确认业务线、北京市/C0012278/GZJD0001/原厂件在测试环境可选，并补充保存后列表查询与清理步骤。combo={"businessScope":"商城业务","areaMode":"按区域设置","area":"北京市","customerMode":"指定参与客户","customerCode":"C0012278","promotionType":"满立折","condition":"满100打8折","marketingFee":"不设上限","stackRule":"不叠加","storeMode":"指定可参与店铺","storeCode":"GZJD0001","productScope":"按品类配置","qualityMode":"指定品质","quality":"原厂件","brandMode":"不限品牌","categoryMode":"不限品类"}
+    at eval (eval at evaluate (:234:30), <anonymous>:1:369)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:488)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-08 17:28:06,220 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 真实保存组合用例默认关闭。启用前需确认业务线、北京市/C0012278/GZJD0001/原厂件在测试环境可选，并补充保存后列表查询与清理步骤。combo={"businessScope":"商城业务","areaMode":"按区域设置","area":"北京市","customerMode":"指定参与客户","customerCode":"C0012278","promotionType":"满立折","condition":"满100打8折","marketingFee":"不设上限","stackRule":"不叠加","storeMode":"指定可参与店铺","storeCode":"GZJD0001","productScope":"按品类配置","qualityMode":"指定品质","quality":"原厂件","brandMode":"不限品牌","categoryMode":"不限品类"}
+    at eval (eval at evaluate (:234:30), <anonymous>:1:369)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:488)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-08 17:28:06,220 [ERROR] 用例阶段失败: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 真实保存组合用例默认关闭。启用前需确认业务线、北京市/C0012278/GZJD0001/原厂件在测试环境可选，并补充保存后列表查询与清理步骤。combo={"businessScope":"商城业务","areaMode":"按区域设置","area":"北京市","customerMode":"指定参与客户","customerCode":"C0012278","promotionType":"满立折","condition":"满100打8折","marketingFee":"不设上限","stackRule":"不叠加","storeMode":"指定可参与店铺","storeCode":"GZJD0001","productScope":"按品类配置","qualityMode":"指定品质","quality":"原厂件","brandMode":"不限品牌","categoryMode":"不限品类"}
+    at eval (eval at evaluate (:234:30), <anonymous>:1:369)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:488)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-08 17:28:06,288 [DEBUG] 截图成功: D:\Documents\pythonProject\.codex-analysis\promo_combo_001_mandy\result\rodski_20260508_172749\screenshots\PROMO_COMBO_AUTO_001_20260508_172806_failure.png
+2026-05-08 17:28:06,288 [INFO] 失败截图已保存: D:\Documents\pythonProject\.codex-analysis\promo_combo_001_mandy\result\rodski_20260508_172749\screenshots\PROMO_COMBO_AUTO_001_20260508_172806_failure.png
+2026-05-08 17:28:06,288 [DEBUG]   [1] close
+2026-05-08 17:28:06,288 [INFO] 执行关键字: close()
+2026-05-08 17:28:06,288 [INFO] 关闭浏览器
+2026-05-08 17:28:06,348 [DEBUG] close 成功
+2026-05-08 17:28:06,348 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-08 17:28:06,348 [DEBUG]   history[4]=True
+2026-05-08 17:28:06,348 [INFO] 浏览器已关闭
+2026-05-08 17:28:06,350 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\.codex-analysis\promo_combo_001_mandy\result\rodski_20260508_172749\execution_summary.json
+2026-05-08 17:28:06,350 [INFO]   FAIL (16.581s)
+2026-05-08 17:28:06,350 [ERROR]   错误: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 真实保存组合用例默认关闭。启用前需确认业务线、北京市/C0012278/GZJD0001/原厂件在测试环境可选，并补充保存后列表查询与清理步骤。combo={"businessScope":"商城业务","areaMode":"按区域设置","area":"北京市","customerMode":"指定参与客户","customerCode":"C0012278","promotionType":"满立折","condition":"满100打8折","marketingFee":"不设上限","stackRule":"不叠加","storeMode":"指定可参与店铺","storeCode":"GZJD0001","productScope":"按品类配置","qualityMode":"指定品质","quality":"原厂件","brandMode":"不限品牌","categoryMode":"不限品类"}
+    at eval (eval at evaluate (:234:30), <anonymous>:1:369)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:488)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-08 17:28:06,361 [INFO] 结果已写入 rodski_20260508_172749/result.xml: 总计 1 条, 通过 0 条, 失败 1 条, 通过率 0.0%

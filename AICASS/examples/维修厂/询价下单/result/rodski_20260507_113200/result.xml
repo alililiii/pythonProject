@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="1" passed="0" failed="1" skipped="0" errors="0" pass_rate="0.0%" total_time="18.00s" average_time="18.00s" start_time="2026-05-07 11:32:18" end_time="2026-05-07 11:32:18"/>
+  <results>
+    <result case_id="garage_publish_inquiry_and_order" title="维修厂发布询价并下单" status="FAIL" execution_time="17.996" retries="0" start_time="" end_time="" error_type="" error_message="[SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 未找到小泽供应商1 - 店铺1&#10;    at click (eval at evaluate (:234:30), &lt;anonymous&gt;:1:328)&#10;    at eval (eval at evaluate (:234:30), &lt;anonymous&gt;:1:1125)&#10;    at async &lt;anonymous&gt;:260:30&#10;  keyword: evaluate" screenshot_path="screenshots/garage_publish_inquiry_and_order_20260507_113217_failure.png" recording_path="" updated_at="2026-05-07 11:32:18"/>
+  </results>
+</testresult>

@@ -1,0 +1,94 @@
+{
+  "case": "PROMO_ADD_001",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "type",
+      "model": "PassportLogin",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "loginModePassword": "click",
+        "username": "mandy",
+        "password": "Init@1125!@#$.Password",
+        "agreement": "click",
+        "submit": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "status": "page-ready",
+        "iframeSrc": "/admin/merchant#/platform-promotions/add-edit",
+        "sections": [
+          "基础信息",
+          "活动对象",
+          "促销玩法",
+          "活动店铺",
+          "活动商品"
+        ]
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 6,
+      "action": "screenshot",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": null,
+      "named_writes": {}
+    },
+    {
+      "index": 7,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

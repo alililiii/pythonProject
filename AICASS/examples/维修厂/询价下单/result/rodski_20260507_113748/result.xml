@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="1" passed="0" failed="1" skipped="0" errors="0" pass_rate="0.0%" total_time="118.60s" average_time="118.60s" start_time="2026-05-07 11:39:47" end_time="2026-05-07 11:39:47"/>
+  <results>
+    <result case_id="garage_publish_inquiry_and_order" title="维修厂发布询价并下单" status="FAIL" execution_time="118.602" retries="0" start_time="" end_time="" error_type="" error_message="[SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Execution context was destroyed, most likely because of a navigation.&#10;  keyword: evaluate" screenshot_path="screenshots/garage_publish_inquiry_and_order_20260507_113946_failure.png" recording_path="" updated_at="2026-05-07 11:39:47"/>
+  </results>
+</testresult>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>登录用例录屏查看</title>
+  <style>
+    body {
+      margin: 24px;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      color: #111827;
+      background: #f8fafc;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 8px;
+    }
+    p {
+      margin: 0 0 20px;
+      color: #4b5563;
+      font-size: 14px;
+    }
+    section {
+      margin: 0 0 28px;
+      padding: 16px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+    }
+    h2 {
+      font-size: 16px;
+      margin: 0 0 12px;
+    }
+    video {
+      display: block;
+      width: min(100%, 1080px);
+      max-height: 640px;
+      background: #000000;
+      border-radius: 6px;
+    }
+    code {
+      display: block;
+      margin-top: 8px;
+      color: #374151;
+      font-size: 12px;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <h1>登录用例录屏查看</h1>
+  <p>如果直接从某些预览器打开 .webm 提示加载失败，请用浏览器打开此页面查看。</p>
+
+  <section>
+    <h2>LOGIN_001 未登录直接访问管理中心首页应被认证拦截</h2>
+    <video controls preload="metadata">
+      <source src="recordings/LOGIN_001_20260509_143845_01.webm" type="video/webm">
+    </video>
+    <code>recordings/LOGIN_001_20260509_143845_01.webm</code>
+  </section>
+
+  <section>
+    <h2>LOGIN_002 使用有效账号登录后进入管理中心首页</h2>
+    <video controls preload="metadata">
+      <source src="recordings/LOGIN_002_20260509_143850_01.webm" type="video/webm">
+    </video>
+    <code>recordings/LOGIN_002_20260509_143850_01.webm</code>
+  </section>
+
+  <section>
+    <h2>LOGIN_003 登录后点击退出应清除会话并离开管理中心首页</h2>
+    <video controls preload="metadata">
+      <source src="recordings/LOGIN_003_20260509_143903_01.webm" type="video/webm">
+    </video>
+    <code>recordings/LOGIN_003_20260509_143903_01.webm</code>
+  </section>
+</body>
+</html>

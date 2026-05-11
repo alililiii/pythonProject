@@ -1,0 +1,1936 @@
+{
+  "case": "CODEX_DATE_REACT_PROPS_DIAG",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "type",
+      "model": "PassportLogin",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "loginModePassword": "click",
+        "username": "mandy",
+        "password": "Init@1125!@#$.Password",
+        "agreement": "click",
+        "submit": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "evaluate",
+      "model": "",
+      "phase": "用例",
+      "status": "ok",
+      "return_source": "evaluate",
+      "return_value": {
+        "rangeHtml": "<div class=\"br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_\"><div class=\"br-datepicker-input br-datepicker-input-active\"><input readonly=\"\" placeholder=\"开始日期\" size=\"21\" autocomplete=\"off\" value=\"\"></div><div class=\"br-datepicker-range-separator\"><i class=\"br-icon icon-half-left br-datepicker-separator\" style=\"font-family: bricks-icon;\"></i></div><div class=\"br-datepicker-input\"><input readonly=\"\" placeholder=\"结束日期\" size=\"21\" autocomplete=\"off\" value=\"\"></div><div class=\"br-datepicker-active-bar\" style=\"left: 0px; width: 166px; position: absolute;\"></div><span class=\"br-datepicker-suffix\"><i class=\"br-icon icon-date\" style=\"font-family: bricks-icon;\"></i></span></div>",
+        "inputs": [
+          {
+            "input": {
+              "placeholder": "开始日期",
+              "value": "",
+              "readOnly": true
+            },
+            "nodes": [
+              {
+                "tag": "INPUT",
+                "cls": "",
+                "text": "开始日期",
+                "placeholder": "开始日期",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "input",
+                      "elementType": "input",
+                      "props": {
+                        "id": null,
+                        "disabled": "false",
+                        "readOnly": "true",
+                        "value": "",
+                        "onChange": "[function onChange]",
+                        "autoFocus": null,
+                        "placeholder": "开始日期",
+                        "onMouseDown": "[function onMouseDown]",
+                        "onKeyDown": "[function onKeyDown]",
+                        "onFocus": "[function onFocus]",
+                        "onBlur": "[function onBlur]",
+                        "size": "21",
+                        "autoComplete": "off"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker-input br-datepicker-input-active",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                        "style": null,
+                        "onClick": "[function onClick]",
+                        "onMouseEnter": null,
+                        "onMouseLeave": null,
+                        "onMouseDown": "[function onMouseDown]",
+                        "children": "[array len 6]",
+                        "onContextMenu": null,
+                        "onTouchStart": null,
+                        "onFocus": null,
+                        "onBlur": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys onPopupMouseDown]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 4,
+                      "tag": 1,
+                      "type": "d",
+                      "elementType": "d",
+                      "props": {
+                        "showAction": "[array len 0]",
+                        "hideAction": "[array len 0]",
+                        "popupPlacement": "bottomLeft",
+                        "builtinPlacements": "[object keys bottomLeft,bottomRight,topLeft,topRight]",
+                        "prefixCls": "br-datepicker-dropdown",
+                        "popupTransitionName": "slide-up",
+                        "popup": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupAlign": "[object keys ]",
+                        "popupVisible": "false",
+                        "popupClassName": "br-datepicker-dropdown-range",
+                        "popupStyle": "[object keys ]",
+                        "getPopupContainer": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "getPopupClassNameFromAlign": "[function ie]",
+                        "getDocument": "[function se]",
+                        "onPopupVisibleChange": "[function oe]",
+                        "afterPopupVisibleChange": "[function oe]",
+                        "onPopupAlign": "[function oe]",
+                        "mouseEnterDelay": "0",
+                        "mouseLeaveDelay": "0.1",
+                        "focusDelay": "0",
+                        "blurDelay": "0.15",
+                        "destroyPopupOnHide": "false",
+                        "defaultPopupVisible": "false",
+                        "mask": "false",
+                        "maskClosable": "true",
+                        "action": "[array len 0]",
+                        "autoDestroy": "false"
+                      },
+                      "state": "[object keys prevPopupVisible,popupVisible]"
+                    },
+                    {
+                      "i": 5,
+                      "tag": 0,
+                      "type": "u",
+                      "elementType": "u",
+                      "props": {
+                        "visible": "false",
+                        "popupElement": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupStyle": null,
+                        "prefixCls": "br-datepicker",
+                        "dropdownClassName": null,
+                        "dropdownAlign": null,
+                        "getPopupContainer": null,
+                        "transitionName": "slide-up",
+                        "range": "true",
+                        "direction": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys operationRef,hideHeader,onDateMouseEnter,onDateMouseLeave,hideRanges,onSelect,open]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 0,
+                      "type": "I",
+                      "elementType": "I",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null,
+                        "pickerRef": "[object keys current]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "br-datepicker-input br-datepicker-input-active",
+                "text": "",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker-input br-datepicker-input-active",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                        "style": null,
+                        "onClick": "[function onClick]",
+                        "onMouseEnter": null,
+                        "onMouseLeave": null,
+                        "onMouseDown": "[function onMouseDown]",
+                        "children": "[array len 6]",
+                        "onContextMenu": null,
+                        "onTouchStart": null,
+                        "onFocus": null,
+                        "onBlur": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys onPopupMouseDown]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 1,
+                      "type": "d",
+                      "elementType": "d",
+                      "props": {
+                        "showAction": "[array len 0]",
+                        "hideAction": "[array len 0]",
+                        "popupPlacement": "bottomLeft",
+                        "builtinPlacements": "[object keys bottomLeft,bottomRight,topLeft,topRight]",
+                        "prefixCls": "br-datepicker-dropdown",
+                        "popupTransitionName": "slide-up",
+                        "popup": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupAlign": "[object keys ]",
+                        "popupVisible": "false",
+                        "popupClassName": "br-datepicker-dropdown-range",
+                        "popupStyle": "[object keys ]",
+                        "getPopupContainer": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "getPopupClassNameFromAlign": "[function ie]",
+                        "getDocument": "[function se]",
+                        "onPopupVisibleChange": "[function oe]",
+                        "afterPopupVisibleChange": "[function oe]",
+                        "onPopupAlign": "[function oe]",
+                        "mouseEnterDelay": "0",
+                        "mouseLeaveDelay": "0.1",
+                        "focusDelay": "0",
+                        "blurDelay": "0.15",
+                        "destroyPopupOnHide": "false",
+                        "defaultPopupVisible": "false",
+                        "mask": "false",
+                        "maskClosable": "true",
+                        "action": "[array len 0]",
+                        "autoDestroy": "false"
+                      },
+                      "state": "[object keys prevPopupVisible,popupVisible]"
+                    },
+                    {
+                      "i": 4,
+                      "tag": 0,
+                      "type": "u",
+                      "elementType": "u",
+                      "props": {
+                        "visible": "false",
+                        "popupElement": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupStyle": null,
+                        "prefixCls": "br-datepicker",
+                        "dropdownClassName": null,
+                        "dropdownAlign": null,
+                        "getPopupContainer": null,
+                        "transitionName": "slide-up",
+                        "range": "true",
+                        "direction": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys operationRef,hideHeader,onDateMouseEnter,onDateMouseLeave,hideRanges,onSelect,open]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 0,
+                      "type": "I",
+                      "elementType": "I",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null,
+                        "pickerRef": "[object keys current]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 7,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null
+                      },
+                      "state": null
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                "text": "",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                        "style": null,
+                        "onClick": "[function onClick]",
+                        "onMouseEnter": null,
+                        "onMouseLeave": null,
+                        "onMouseDown": "[function onMouseDown]",
+                        "children": "[array len 6]",
+                        "onContextMenu": null,
+                        "onTouchStart": null,
+                        "onFocus": null,
+                        "onBlur": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys onPopupMouseDown]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 1,
+                      "type": "d",
+                      "elementType": "d",
+                      "props": {
+                        "showAction": "[array len 0]",
+                        "hideAction": "[array len 0]",
+                        "popupPlacement": "bottomLeft",
+                        "builtinPlacements": "[object keys bottomLeft,bottomRight,topLeft,topRight]",
+                        "prefixCls": "br-datepicker-dropdown",
+                        "popupTransitionName": "slide-up",
+                        "popup": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupAlign": "[object keys ]",
+                        "popupVisible": "false",
+                        "popupClassName": "br-datepicker-dropdown-range",
+                        "popupStyle": "[object keys ]",
+                        "getPopupContainer": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "getPopupClassNameFromAlign": "[function ie]",
+                        "getDocument": "[function se]",
+                        "onPopupVisibleChange": "[function oe]",
+                        "afterPopupVisibleChange": "[function oe]",
+                        "onPopupAlign": "[function oe]",
+                        "mouseEnterDelay": "0",
+                        "mouseLeaveDelay": "0.1",
+                        "focusDelay": "0",
+                        "blurDelay": "0.15",
+                        "destroyPopupOnHide": "false",
+                        "defaultPopupVisible": "false",
+                        "mask": "false",
+                        "maskClosable": "true",
+                        "action": "[array len 0]",
+                        "autoDestroy": "false"
+                      },
+                      "state": "[object keys prevPopupVisible,popupVisible]"
+                    },
+                    {
+                      "i": 3,
+                      "tag": 0,
+                      "type": "u",
+                      "elementType": "u",
+                      "props": {
+                        "visible": "false",
+                        "popupElement": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupStyle": null,
+                        "prefixCls": "br-datepicker",
+                        "dropdownClassName": null,
+                        "dropdownAlign": null,
+                        "getPopupContainer": null,
+                        "transitionName": "slide-up",
+                        "range": "true",
+                        "direction": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 4,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys operationRef,hideHeader,onDateMouseEnter,onDateMouseLeave,hideRanges,onSelect,open]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 0,
+                      "type": "I",
+                      "elementType": "I",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null,
+                        "pickerRef": "[object keys current]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 6,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 0,
+                      "type": "x",
+                      "elementType": "x",
+                      "props": {
+                        "className": "styles_dateStyle__515R_",
+                        "picker": "date",
+                        "showTime": "true",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "value": "[array len 2]",
+                        "onChange": "[function onChange]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "",
+                "text": "",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "style": "[object keys display,alignItems,gap]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_row__4gJQt",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_form__2yEEv",
+                        "children": "[array len 5]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 4,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_mainContainer__1F6ZP",
+                        "children": "[array len 7]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]",
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 6,
+                      "tag": 0,
+                      "type": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "elementType": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 1,
+                      "type": "s",
+                      "elementType": "s",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "styles_row__4gJQt",
+                "text": "*活动时间：",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_row__4gJQt",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_form__2yEEv",
+                        "children": "[array len 5]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 3,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_mainContainer__1F6ZP",
+                        "children": "[array len 7]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 4,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]",
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 5,
+                      "tag": 0,
+                      "type": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "elementType": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 1,
+                      "type": "s",
+                      "elementType": "s",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys error,pastDelay,timedOut,loading,loaded]"
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "styles_form__2yEEv",
+                "text": "*活动名称：*活动时间：*业务范围：商城业务询价业务选择指定业务后业务范围不可更改*业务线：请选择业务线",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_form__2yEEv",
+                        "children": "[array len 5]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 2,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_mainContainer__1F6ZP",
+                        "children": "[array len 7]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]",
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 4,
+                      "tag": 0,
+                      "type": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "elementType": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 1,
+                      "type": "s",
+                      "elementType": "s",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys error,pastDelay,timedOut,loading,loaded]"
+                    },
+                    {
+                      "i": 7,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys history,location,match,staticContext]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "input": {
+              "placeholder": "结束日期",
+              "value": "",
+              "readOnly": true
+            },
+            "nodes": [
+              {
+                "tag": "INPUT",
+                "cls": "",
+                "text": "结束日期",
+                "placeholder": "结束日期",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "input",
+                      "elementType": "input",
+                      "props": {
+                        "disabled": "false",
+                        "readOnly": "true",
+                        "value": "",
+                        "onChange": "[function onChange]",
+                        "placeholder": "结束日期",
+                        "onMouseDown": "[function onMouseDown]",
+                        "onKeyDown": "[function onKeyDown]",
+                        "onFocus": "[function onFocus]",
+                        "onBlur": "[function onBlur]",
+                        "size": "21",
+                        "autoComplete": "off"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker-input",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                        "style": null,
+                        "onClick": "[function onClick]",
+                        "onMouseEnter": null,
+                        "onMouseLeave": null,
+                        "onMouseDown": "[function onMouseDown]",
+                        "children": "[array len 6]",
+                        "onContextMenu": null,
+                        "onTouchStart": null,
+                        "onFocus": null,
+                        "onBlur": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys onPopupMouseDown]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 4,
+                      "tag": 1,
+                      "type": "d",
+                      "elementType": "d",
+                      "props": {
+                        "showAction": "[array len 0]",
+                        "hideAction": "[array len 0]",
+                        "popupPlacement": "bottomLeft",
+                        "builtinPlacements": "[object keys bottomLeft,bottomRight,topLeft,topRight]",
+                        "prefixCls": "br-datepicker-dropdown",
+                        "popupTransitionName": "slide-up",
+                        "popup": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupAlign": "[object keys ]",
+                        "popupVisible": "false",
+                        "popupClassName": "br-datepicker-dropdown-range",
+                        "popupStyle": "[object keys ]",
+                        "getPopupContainer": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "getPopupClassNameFromAlign": "[function ie]",
+                        "getDocument": "[function se]",
+                        "onPopupVisibleChange": "[function oe]",
+                        "afterPopupVisibleChange": "[function oe]",
+                        "onPopupAlign": "[function oe]",
+                        "mouseEnterDelay": "0",
+                        "mouseLeaveDelay": "0.1",
+                        "focusDelay": "0",
+                        "blurDelay": "0.15",
+                        "destroyPopupOnHide": "false",
+                        "defaultPopupVisible": "false",
+                        "mask": "false",
+                        "maskClosable": "true",
+                        "action": "[array len 0]",
+                        "autoDestroy": "false"
+                      },
+                      "state": "[object keys prevPopupVisible,popupVisible]"
+                    },
+                    {
+                      "i": 5,
+                      "tag": 0,
+                      "type": "u",
+                      "elementType": "u",
+                      "props": {
+                        "visible": "false",
+                        "popupElement": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupStyle": null,
+                        "prefixCls": "br-datepicker",
+                        "dropdownClassName": null,
+                        "dropdownAlign": null,
+                        "getPopupContainer": null,
+                        "transitionName": "slide-up",
+                        "range": "true",
+                        "direction": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys operationRef,hideHeader,onDateMouseEnter,onDateMouseLeave,hideRanges,onSelect,open]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 0,
+                      "type": "I",
+                      "elementType": "I",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null,
+                        "pickerRef": "[object keys current]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "br-datepicker-input",
+                "text": "",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker-input",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                        "style": null,
+                        "onClick": "[function onClick]",
+                        "onMouseEnter": null,
+                        "onMouseLeave": null,
+                        "onMouseDown": "[function onMouseDown]",
+                        "children": "[array len 6]",
+                        "onContextMenu": null,
+                        "onTouchStart": null,
+                        "onFocus": null,
+                        "onBlur": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys onPopupMouseDown]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 1,
+                      "type": "d",
+                      "elementType": "d",
+                      "props": {
+                        "showAction": "[array len 0]",
+                        "hideAction": "[array len 0]",
+                        "popupPlacement": "bottomLeft",
+                        "builtinPlacements": "[object keys bottomLeft,bottomRight,topLeft,topRight]",
+                        "prefixCls": "br-datepicker-dropdown",
+                        "popupTransitionName": "slide-up",
+                        "popup": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupAlign": "[object keys ]",
+                        "popupVisible": "false",
+                        "popupClassName": "br-datepicker-dropdown-range",
+                        "popupStyle": "[object keys ]",
+                        "getPopupContainer": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "getPopupClassNameFromAlign": "[function ie]",
+                        "getDocument": "[function se]",
+                        "onPopupVisibleChange": "[function oe]",
+                        "afterPopupVisibleChange": "[function oe]",
+                        "onPopupAlign": "[function oe]",
+                        "mouseEnterDelay": "0",
+                        "mouseLeaveDelay": "0.1",
+                        "focusDelay": "0",
+                        "blurDelay": "0.15",
+                        "destroyPopupOnHide": "false",
+                        "defaultPopupVisible": "false",
+                        "mask": "false",
+                        "maskClosable": "true",
+                        "action": "[array len 0]",
+                        "autoDestroy": "false"
+                      },
+                      "state": "[object keys prevPopupVisible,popupVisible]"
+                    },
+                    {
+                      "i": 4,
+                      "tag": 0,
+                      "type": "u",
+                      "elementType": "u",
+                      "props": {
+                        "visible": "false",
+                        "popupElement": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupStyle": null,
+                        "prefixCls": "br-datepicker",
+                        "dropdownClassName": null,
+                        "dropdownAlign": null,
+                        "getPopupContainer": null,
+                        "transitionName": "slide-up",
+                        "range": "true",
+                        "direction": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys operationRef,hideHeader,onDateMouseEnter,onDateMouseLeave,hideRanges,onSelect,open]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 0,
+                      "type": "I",
+                      "elementType": "I",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null,
+                        "pickerRef": "[object keys current]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 7,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null
+                      },
+                      "state": null
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                "text": "",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "br-datepicker br-datepicker-range br-rangepicker styles_dateStyle__515R_",
+                        "style": null,
+                        "onClick": "[function onClick]",
+                        "onMouseEnter": null,
+                        "onMouseLeave": null,
+                        "onMouseDown": "[function onMouseDown]",
+                        "children": "[array len 6]",
+                        "onContextMenu": null,
+                        "onTouchStart": null,
+                        "onFocus": null,
+                        "onBlur": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys onPopupMouseDown]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 1,
+                      "type": "d",
+                      "elementType": "d",
+                      "props": {
+                        "showAction": "[array len 0]",
+                        "hideAction": "[array len 0]",
+                        "popupPlacement": "bottomLeft",
+                        "builtinPlacements": "[object keys bottomLeft,bottomRight,topLeft,topRight]",
+                        "prefixCls": "br-datepicker-dropdown",
+                        "popupTransitionName": "slide-up",
+                        "popup": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupAlign": "[object keys ]",
+                        "popupVisible": "false",
+                        "popupClassName": "br-datepicker-dropdown-range",
+                        "popupStyle": "[object keys ]",
+                        "getPopupContainer": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "getPopupClassNameFromAlign": "[function ie]",
+                        "getDocument": "[function se]",
+                        "onPopupVisibleChange": "[function oe]",
+                        "afterPopupVisibleChange": "[function oe]",
+                        "onPopupAlign": "[function oe]",
+                        "mouseEnterDelay": "0",
+                        "mouseLeaveDelay": "0.1",
+                        "focusDelay": "0",
+                        "blurDelay": "0.15",
+                        "destroyPopupOnHide": "false",
+                        "defaultPopupVisible": "false",
+                        "mask": "false",
+                        "maskClosable": "true",
+                        "action": "[array len 0]",
+                        "autoDestroy": "false"
+                      },
+                      "state": "[object keys prevPopupVisible,popupVisible]"
+                    },
+                    {
+                      "i": 3,
+                      "tag": 0,
+                      "type": "u",
+                      "elementType": "u",
+                      "props": {
+                        "visible": "false",
+                        "popupElement": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "popupStyle": null,
+                        "prefixCls": "br-datepicker",
+                        "dropdownClassName": null,
+                        "dropdownAlign": null,
+                        "getPopupContainer": null,
+                        "transitionName": "slide-up",
+                        "range": "true",
+                        "direction": null,
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 4,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys operationRef,hideHeader,onDateMouseEnter,onDateMouseLeave,hideRanges,onSelect,open]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 0,
+                      "type": "I",
+                      "elementType": "I",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null,
+                        "pickerRef": "[object keys current]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 6,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "value": "[array len 2]",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "prefixCls": "br-datepicker",
+                        "transitionName": "slide-up",
+                        "panelRender": "[function panelRender]",
+                        "className": "br-rangepicker styles_dateStyle__515R_",
+                        "generateConfig": "[object keys getNow,getFixedDate,getEndDate,getWeekDay,getYear,getMonth,getDate,getHour,getMinute,getSecond,addYear,addMonth,addDate,setYear,setMonth,setDate,setHour,setMinute,setSecond,isAfter]",
+                        "onChange": "[function Y]",
+                        "onCalendarChange": "[function onCalendarChange]",
+                        "renderExtraFooter": null,
+                        "showTime": "true",
+                        "showSecond": null,
+                        "minuteStep": null,
+                        "disabled": null,
+                        "picker": "date",
+                        "open": null,
+                        "placeholder": "[array len 2]",
+                        "locale": "[object keys locale,today,now,backToToday,ok,timeSelect,dateSelect,weekSelect,clear,month,year,previousMonth,nextMonth,monthSelect,yearSelect,decadeSelect,yearFormat,dayFormat,dateFormat,dateTimeFormat]",
+                        "allowClear": null,
+                        "onOpenChange": "[function onOpenChange]",
+                        "separator": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "clearIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "suffixIcon": "[object keys $$typeof,type,key,ref,props,_owner]",
+                        "autoFocus": null,
+                        "disabledTime": null,
+                        "disabledDate": null
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 0,
+                      "type": "x",
+                      "elementType": "x",
+                      "props": {
+                        "className": "styles_dateStyle__515R_",
+                        "picker": "date",
+                        "showTime": "true",
+                        "format": "YYYY-MM-DD HH:mm:ss",
+                        "value": "[array len 2]",
+                        "onChange": "[function onChange]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "",
+                "text": "",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "style": "[object keys display,alignItems,gap]",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_row__4gJQt",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_form__2yEEv",
+                        "children": "[array len 5]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 4,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_mainContainer__1F6ZP",
+                        "children": "[array len 7]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]",
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 6,
+                      "tag": 0,
+                      "type": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "elementType": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 1,
+                      "type": "s",
+                      "elementType": "s",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "styles_row__4gJQt",
+                "text": "*活动时间：",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_row__4gJQt",
+                        "children": "[array len 2]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_form__2yEEv",
+                        "children": "[array len 5]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 2,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 3,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_mainContainer__1F6ZP",
+                        "children": "[array len 7]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 4,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]",
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 5,
+                      "tag": 0,
+                      "type": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "elementType": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 1,
+                      "type": "s",
+                      "elementType": "s",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 7,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys error,pastDelay,timedOut,loading,loaded]"
+                    }
+                  ]
+                }
+              },
+              {
+                "tag": "DIV",
+                "cls": "styles_form__2yEEv",
+                "text": "*活动名称：*活动时间：*业务范围：商城业务询价业务选择指定业务后业务范围不可更改*业务线：请选择业务线",
+                "placeholder": "",
+                "value": "",
+                "react": {
+                  "ownKeys": [
+                    "__reactInternalInstance$uep52bxnpjl",
+                    "__reactEventHandlers$uep52bxnpjl"
+                  ],
+                  "levels": [
+                    {
+                      "i": 0,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_form__2yEEv",
+                        "children": "[array len 5]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 1,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 2,
+                      "tag": 5,
+                      "type": "div",
+                      "elementType": "div",
+                      "props": {
+                        "className": "styles_mainContainer__1F6ZP",
+                        "children": "[array len 7]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 3,
+                      "tag": 15,
+                      "type": "c",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "pageStore": "[object keys getDuration,updateConditionItem,checkTreeData,restoreTreeCheckedState,buildParams,validate,mode,promotionId,promotionCode,promotionName,showNameTip,effectDate,expireDate,businessScope,businessLines,customerConfig,promotionLimitType,conditionItemList,promotionBudget,hasBudgetLimit]",
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys memoizedState,baseState,baseQueue,queue,next]"
+                    },
+                    {
+                      "i": 4,
+                      "tag": 0,
+                      "type": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "elementType": "function(e){return o.a.createElement(kt,Object.assign({},Ft,e))}",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 5,
+                      "tag": 1,
+                      "type": "s",
+                      "elementType": "s",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": null
+                    },
+                    {
+                      "i": 6,
+                      "tag": 1,
+                      "type": "n",
+                      "elementType": "n",
+                      "props": {
+                        "history": "[object keys length,action,location,createHref,push,replace,go,goBack,goForward,block,listen]",
+                        "location": "[object keys pathname,search,hash,state]",
+                        "match": "[object keys path,url,isExact,params]",
+                        "staticContext": null,
+                        "route": "[object keys path,exact,component]"
+                      },
+                      "state": "[object keys error,pastDelay,timedOut,loading,loaded]"
+                    },
+                    {
+                      "i": 7,
+                      "tag": 10,
+                      "type": "[object Object]",
+                      "elementType": "[object Object]",
+                      "props": {
+                        "value": "[object keys history,location,match,staticContext]",
+                        "children": "[object keys $$typeof,type,key,ref,props,_owner]"
+                      },
+                      "state": null
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 6,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

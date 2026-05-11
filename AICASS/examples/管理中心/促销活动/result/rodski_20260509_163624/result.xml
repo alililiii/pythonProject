@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="1" passed="1" failed="0" skipped="0" errors="0" pass_rate="100.0%" total_time="45.27s" average_time="45.27s" start_time="2026-05-09 16:37:09" end_time="2026-05-09 16:37:09"/>
+  <results>
+    <result case_id="CODEX_DATE_PROPS_DEEP_PROBE" title="date props deep probe" status="PASS" execution_time="45.273" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\CODEX_DATE_PROPS_DEEP_PROBE_20260509_163624_01.webm" updated_at="2026-05-09 16:37:09">
+      <recordings>
+        <recording index="1" path="recordings\CODEX_DATE_PROPS_DEEP_PROBE_20260509_163624_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+  </results>
+</testresult>

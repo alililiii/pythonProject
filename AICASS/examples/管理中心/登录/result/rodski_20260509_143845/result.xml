@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="3" passed="3" failed="0" skipped="0" errors="0" pass_rate="100.0%" total_time="39.69s" average_time="13.23s" start_time="2026-05-09 14:39:25" end_time="2026-05-09 14:39:25"/>
+  <results>
+    <result case_id="LOGIN_001" title="未登录直接访问管理中心首页应被认证拦截" status="PASS" execution_time="5.258" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\LOGIN_001_20260509_143845_01.webm" updated_at="2026-05-09 14:39:25">
+      <recordings>
+        <recording index="1" path="recordings\LOGIN_001_20260509_143845_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="LOGIN_002" title="使用有效账号登录后进入管理中心首页" status="PASS" execution_time="12.723" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\LOGIN_002_20260509_143850_01.webm" updated_at="2026-05-09 14:39:25">
+      <recordings>
+        <recording index="1" path="recordings\LOGIN_002_20260509_143850_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="LOGIN_003" title="登录后点击退出应清除会话并离开管理中心首页" status="PASS" execution_time="21.711" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\LOGIN_003_20260509_143903_01.webm" updated_at="2026-05-09 14:39:25">
+      <recordings>
+        <recording index="1" path="recordings\LOGIN_003_20260509_143903_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+  </results>
+</testresult>

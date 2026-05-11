@@ -1,0 +1,12 @@
+{
+  "claudeCode.environmentVariables": [
+    {
+      "name": "ANTHROPIC_BASE_URL",
+      "value": "http://code.casstime.ai"
+    },
+    {
+      "name": "ANTHROPIC_AUTH_TOKEN",
+      "value": "sk-TKtKHJ4c6syrKFHZK8APgWdF6f2ofJgshET8YEJZ7LAkZ5zi"
+    }
+  ]
+}

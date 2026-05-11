@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="1" passed="1" failed="0" skipped="0" errors="0" pass_rate="100.0%" total_time="79.26s" average_time="79.26s" start_time="2026-05-09 16:15:10" end_time="2026-05-09 16:15:10"/>
+  <results>
+    <result case_id="CODEX_BUSINESS_LINE_DIAG" title="业务线控件诊断" status="PASS" execution_time="79.26" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\CODEX_BUSINESS_LINE_DIAG_20260509_161351_01.webm" updated_at="2026-05-09 16:15:10">
+      <recordings>
+        <recording index="1" path="recordings\CODEX_BUSINESS_LINE_DIAG_20260509_161351_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+  </results>
+</testresult>

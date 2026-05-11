@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="promo_add_001_only" title="仅执行 PROMO_ADD_001" kind="suite" default_execute="否">
+  <case id="PROMO_ADD_001" execute="是"/>
+</test_plan>

@@ -1,0 +1,93 @@
+2026-05-09 14:35:58,308 [INFO] 执行用例 1/3: LOGIN_001 - 未登录直接访问管理中心首页应被认证拦截
+2026-05-09 14:36:20,104 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\recordings\LOGIN_001_20260509_143558_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-09 14:36:20,106 [DEBUG]   [1] navigate
+2026-05-09 14:36:20,107 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'https://ec-hwbeta.casstime.com/admin#'
+2026-05-09 14:36:20,108 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#)
+2026-05-09 14:36:20,108 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:23,134 [ERROR] navigate 失败: https://ec-hwbeta.casstime.com/admin#, 错误: Page.goto: net::ERR_NETWORK_ACCESS_DENIED at https://ec-hwbeta.casstime.com/admin#
+Call log:
+  - navigating to "https://ec-hwbeta.casstime.com/admin#", waiting until "load"
+
+2026-05-09 14:36:23,137 [ERROR] ❌ 驱动操作失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:23,137 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:23,138 [ERROR] 用例阶段失败: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+  keyword: navigate
+2026-05-09 14:36:23,228 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\screenshots\LOGIN_001_20260509_143623_failure.png
+2026-05-09 14:36:23,229 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\screenshots\LOGIN_001_20260509_143623_failure.png
+2026-05-09 14:36:23,229 [DEBUG]   [1] close
+2026-05-09 14:36:23,229 [INFO] 执行关键字: close()
+2026-05-09 14:36:23,229 [INFO] 关闭浏览器
+2026-05-09 14:36:24,219 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\recordings\LOGIN_001_20260509_143558_01.webm
+2026-05-09 14:36:24,275 [DEBUG] close 成功
+2026-05-09 14:36:24,275 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-09 14:36:24,275 [DEBUG]   history[0]=True
+2026-05-09 14:36:24,276 [INFO] 浏览器已关闭
+2026-05-09 14:36:24,276 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\execution_summary.json
+2026-05-09 14:36:24,276 [INFO]   FAIL (25.969s)
+2026-05-09 14:36:24,277 [ERROR]   错误: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+  keyword: navigate
+2026-05-09 14:36:24,277 [INFO] 用例 2/3: 驱动已关闭，重新创建浏览器...
+2026-05-09 14:36:24,277 [INFO] 驱动已关闭，重新创建驱动...
+2026-05-09 14:36:24,277 [INFO] 驱动重新创建成功
+2026-05-09 14:36:24,277 [INFO] 新浏览器已启动
+2026-05-09 14:36:24,277 [INFO] 执行用例 2/3: LOGIN_002 - 使用有效账号登录后进入管理中心首页
+2026-05-09 14:36:24,810 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\recordings\LOGIN_002_20260509_143624_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-09 14:36:24,810 [DEBUG]   [1] navigate
+2026-05-09 14:36:24,810 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'https://ec-hwbeta.casstime.com/admin#'
+2026-05-09 14:36:24,810 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#)
+2026-05-09 14:36:24,810 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:24,858 [ERROR] navigate 失败: https://ec-hwbeta.casstime.com/admin#, 错误: Page.goto: net::ERR_NETWORK_ACCESS_DENIED at https://ec-hwbeta.casstime.com/admin#
+Call log:
+  - navigating to "https://ec-hwbeta.casstime.com/admin#", waiting until "load"
+
+2026-05-09 14:36:24,858 [ERROR] ❌ 驱动操作失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:24,858 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:24,858 [ERROR] 用例阶段失败: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+  keyword: navigate
+2026-05-09 14:36:24,921 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\screenshots\LOGIN_002_20260509_143624_failure.png
+2026-05-09 14:36:24,921 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\screenshots\LOGIN_002_20260509_143624_failure.png
+2026-05-09 14:36:24,921 [DEBUG]   [1] close
+2026-05-09 14:36:24,921 [INFO] 执行关键字: close()
+2026-05-09 14:36:24,921 [INFO] 关闭浏览器
+2026-05-09 14:36:24,993 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\recordings\LOGIN_002_20260509_143624_01.webm
+2026-05-09 14:36:25,045 [DEBUG] close 成功
+2026-05-09 14:36:25,046 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-09 14:36:25,046 [DEBUG]   history[0]=True
+2026-05-09 14:36:25,046 [INFO] 浏览器已关闭
+2026-05-09 14:36:25,046 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\execution_summary.json
+2026-05-09 14:36:25,047 [INFO]   FAIL (0.77s)
+2026-05-09 14:36:25,047 [ERROR]   错误: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+  keyword: navigate
+2026-05-09 14:36:25,047 [INFO] 用例 3/3: 驱动已关闭，重新创建浏览器...
+2026-05-09 14:36:25,047 [INFO] 驱动已关闭，重新创建驱动...
+2026-05-09 14:36:25,047 [INFO] 驱动重新创建成功
+2026-05-09 14:36:25,047 [INFO] 新浏览器已启动
+2026-05-09 14:36:25,047 [INFO] 执行用例 3/3: LOGIN_003 - 登录后点击退出应清除会话并离开管理中心首页
+2026-05-09 14:36:25,568 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\recordings\LOGIN_003_20260509_143625_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-09 14:36:25,569 [DEBUG]   [1] navigate
+2026-05-09 14:36:25,569 [DEBUG] 数据解析: 'GlobalValue.Env.admin_url' -> 'https://ec-hwbeta.casstime.com/admin#'
+2026-05-09 14:36:25,569 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#)
+2026-05-09 14:36:25,569 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:25,613 [ERROR] navigate 失败: https://ec-hwbeta.casstime.com/admin#, 错误: Page.goto: net::ERR_NETWORK_ACCESS_DENIED at https://ec-hwbeta.casstime.com/admin#
+Call log:
+  - navigating to "https://ec-hwbeta.casstime.com/admin#", waiting until "load"
+
+2026-05-09 14:36:25,613 [ERROR] ❌ 驱动操作失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:25,614 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+2026-05-09 14:36:25,614 [ERROR] 用例阶段失败: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+  keyword: navigate
+2026-05-09 14:36:25,671 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\screenshots\LOGIN_003_20260509_143625_failure.png
+2026-05-09 14:36:25,671 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\screenshots\LOGIN_003_20260509_143625_failure.png
+2026-05-09 14:36:25,671 [DEBUG]   [1] close
+2026-05-09 14:36:25,671 [INFO] 执行关键字: close()
+2026-05-09 14:36:25,671 [INFO] 关闭浏览器
+2026-05-09 14:36:25,734 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\recordings\LOGIN_003_20260509_143625_01.webm
+2026-05-09 14:36:25,800 [DEBUG] close 成功
+2026-05-09 14:36:25,800 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-09 14:36:25,800 [DEBUG]   history[0]=True
+2026-05-09 14:36:25,801 [INFO] 浏览器已关闭
+2026-05-09 14:36:25,801 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\登录\result\rodski_20260509_143558\execution_summary.json
+2026-05-09 14:36:25,801 [INFO]   FAIL (0.755s)
+2026-05-09 14:36:25,801 [ERROR]   错误: [SKI313] 关键字 'navigate' 重试 1 次后仍失败: [SKI302] 导航失败: https://ec-hwbeta.casstime.com/admin#
+  keyword: navigate
+2026-05-09 14:36:25,812 [INFO] 结果已写入 rodski_20260509_143558/result.xml: 总计 3 条, 通过 0 条, 失败 3 条, 通过率 0.0%

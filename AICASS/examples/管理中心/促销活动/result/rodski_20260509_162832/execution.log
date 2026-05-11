@@ -1,0 +1,220 @@
+2026-05-09 16:28:32,541 [INFO] 执行用例 1/1: CODEX_ACTIVITY_TIME_DIAG - 活动时间控件诊断
+2026-05-09 16:28:33,067 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\recordings\CODEX_ACTIVITY_TIME_DIAG_20260509_162832_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-09 16:28:33,067 [DEBUG]   [1] navigate
+2026-05-09 16:28:33,068 [DEBUG] 数据解析: 'GlobalValue.Env.platform_promotion_add_url' -> 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit'
+2026-05-09 16:28:33,068 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit)
+2026-05-09 16:28:33,068 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:28:34,971 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:28:34,971 [DEBUG] navigate 成功
+2026-05-09 16:28:34,971 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-09 16:28:34,971 [DEBUG]   history[0]=True
+2026-05-09 16:28:35,075 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_01_预处理_20260509_162834.png
+2026-05-09 16:28:35,075 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_01_预处理_20260509_162834.png
+2026-05-09 16:28:35,075 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:28:45,076 [DEBUG]   [2] wait
+2026-05-09 16:28:45,076 [INFO] 执行关键字: wait(data=2)
+2026-05-09 16:28:45,076 [INFO] 等待: 2秒
+2026-05-09 16:28:47,077 [DEBUG] wait 成功
+2026-05-09 16:28:47,077 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-09 16:28:47,077 [DEBUG]   history[1]=True
+2026-05-09 16:28:47,077 [DEBUG]   [3] type
+2026-05-09 16:28:47,077 [INFO] 执行关键字: type(model=PassportLogin, data=ValidCredential)
+2026-05-09 16:28:47,077 [INFO] 批量输入: 模型=PassportLogin, DataID=ValidCredential
+2026-05-09 16:28:47,077 [DEBUG] loginModePassword: click css=span[type='PASSWORD']
+2026-05-09 16:28:47,077 [DEBUG] 点击元素: css=span[type='PASSWORD'] -> span[type='PASSWORD']
+2026-05-09 16:28:47,149 [DEBUG]   ↳ 定位器 css=span[type='PASSWORD'] 成功 (priority=1)
+2026-05-09 16:28:47,149 [DEBUG] username: id=userName <- 'mandy'
+2026-05-09 16:28:47,149 [DEBUG] 输入文本: id=userName -> #userName
+2026-05-09 16:28:47,176 [DEBUG]   ↳ 定位器 id=userName 成功 (priority=1)
+2026-05-09 16:28:47,176 [DEBUG] password: id=password <- '***'
+2026-05-09 16:28:47,176 [DEBUG] 输入文本: id=password -> #password
+2026-05-09 16:28:47,203 [DEBUG]   ↳ 定位器 id=password 成功 (priority=1)
+2026-05-09 16:28:47,203 [DEBUG] agreement: click css=.bre-login-privacy-modal_entry-checkbox
+2026-05-09 16:28:47,203 [DEBUG] 点击元素: css=.bre-login-privacy-modal_entry-checkbox -> .bre-login-privacy-modal_entry-checkbox
+2026-05-09 16:28:47,261 [DEBUG]   ↳ 定位器 css=.bre-login-privacy-modal_entry-checkbox 成功 (priority=1)
+2026-05-09 16:28:47,261 [DEBUG] submit: click css=input.btn-submit
+2026-05-09 16:28:47,261 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-09 16:28:47,304 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-09 16:28:47,304 [DEBUG] type 成功
+2026-05-09 16:28:47,304 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-09 16:28:47,304 [DEBUG]   history[2]={'loginModePassword': 'click', 'username': 'mandy', 'password': 'Init@1125!@#$.Password', 'agreement': 'click', 'submit': 'click'}
+2026-05-09 16:28:47,392 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_02_预处理_20260509_162847.png
+2026-05-09 16:28:47,392 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_02_预处理_20260509_162847.png
+2026-05-09 16:28:47,392 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:28:57,393 [DEBUG]   [4] wait
+2026-05-09 16:28:57,393 [INFO] 执行关键字: wait(data=7)
+2026-05-09 16:28:57,393 [INFO] 等待: 7秒
+2026-05-09 16:29:04,394 [DEBUG] wait 成功
+2026-05-09 16:29:04,394 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-09 16:29:04,394 [DEBUG]   history[3]=True
+2026-05-09 16:29:04,394 [DEBUG]   [1] evaluate
+2026-05-09 16:29:04,394 [DEBUG] 数据解析: 'PromoScript.CodexActivityTimeDiagnosis.script' -> '(async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const norm=s=>String(s||'').replace(/\s+/g,'').trim();
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const textOf=el=>norm((el.innerText||el.textContent||el.value||el.getAttribute('title')||el.getAttribute('placeholder')||''));
+const brief=el=>{
+  if(!el)return null;
+  const r=el.getBoundingClientRect();
+  return {
+    tag:el.tagName,id:el.id||'',cls:String(el.className||''),text:textOf(el).slice(0,200),
+    value:String(el.value||''),placeholder:el.getAttribute('placeholder')||'',readonly:!!el.readOnly,
+    type:el.getAttribute('type')||'',name:el.getAttribute('name')||'',html:el.outerHTML.slice(0,4000),
+    rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}
+  };
+};
+async function promoDoc(timeout=30000){
+  for(let i=0;i<Math.ceil(timeout/250);i++){
+    const f=document.querySelector('#iframeCon,iframe[name="iframeCon"]');
+    let d=null;
+    try{d=f?(f.contentDocument||f.contentWindow.document):document;}catch(e){d=document;}
+    const txt=d&&d.body?d.body.innerText:'';
+    const url=[location.href,f&&f.getAttribute('src'),d&&d.location&&d.location.href].filter(Boolean).join(' ');
+    if(d&&d.body&&(/platform-promotions\/add-edit/.test(url)||txt.includes('活动时间')||txt.includes('活动名称')))return d;
+    await sleep(250);
+  }
+  throw new Error('promo doc not loaded');
+}
+function uniqueText(items){return Array.from(new Set(items.filter(Boolean))).slice(0,240);}
+const doc=await promoDoc();
+const anchors=Array.from(doc.querySelectorAll('label,span,div,p,td,th')).filter(visible).filter(el=>textOf(el).includes('活动时间'));
+const rows=[];
+const controls=[];
+for(const a of anchors){
+  let root=a;
+  for(let level=0;level<8&&root;level++,root=root.parentElement){
+    const inputs=Array.from(root.querySelectorAll('input,textarea,select,.br-datepicker,.br-rangepicker,[class*=datepicker],[class*=Date]')).filter(visible);
+    rows.push({level,anchor:brief(a),root:brief(root),inputs:inputs.map(brief)});
+    controls.push(...inputs);
+  }
+}
+const dateRoots=Array.from(new Set([
+  ...Array.from(doc.querySelectorAll('.br-datepicker,.br-rangepicker,[class*=datepicker],[class*=Date]')).filter(visible),
+  ...controls
+]));
+const clicked=[];
+for(const ctrl of dateRoots.slice(0,12)){
+  try{
+    ctrl.scrollIntoView({block:'center',inline:'center'});
+    await sleep(200);
+    ctrl.click();
+    await sleep(900);
+    clicked.push({
+      ctrl:brief(ctrl),
+      topTexts:uniqueText(Array.from(document.querySelectorAll('body *')).filter(visible).map(textOf).filter(t=>/2026|今天|确定|清除|现在|时|分|秒|月|年|开始|结束|活动时间|请选择/.test(t)&&t.length<120)),
+      frameTexts:uniqueText(Array.from(doc.querySelectorAll('body *')).filter(visible).map(textOf).filter(t=>/2026|今天|确定|清除|现在|时|分|秒|月|年|开始|结束|活动时间|请选择/.test(t)&&t.length<120))
+    });
+  }catch(e){clicked.push({ctrl:brief(ctrl),error:String(e).slice(0,300)});}
+}
+return {
+  url:location.href,
+  frameSrc:(document.querySelector('#iframeCon,iframe[name="iframeCon"]')||{}).src||'',
+  docUrl:doc.location&&doc.location.href,
+  bodyHead:(doc.body&&doc.body.innerText||'').slice(0,1200),
+  anchors:anchors.map(brief),
+  rows:rows.slice(0,40),
+  dateRoots:dateRoots.map(brief),
+  clicked
+};
+})()'
+2026-05-09 16:29:04,394 [INFO] 执行关键字: evaluate(data=(async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const norm=s=>String(s||'').replace(/\s+/g,'').trim();
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const textOf=el=>norm((el.innerText||el.textContent||el.value||el.getAttribute('title')||el.getAttribute('placeholder')||''));
+const brief=el=>{
+  if(!el)return null;
+  const r=el.getBoundingClientRect();
+  return {
+    tag:el.tagName,id:el.id||'',cls:String(el.className||''),text:textOf(el).slice(0,200),
+    value:String(el.value||''),placeholder:el.getAttribute('placeholder')||'',readonly:!!el.readOnly,
+    type:el.getAttribute('type')||'',name:el.getAttribute('name')||'',html:el.outerHTML.slice(0,4000),
+    rect:{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}
+  };
+};
+async function promoDoc(timeout=30000){
+  for(let i=0;i<Math.ceil(timeout/250);i++){
+    const f=document.querySelector('#iframeCon,iframe[name="iframeCon"]');
+    let d=null;
+    try{d=f?(f.contentDocument||f.contentWindow.document):document;}catch(e){d=document;}
+    const txt=d&&d.body?d.body.innerText:'';
+    const url=[location.href,f&&f.getAttribute('src'),d&&d.location&&d.location.href].filter(Boolean).join(' ');
+    if(d&&d.body&&(/platform-promotions\/add-edit/.test(url)||txt.includes('活动时间')||txt.includes('活动名称')))return d;
+    await sleep(250);
+  }
+  throw new Error('promo doc not loaded');
+}
+function uniqueText(items){return Array.from(new Set(items.filter(Boolean))).slice(0,240);}
+const doc=await promoDoc();
+const anchors=Array.from(doc.querySelectorAll('label,span,div,p,td,th')).filter(visible).filter(el=>textOf(el).includes('活动时间'));
+const rows=[];
+const controls=[];
+for(const a of anchors){
+  let root=a;
+  for(let level=0;level<8&&root;level++,root=root.parentElement){
+    const inputs=Array.from(root.querySelectorAll('input,textarea,select,.br-datepicker,.br-rangepicker,[class*=datepicker],[class*=Date]')).filter(visible);
+    rows.push({level,anchor:brief(a),root:brief(root),inputs:inputs.map(brief)});
+    controls.push(...inputs);
+  }
+}
+const dateRoots=Array.from(new Set([
+  ...Array.from(doc.querySelectorAll('.br-datepicker,.br-rangepicker,[class*=datepicker],[class*=Date]')).filter(visible),
+  ...controls
+]));
+const clicked=[];
+for(const ctrl of dateRoots.slice(0,12)){
+  try{
+    ctrl.scrollIntoView({block:'center',inline:'center'});
+    await sleep(200);
+    ctrl.click();
+    await sleep(900);
+    clicked.push({
+      ctrl:brief(ctrl),
+      topTexts:uniqueText(Array.from(document.querySelectorAll('body *')).filter(visible).map(textOf).filter(t=>/2026|今天|确定|清除|现在|时|分|秒|月|年|开始|结束|活动时间|请选择/.test(t)&&t.length<120)),
+      frameTexts:uniqueText(Array.from(doc.querySelectorAll('body *')).filter(visible).map(textOf).filter(t=>/2026|今天|确定|清除|现在|时|分|秒|月|年|开始|结束|活动时间|请选择/.test(t)&&t.length<120))
+    });
+  }catch(e){clicked.push({ctrl:brief(ctrl),error:String(e).slice(0,300)});}
+}
+return {
+  url:location.href,
+  frameSrc:(document.querySelector('#iframeCon,iframe[name="iframeCon"]')||{}).src||'',
+  docUrl:doc.location&&doc.location.href,
+  bodyHead:(doc.body&&doc.body.innerText||'').slice(0,1200),
+  anchors:anchors.map(brief),
+  rows:rows.slice(0,40),
+  dateRoots:dateRoots.map(brief),
+  clicked
+};
+})())
+2026-05-09 16:29:04,394 [INFO] 执行 JS: (async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const norm=s=>String(s||'').replace(/\s+/g,'').trim();
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getC
+2026-05-09 16:29:18,114 [INFO] JS 结果: {'url': 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit', 'frameSrc': 'https://ec-hwbeta.casstime.com/admin/merchant#/platfor
+2026-05-09 16:29:18,114 [DEBUG] evaluate 成功
+2026-05-09 16:29:18,114 [INFO] [STEP] action=evaluate model=- status=OK source=evaluate
+2026-05-09 16:29:18,118 [DEBUG]   history[4]={'url': 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit', 'frameSrc': 'https://ec-hwbeta.casstime.com/admin/merchant#/platfor
+2026-05-09 16:29:18,196 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_03_用例_20260509_162918.png
+2026-05-09 16:29:18,196 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_03_用例_20260509_162918.png
+2026-05-09 16:29:18,196 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:29:28,197 [DEBUG]   [2] screenshot
+2026-05-09 16:29:28,197 [INFO] 执行关键字: screenshot(data=screenshots/CODEX_ACTIVITY_TIME_DIAG.png)
+2026-05-09 16:29:28,198 [INFO] 截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\screenshots\CODEX_ACTIVITY_TIME_DIAG.png
+2026-05-09 16:29:28,273 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\screenshots\CODEX_ACTIVITY_TIME_DIAG.png
+2026-05-09 16:29:28,274 [DEBUG] screenshot 成功
+2026-05-09 16:29:28,274 [INFO] [STEP] action=screenshot model=- status=OK source=keyword_result
+2026-05-09 16:29:28,278 [DEBUG]   history[4]={'url': 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit', 'frameSrc': 'https://ec-hwbeta.casstime.com/admin/merchant#/platfor
+2026-05-09 16:29:28,342 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_04_用例_20260509_162928.png
+2026-05-09 16:29:28,342 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\screenshots\CODEX_ACTIVITY_TIME_DIAG_04_用例_20260509_162928.png
+2026-05-09 16:29:28,342 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:29:38,343 [DEBUG]   [1] close
+2026-05-09 16:29:38,343 [INFO] 执行关键字: close()
+2026-05-09 16:29:38,343 [INFO] 关闭浏览器
+2026-05-09 16:29:38,491 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\recordings\CODEX_ACTIVITY_TIME_DIAG_20260509_162832_01.webm
+2026-05-09 16:29:38,544 [DEBUG] close 成功
+2026-05-09 16:29:38,544 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-09 16:29:38,544 [DEBUG]   history[5]=True
+2026-05-09 16:29:38,545 [INFO] 浏览器已关闭
+2026-05-09 16:29:38,570 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_162832\execution_summary.json
+2026-05-09 16:29:38,571 [INFO]   PASS (66.029s)
+2026-05-09 16:29:38,581 [INFO] 结果已写入 rodski_20260509_162832/result.xml: 总计 1 条, 通过 1 条, 失败 0 条, 通过率 100.0%

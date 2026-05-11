@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="1" passed="1" failed="0" skipped="0" errors="0" pass_rate="100.0%" total_time="28.66s" average_time="28.66s" start_time="2026-05-07 17:21:41" end_time="2026-05-07 17:21:41"/>
+  <results>
+    <result case_id="garage_publish_inquiry" title="维修厂发布询价" status="PASS" execution_time="28.66" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="" updated_at="2026-05-07 17:21:41"/>
+  </results>
+</testresult>

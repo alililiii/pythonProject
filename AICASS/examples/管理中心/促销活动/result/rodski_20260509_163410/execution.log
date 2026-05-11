@@ -1,0 +1,206 @@
+2026-05-09 16:34:10,217 [INFO] 执行用例 1/1: CODEX_DATE_ONCHANGE_PROBE - date onchange probe
+2026-05-09 16:34:10,769 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\recordings\CODEX_DATE_ONCHANGE_PROBE_20260509_163410_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-09 16:34:10,770 [DEBUG]   [1] navigate
+2026-05-09 16:34:10,770 [DEBUG] 数据解析: 'GlobalValue.Env.platform_promotion_add_url' -> 'https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit'
+2026-05-09 16:34:10,770 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit)
+2026-05-09 16:34:10,772 [INFO] 导航: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:34:12,947 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/admin#/?menuId=platform_promotions&iframeUrl=/admin/merchant#/platform-promotions/add-edit
+2026-05-09 16:34:12,948 [DEBUG] navigate 成功
+2026-05-09 16:34:12,948 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-09 16:34:12,948 [DEBUG]   history[0]=True
+2026-05-09 16:34:13,054 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\screenshots\CODEX_DATE_ONCHANGE_PROBE_01_预处理_20260509_163412.png
+2026-05-09 16:34:13,054 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\screenshots\CODEX_DATE_ONCHANGE_PROBE_01_预处理_20260509_163412.png
+2026-05-09 16:34:13,054 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:34:23,054 [DEBUG]   [2] wait
+2026-05-09 16:34:23,055 [INFO] 执行关键字: wait(data=2)
+2026-05-09 16:34:23,055 [INFO] 等待: 2秒
+2026-05-09 16:34:25,055 [DEBUG] wait 成功
+2026-05-09 16:34:25,055 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-09 16:34:25,055 [DEBUG]   history[1]=True
+2026-05-09 16:34:25,056 [DEBUG]   [3] type
+2026-05-09 16:34:25,056 [INFO] 执行关键字: type(model=PassportLogin, data=ValidCredential)
+2026-05-09 16:34:25,056 [INFO] 批量输入: 模型=PassportLogin, DataID=ValidCredential
+2026-05-09 16:34:25,056 [DEBUG] loginModePassword: click css=span[type='PASSWORD']
+2026-05-09 16:34:25,056 [DEBUG] 点击元素: css=span[type='PASSWORD'] -> span[type='PASSWORD']
+2026-05-09 16:34:25,116 [DEBUG]   ↳ 定位器 css=span[type='PASSWORD'] 成功 (priority=1)
+2026-05-09 16:34:25,116 [DEBUG] username: id=userName <- 'mandy'
+2026-05-09 16:34:25,116 [DEBUG] 输入文本: id=userName -> #userName
+2026-05-09 16:34:25,145 [DEBUG]   ↳ 定位器 id=userName 成功 (priority=1)
+2026-05-09 16:34:25,145 [DEBUG] password: id=password <- '***'
+2026-05-09 16:34:25,146 [DEBUG] 输入文本: id=password -> #password
+2026-05-09 16:34:25,180 [DEBUG]   ↳ 定位器 id=password 成功 (priority=1)
+2026-05-09 16:34:25,180 [DEBUG] agreement: click css=.bre-login-privacy-modal_entry-checkbox
+2026-05-09 16:34:25,180 [DEBUG] 点击元素: css=.bre-login-privacy-modal_entry-checkbox -> .bre-login-privacy-modal_entry-checkbox
+2026-05-09 16:34:25,232 [DEBUG]   ↳ 定位器 css=.bre-login-privacy-modal_entry-checkbox 成功 (priority=1)
+2026-05-09 16:34:25,232 [DEBUG] submit: click css=input.btn-submit
+2026-05-09 16:34:25,232 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-09 16:34:25,277 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-09 16:34:25,277 [DEBUG] type 成功
+2026-05-09 16:34:25,277 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-09 16:34:25,277 [DEBUG]   history[2]={'loginModePassword': 'click', 'username': 'mandy', 'password': 'Init@1125!@#$.Password', 'agreement': 'click', 'submit': 'click'}
+2026-05-09 16:34:25,381 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\screenshots\CODEX_DATE_ONCHANGE_PROBE_02_预处理_20260509_163425.png
+2026-05-09 16:34:25,381 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\screenshots\CODEX_DATE_ONCHANGE_PROBE_02_预处理_20260509_163425.png
+2026-05-09 16:34:25,381 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:34:35,381 [DEBUG]   [4] wait
+2026-05-09 16:34:35,382 [INFO] 执行关键字: wait(data=7)
+2026-05-09 16:34:35,382 [INFO] 等待: 7秒
+2026-05-09 16:34:42,382 [DEBUG] wait 成功
+2026-05-09 16:34:42,382 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-09 16:34:42,382 [DEBUG]   history[3]=True
+2026-05-09 16:34:42,383 [DEBUG]   [1] evaluate
+2026-05-09 16:34:42,383 [DEBUG] 数据解析: 'PromoScript.CodexDateOnChangeProbe.script' -> '(async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const formatDate=d=>{const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());};
+async function promoDoc(timeout=30000){
+  for(let i=0;i<Math.ceil(timeout/250);i++){
+    const f=document.querySelector('#iframeCon,iframe[name="iframeCon"]');
+    let d=null;
+    try{d=f?(f.contentDocument||f.contentWindow.document):document;}catch(e){d=document;}
+    const txt=d&&d.body?d.body.innerText:'';
+    if(d&&d.body&&(txt.includes('活动时间')||txt.includes('活动名称')))return d;
+    await sleep(250);
+  }
+  throw new Error('promo doc not loaded');
+}
+function getFiber(el){
+  const key=Object.keys(el).find(k=>k.startsWith('__reactInternalInstance')||k.startsWith('__reactFiber'));
+  return key?el[key]:null;
+}
+function findDateProps(root){
+  let n=root;
+  const seen=new Set();
+  while(n){
+    let f=getFiber(n);
+    for(let i=0;i<12&&f&&!seen.has(f);i++,f=f.return){
+      seen.add(f);
+      const p=f.memoizedProps||{};
+      if(typeof p.onChange==='function'&&p.format==='YYYY-MM-DD HH:mm:ss'&&Array.isArray(p.value))return {props:p,level:i,tag:f.tag,type:String((f.type&&f.type.name)||f.type||'')};
+    }
+    n=n.parentElement;
+  }
+  return null;
+}
+function values(doc){
+  const range=doc.querySelector('.br-datepicker-range,.br-rangepicker,.br-datepicker');
+  return range?Array.from(range.querySelectorAll('input')).map(el=>({placeholder:el.placeholder,value:el.value,readOnly:el.readOnly})):[];
+}
+const doc=await promoDoc();
+const range=doc.querySelector('.br-datepicker-range,.br-rangepicker,.br-datepicker');
+const info=findDateProps(range);
+if(!info)throw new Error('date onChange props not found');
+const start=new Date(), end=new Date(start.getTime()+10*60*1000);
+const startText=formatDate(start), endText=formatDate(end);
+const attempts=[];
+function tryCall(label,args){
+  try{
+    info.props.onChange.apply(null,args);
+    return {label,ok:true};
+  }catch(e){
+    return {label,ok:false,error:String(e).slice(0,500)};
+  }
+}
+attempts.push({before:values(doc), globals:{moment:typeof window.moment,dayjs:typeof window.dayjs}});
+attempts.push(tryCall('strings-1arg',[[startText,endText]]));
+await sleep(800);
+attempts.push({afterStrings1:values(doc)});
+attempts.push(tryCall('strings-2arg',[[startText,endText],[startText,endText]]));
+await sleep(800);
+attempts.push({afterStrings2:values(doc)});
+attempts.push(tryCall('dates-1arg',[[start,end]]));
+await sleep(800);
+attempts.push({afterDates1:values(doc)});
+attempts.push(tryCall('dates-2arg',[[start,end],[startText,endText]]));
+await sleep(800);
+attempts.push({afterDates2:values(doc)});
+return {startText,endText,info:{level:info.level,tag:info.tag,type:info.type},attempts};
+})()'
+2026-05-09 16:34:42,383 [INFO] 执行关键字: evaluate(data=(async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const formatDate=d=>{const p=n=>String(n).padStart(2,'0');return d.getFullYear()+'-'+p(d.getMonth()+1)+'-'+p(d.getDate())+' '+p(d.getHours())+':'+p(d.getMinutes())+':'+p(d.getSeconds());};
+async function promoDoc(timeout=30000){
+  for(let i=0;i<Math.ceil(timeout/250);i++){
+    const f=document.querySelector('#iframeCon,iframe[name="iframeCon"]');
+    let d=null;
+    try{d=f?(f.contentDocument||f.contentWindow.document):document;}catch(e){d=document;}
+    const txt=d&&d.body?d.body.innerText:'';
+    if(d&&d.body&&(txt.includes('活动时间')||txt.includes('活动名称')))return d;
+    await sleep(250);
+  }
+  throw new Error('promo doc not loaded');
+}
+function getFiber(el){
+  const key=Object.keys(el).find(k=>k.startsWith('__reactInternalInstance')||k.startsWith('__reactFiber'));
+  return key?el[key]:null;
+}
+function findDateProps(root){
+  let n=root;
+  const seen=new Set();
+  while(n){
+    let f=getFiber(n);
+    for(let i=0;i<12&&f&&!seen.has(f);i++,f=f.return){
+      seen.add(f);
+      const p=f.memoizedProps||{};
+      if(typeof p.onChange==='function'&&p.format==='YYYY-MM-DD HH:mm:ss'&&Array.isArray(p.value))return {props:p,level:i,tag:f.tag,type:String((f.type&&f.type.name)||f.type||'')};
+    }
+    n=n.parentElement;
+  }
+  return null;
+}
+function values(doc){
+  const range=doc.querySelector('.br-datepicker-range,.br-rangepicker,.br-datepicker');
+  return range?Array.from(range.querySelectorAll('input')).map(el=>({placeholder:el.placeholder,value:el.value,readOnly:el.readOnly})):[];
+}
+const doc=await promoDoc();
+const range=doc.querySelector('.br-datepicker-range,.br-rangepicker,.br-datepicker');
+const info=findDateProps(range);
+if(!info)throw new Error('date onChange props not found');
+const start=new Date(), end=new Date(start.getTime()+10*60*1000);
+const startText=formatDate(start), endText=formatDate(end);
+const attempts=[];
+function tryCall(label,args){
+  try{
+    info.props.onChange.apply(null,args);
+    return {label,ok:true};
+  }catch(e){
+    return {label,ok:false,error:String(e).slice(0,500)};
+  }
+}
+attempts.push({before:values(doc), globals:{moment:typeof window.moment,dayjs:typeof window.dayjs}});
+attempts.push(tryCall('strings-1arg',[[startText,endText]]));
+await sleep(800);
+attempts.push({afterStrings1:values(doc)});
+attempts.push(tryCall('strings-2arg',[[startText,endText],[startText,endText]]));
+await sleep(800);
+attempts.push({afterStrings2:values(doc)});
+attempts.push(tryCall('dates-1arg',[[start,end]]));
+await sleep(800);
+attempts.push({afterDates1:values(doc)});
+attempts.push(tryCall('dates-2arg',[[start,end],[startText,endText]]));
+await sleep(800);
+attempts.push({afterDates2:values(doc)});
+return {startText,endText,info:{level:info.level,tag:info.tag,type:info.type},attempts};
+})())
+2026-05-09 16:34:42,384 [INFO] 执行 JS: (async()=>{
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const visible=el=>!!el&&el.isConnected&&!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);
+const formatDate=d=>{const p=n=>S
+2026-05-09 16:34:45,672 [INFO] JS 结果: {'startText': '2026-05-09 16:34:42', 'endText': '2026-05-09 16:44:42', 'info': {'level': 5, 'tag': 0, 'type': 'I'}, 'attempts': [{'before': [{'placeholder': '开始日期', 'value': '', 'readOnly': True}, {'p
+2026-05-09 16:34:45,672 [DEBUG] evaluate 成功
+2026-05-09 16:34:45,672 [INFO] [STEP] action=evaluate model=- status=OK source=evaluate
+2026-05-09 16:34:45,672 [DEBUG]   history[4]={'startText': '2026-05-09 16:34:42', 'endText': '2026-05-09 16:44:42', 'info': {'level': 5, 'tag': 0, 'type': 'I'}, 'attempts': [{'before': [{'placeholder': '开始日期', 'value': '', 'readOnly': True}, {'p
+2026-05-09 16:34:45,821 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\screenshots\CODEX_DATE_ONCHANGE_PROBE_03_用例_20260509_163445.png
+2026-05-09 16:34:45,822 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\screenshots\CODEX_DATE_ONCHANGE_PROBE_03_用例_20260509_163445.png
+2026-05-09 16:34:45,822 [DEBUG] 步骤等待 10.0s
+2026-05-09 16:34:55,823 [DEBUG]   [1] close
+2026-05-09 16:34:55,823 [INFO] 执行关键字: close()
+2026-05-09 16:34:55,823 [INFO] 关闭浏览器
+2026-05-09 16:34:58,259 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\recordings\CODEX_DATE_ONCHANGE_PROBE_20260509_163410_01.webm
+2026-05-09 16:34:58,334 [DEBUG] close 成功
+2026-05-09 16:34:58,334 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-09 16:34:58,334 [DEBUG]   history[5]=True
+2026-05-09 16:34:58,334 [INFO] 浏览器已关闭
+2026-05-09 16:34:58,335 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\管理中心\促销活动\result\rodski_20260509_163410\execution_summary.json
+2026-05-09 16:34:58,335 [INFO]   PASS (48.118s)
+2026-05-09 16:34:58,348 [INFO] 结果已写入 rodski_20260509_163410/result.xml: 总计 1 条, 通过 1 条, 失败 0 条, 通过率 100.0%
