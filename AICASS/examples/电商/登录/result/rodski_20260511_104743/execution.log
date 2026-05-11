@@ -1,0 +1,101 @@
+2026-05-11 10:47:43,799 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:47:43,799 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:47:43,799 [INFO] 执行用例 3/4: SELLER_LOGIN_001 - 供应商 seller 使用有效账号登录后进入供应商中心
+2026-05-11 10:47:44,319 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\recordings\SELLER_LOGIN_001_20260511_104743_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-11 10:47:44,320 [INFO]   [1] scenario SELLER_LOGIN_001_OPEN_LOGIN - 打开供应商 seller 登录入口 (group=seller, tag=['login', 'seller', 'p0', 'smoke', 'navigate'])
+2026-05-11 10:47:44,320 [DEBUG]   [1] navigate
+2026-05-11 10:47:44,320 [DEBUG] 数据解析: 'GlobalValue.Env.seller_url' -> 'https://ec-hwbeta.casstime.com/seller'
+2026-05-11 10:47:44,320 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/seller)
+2026-05-11 10:47:44,321 [INFO] 导航: https://ec-hwbeta.casstime.com/seller
+2026-05-11 10:47:50,580 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/seller
+2026-05-11 10:47:50,580 [DEBUG] navigate 成功
+2026-05-11 10:47:50,580 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-11 10:47:50,580 [DEBUG]   history[0]=True
+2026-05-11 10:47:50,679 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_OPEN_LOGIN_打开供应商_seller_登录入口\01_20260511_104750.png
+2026-05-11 10:47:50,679 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_OPEN_LOGIN_打开供应商_seller_登录入口\01_20260511_104750.png
+2026-05-11 10:47:50,680 [DEBUG] 步骤等待 0.001s
+2026-05-11 10:47:50,681 [DEBUG]   [1] wait
+2026-05-11 10:47:50,681 [INFO] 执行关键字: wait(data=2)
+2026-05-11 10:47:50,681 [INFO] 等待: 2秒
+2026-05-11 10:47:52,682 [DEBUG] wait 成功
+2026-05-11 10:47:52,682 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-11 10:47:52,682 [DEBUG]   history[1]=True
+2026-05-11 10:47:52,683 [INFO]   [2] scenario SELLER_LOGIN_001_SUBMIT_VALID - 使用供应商有效账号提交登录 (group=seller, tag=['login', 'seller', 'p0', 'smoke', 'submit'])
+2026-05-11 10:47:52,683 [DEBUG]   [2] type
+2026-05-11 10:47:52,683 [INFO] 执行关键字: type(model=PassportLogin, data=SellerValidCredential)
+2026-05-11 10:47:52,683 [INFO] 批量输入: 模型=PassportLogin, DataID=SellerValidCredential
+2026-05-11 10:47:52,684 [DEBUG] loginModePassword: click css=span[type='PASSWORD']
+2026-05-11 10:47:52,684 [DEBUG] 点击元素: css=span[type='PASSWORD'] -> span[type='PASSWORD']
+2026-05-11 10:47:52,748 [DEBUG]   ↳ 定位器 css=span[type='PASSWORD'] 成功 (priority=1)
+2026-05-11 10:47:52,748 [DEBUG] username: id=userName <- 'ksseller'
+2026-05-11 10:47:52,748 [DEBUG] 输入文本: id=userName -> #userName
+2026-05-11 10:47:52,775 [DEBUG]   ↳ 定位器 id=userName 成功 (priority=1)
+2026-05-11 10:47:52,775 [DEBUG] password: id=password <- 'Init@1125'
+2026-05-11 10:47:52,775 [DEBUG] 输入文本: id=password -> #password
+2026-05-11 10:47:52,799 [DEBUG]   ↳ 定位器 id=password 成功 (priority=1)
+2026-05-11 10:47:52,799 [DEBUG] agreement: click css=.bre-login-privacy-modal_entry-checkbox
+2026-05-11 10:47:52,799 [DEBUG] 点击元素: css=.bre-login-privacy-modal_entry-checkbox -> .bre-login-privacy-modal_entry-checkbox
+2026-05-11 10:47:52,862 [DEBUG]   ↳ 定位器 css=.bre-login-privacy-modal_entry-checkbox 成功 (priority=1)
+2026-05-11 10:47:52,862 [DEBUG] submit: click css=input.btn-submit
+2026-05-11 10:47:52,862 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-11 10:47:52,907 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-11 10:47:52,907 [DEBUG] type 成功
+2026-05-11 10:47:52,908 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-11 10:47:52,908 [DEBUG]   history[2]={'loginModePassword': 'click', 'username': 'ksseller', 'password': 'Init@1125', 'agreement': 'click', 'submit': 'click'}
+2026-05-11 10:47:53,142 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_SUBMIT_VALID_使用供应商有效账号提交登录\02_20260511_104752.png
+2026-05-11 10:47:53,142 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_SUBMIT_VALID_使用供应商有效账号提交登录\02_20260511_104752.png
+2026-05-11 10:47:53,142 [DEBUG] 步骤等待 0.001s
+2026-05-11 10:47:53,144 [DEBUG]   [2] wait
+2026-05-11 10:47:53,144 [INFO] 执行关键字: wait(data=5)
+2026-05-11 10:47:53,144 [INFO] 等待: 5秒
+2026-05-11 10:47:58,144 [DEBUG] wait 成功
+2026-05-11 10:47:58,144 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-11 10:47:58,144 [DEBUG]   history[3]=True
+2026-05-11 10:47:58,144 [INFO]   [3] scenario SELLER_LOGIN_001_ASSERT_HOME - 校验进入供应商 seller 已登录页面 (group=seller, tag=['login', 'seller', 'p0', 'smoke', 'assert'])
+2026-05-11 10:47:58,145 [DEBUG]   [3] evaluate
+2026-05-11 10:47:58,145 [INFO] 执行关键字: evaluate(data=(() => { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name="username"], input[name="password"], input[type="password"], #userName, #password'); const stillOnLogin = hasLoginControl || /passport\/login|\/login/i.test(url); const hasSellerSignal = /\/seller|供应商|卖家|店铺|订单|报价|商品|发货|售后/i.test(url + ' ' + text); const hasLogout = /退出|注销|logout/i.test(url + ' ' + text) || !!document.querySelector('a[href*="logout"], button[onclick*="logout"]'); if (!stillOnLogin && hasSellerSignal) { return 'seller-login-success'; } if (!stillOnLogin && hasLogout) { return 'seller-login-success-with-logout'; } throw new Error('供应商 seller 登录成功页断言失败: currentUrl=' + url + ', stillOnLogin=' + stillOnLogin + ', hasSellerSignal=' + hasSellerSignal + ', hasLogout=' + hasLogout + ', text=' + text.slice(0, 180)); })())
+2026-05-11 10:47:58,145 [INFO] 执行 JS: (() => { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name="username"], input[name="password"], input[t
+2026-05-11 10:47:58,152 [ERROR] ❌ 驱动操作失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-11 10:47:58,152 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-11 10:47:58,153 [ERROR] 用例阶段失败: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-11 10:47:58,191 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\screenshots\SELLER_LOGIN_001_20260511_104758_failure.png
+2026-05-11 10:47:58,191 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\screenshots\SELLER_LOGIN_001_20260511_104758_failure.png
+2026-05-11 10:47:58,191 [DEBUG]   [1] close
+2026-05-11 10:47:58,191 [INFO] 执行关键字: close()
+2026-05-11 10:47:58,192 [INFO] 关闭浏览器
+2026-05-11 10:47:59,532 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\recordings\SELLER_LOGIN_001_20260511_104743_01.webm
+2026-05-11 10:47:59,581 [DEBUG] close 成功
+2026-05-11 10:47:59,581 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-11 10:47:59,581 [DEBUG]   history[4]=True
+2026-05-11 10:47:59,582 [INFO] 浏览器已关闭
+2026-05-11 10:47:59,582 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104743\execution_summary.json
+2026-05-11 10:47:59,582 [INFO]   FAIL (15.783s)
+2026-05-11 10:47:59,582 [ERROR]   错误: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-11 10:47:59,582 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:47:59,594 [INFO] 结果已写入 rodski_20260511_104743/result.xml: 总计 4 条, 通过 0 条, 失败 1 条, 通过率 0.0%

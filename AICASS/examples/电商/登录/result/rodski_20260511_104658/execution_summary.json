@@ -1,0 +1,64 @@
+{
+  "case": "SELLER_LOGIN_001",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "用例/SELLER_LOGIN_001_OPEN_LOGIN",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "wait",
+      "model": "",
+      "phase": "用例/SELLER_LOGIN_001_OPEN_LOGIN",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "type",
+      "model": "PassportLogin",
+      "phase": "用例/SELLER_LOGIN_001_SUBMIT_VALID",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "loginModePassword": "click",
+        "username": "ksseller",
+        "password": "Init@1125",
+        "agreement": "click",
+        "submit": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "wait",
+      "model": "",
+      "phase": "用例/SELLER_LOGIN_001_SUBMIT_VALID",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

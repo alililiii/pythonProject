@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalvalue>
+  <group name="DefaultValue">
+    <var name="BrowserType" value="chromium"/>
+    <var name="WaitTime" value="10"/>
+    <var name="Headless" value="false"/>
+  </group>
+  <group name="Env">
+    <var name="base_url" value="https://ec-hwbeta.casstime.com"/>
+    <var name="admin_url" value="https://ec-hwbeta.casstime.com/admin#"/>
+    <var name="mall_url" value="https://ec-hwbeta.casstime.com/mall"/>
+    <var name="seller_url" value="https://ec-hwbeta.casstime.com/seller"/>
+    <var name="logout_url" value="https://ec-hwbeta.casstime.com/logout"/>
+  </group>
+  <group name="MallLogin">
+    <var name="username" value="13119909586"/>
+    <var name="password" value="123456Aa"/>
+  </group>
+  <group name="AdminLogin">
+    <var name="username" value="mandy"/>
+    <var name="password" value="Init@1125!@#$"/>
+  </group>
+  <group name="SellerLogin">
+    <var name="username" value="ksseller1"/>
+    <var name="password" value="Init@1125"/>
+  </group>
+</globalvalue>

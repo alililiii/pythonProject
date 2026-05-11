@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<testresult>
+  <summary total="7" passed="7" failed="0" skipped="0" errors="0" pass_rate="100.0%" total_time="80.51s" average_time="11.50s" start_time="2026-05-11 11:25:54" end_time="2026-05-11 11:25:54"/>
+  <results>
+    <result case_id="BUYER_LOGIN_001" title="买家工作台 buyer 使用有效账号登录后进入买家工作台" status="PASS" execution_time="10.882" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\BUYER_LOGIN_001_20260511_112433_01.webm" updated_at="2026-05-11 11:25:54">
+      <recordings>
+        <recording index="1" path="recordings\BUYER_LOGIN_001_20260511_112433_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="BUYER_LOGIN_002" title="买家工作台 buyer 登录后退出应离开已登录状态" status="PASS" execution_time="14.287" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\BUYER_LOGIN_002_20260511_112444_01.webm" updated_at="2026-05-11 11:25:54">
+      <recordings>
+        <recording index="1" path="recordings\BUYER_LOGIN_002_20260511_112444_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="SELLER_LOGIN_001" title="卖家工作台 seller 使用有效账号登录后进入卖家工作台" status="PASS" execution_time="10.619" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\SELLER_LOGIN_001_20260511_112458_01.webm" updated_at="2026-05-11 11:25:54">
+      <recordings>
+        <recording index="1" path="recordings\SELLER_LOGIN_001_20260511_112458_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="SELLER_LOGIN_002" title="卖家工作台 seller 登录后退出应离开已登录状态" status="PASS" execution_time="13.843" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\SELLER_LOGIN_002_20260511_112509_01.webm" updated_at="2026-05-11 11:25:54">
+      <recordings>
+        <recording index="1" path="recordings\SELLER_LOGIN_002_20260511_112509_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="ADMIN_LOGIN_001" title="管理中心 admin 未登录直接访问应被认证拦截" status="PASS" execution_time="5.317" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\ADMIN_LOGIN_001_20260511_112523_01.webm" updated_at="2026-05-11 11:25:54">
+      <recordings>
+        <recording index="1" path="recordings\ADMIN_LOGIN_001_20260511_112523_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="ADMIN_LOGIN_002" title="管理中心 admin 使用有效账号登录后进入首页" status="PASS" execution_time="11.359" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\ADMIN_LOGIN_002_20260511_112528_01.webm" updated_at="2026-05-11 11:25:54">
+      <recordings>
+        <recording index="1" path="recordings\ADMIN_LOGIN_002_20260511_112528_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+    <result case_id="ADMIN_LOGIN_003" title="管理中心 admin 登录后退出应离开已登录状态" status="PASS" execution_time="14.203" retries="0" start_time="" end_time="" error_type="" error_message="" screenshot_path="" recording_path="recordings\ADMIN_LOGIN_003_20260511_112539_01.webm" updated_at="2026-05-11 11:25:54">
+      <recordings>
+        <recording index="1" path="recordings\ADMIN_LOGIN_003_20260511_112539_01.webm" backend="playwright"/>
+      </recordings>
+    </result>
+  </results>
+</testresult>

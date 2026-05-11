@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases step_wait="1" tags="login,jiping,buyer,seller,admin,smoke">
+  <case execute="是" id="BUYER_LOGIN_001" title="买家工作台 buyer 使用有效账号登录后进入买家工作台" description="访问集配买家工作台入口，使用买家有效账号登录，验证页面离开统一认证登录态并进入买家工作台已登录页面。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="BUYER_LOGIN_001_OPEN_LOGIN" title="打开买家工作台 buyer 登录入口" group="buyer" tag="login,buyer,p0,smoke,navigate">
+        <test_step action="navigate" data="GlobalValue.Env.buyer_url"/>
+        <test_step action="wait" data="2"/>
+      </scenario>
+      <scenario id="BUYER_LOGIN_001_SUBMIT_VALID" title="使用买家工作台有效账号提交登录" group="buyer" tag="login,buyer,p0,smoke,submit" depends="BUYER_LOGIN_001_OPEN_LOGIN">
+        <test_step action="type" model="PassportLogin" data="BuyerValidCredential"/>
+        <test_step action="wait" data="5"/>
+      </scenario>
+      <scenario id="BUYER_LOGIN_001_ASSERT_HOME" title="校验进入买家工作台已登录页面" group="buyer" tag="login,buyer,p0,smoke,assert" depends="BUYER_LOGIN_001_SUBMIT_VALID">
+        <test_step action="evaluate" data="(() =&gt; { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name=&quot;username&quot;], input[name=&quot;password&quot;], input[type=&quot;password&quot;], #userName, #password'); const stillOnLogin = hasLoginControl || /passport\/login|\/login/i.test(url); const hasBuyerSignal = /\/buyer|买家|采购|工作台|订单|询价|报价|商品|购物车|集配/i.test(url + ' ' + text); const hasLogout = /退出|注销|logout/i.test(url + ' ' + text) || !!document.querySelector('a[href*=&quot;logout&quot;], button[onclick*=&quot;logout&quot;]'); if (!stillOnLogin &amp;&amp; hasBuyerSignal) { return 'buyer-login-success'; } if (!stillOnLogin &amp;&amp; hasLogout) { return 'buyer-login-success-with-logout'; } throw new Error('买家工作台登录成功页断言失败: currentUrl=' + url + ', stillOnLogin=' + stillOnLogin + ', hasBuyerSignal=' + hasBuyerSignal + ', hasLogout=' + hasLogout + ', text=' + text.slice(0, 180)); })()"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="BUYER_LOGIN_002" title="买家工作台 buyer 登录后退出应离开已登录状态" description="买家工作台账号登录成功后访问统一退出地址，再确认不保留买家工作台已登录状态。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="BUYER_LOGIN_002_LOGIN_FIRST" title="先登录进入买家工作台 buyer" group="buyer_logout" tag="login,buyer,p0,smoke,prepare">
+        <test_step action="navigate" data="GlobalValue.Env.buyer_url"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="PassportLogin" data="BuyerValidCredential"/>
+        <test_step action="wait" data="5"/>
+      </scenario>
+      <scenario id="BUYER_LOGIN_002_LOGOUT" title="执行买家工作台 buyer 退出登录" group="buyer_logout" tag="login,buyer,p0,smoke,logout" depends="BUYER_LOGIN_002_LOGIN_FIRST">
+        <test_step action="navigate" data="GlobalValue.Env.logout_url"/>
+        <test_step action="wait" data="3"/>
+      </scenario>
+      <scenario id="BUYER_LOGIN_002_ASSERT_LOGOUT" title="校验买家工作台 buyer 退出后离开已登录状态" group="buyer_logout" tag="login,buyer,p0,smoke,assert" depends="BUYER_LOGIN_002_LOGOUT">
+        <test_step action="evaluate" data="(() =&gt; { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name=&quot;username&quot;], input[name=&quot;password&quot;], input[type=&quot;password&quot;], #userName, #password'); const hasLoggedInSignal = /买家|采购|工作台|订单|询价|报价|商品|购物车/.test(text) &amp;&amp; !/passport\/login|\/login/i.test(url); const loggedOut = hasLoginControl || /passport\/login|\/login|logout|登录|认证|未登录/i.test(url + ' ' + text) || !hasLoggedInSignal; if (loggedOut) { return 'buyer-logout-success'; } throw new Error('买家工作台退出后仍可能处于已登录状态，currentUrl=' + url + ', text=' + text.slice(0, 180)); })()"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="SELLER_LOGIN_001" title="卖家工作台 seller 使用有效账号登录后进入卖家工作台" description="访问集配卖家工作台入口，使用卖家有效账号登录，验证页面离开统一认证登录态并进入卖家工作台已登录页面。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="SELLER_LOGIN_001_OPEN_LOGIN" title="打开卖家工作台 seller 登录入口" group="seller" tag="login,seller,p0,smoke,navigate">
+        <test_step action="navigate" data="GlobalValue.Env.seller_url"/>
+        <test_step action="wait" data="2"/>
+      </scenario>
+      <scenario id="SELLER_LOGIN_001_SUBMIT_VALID" title="使用卖家工作台有效账号提交登录" group="seller" tag="login,seller,p0,smoke,submit" depends="SELLER_LOGIN_001_OPEN_LOGIN">
+        <test_step action="type" model="PassportLogin" data="SellerValidCredential"/>
+        <test_step action="wait" data="5"/>
+      </scenario>
+      <scenario id="SELLER_LOGIN_001_ASSERT_HOME" title="校验进入卖家工作台已登录页面" group="seller" tag="login,seller,p0,smoke,assert" depends="SELLER_LOGIN_001_SUBMIT_VALID">
+        <test_step action="evaluate" data="(() =&gt; { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name=&quot;username&quot;], input[name=&quot;password&quot;], input[type=&quot;password&quot;], #userName, #password'); const stillOnLogin = hasLoginControl || /passport\/login|\/login/i.test(url); const hasSellerSignal = /\/seller|卖家|供应商|工作台|订单|报价|商品|发货|售后|集配/i.test(url + ' ' + text); const hasLogout = /退出|注销|logout/i.test(url + ' ' + text) || !!document.querySelector('a[href*=&quot;logout&quot;], button[onclick*=&quot;logout&quot;]'); if (!stillOnLogin &amp;&amp; hasSellerSignal) { return 'seller-login-success'; } if (!stillOnLogin &amp;&amp; hasLogout) { return 'seller-login-success-with-logout'; } throw new Error('卖家工作台登录成功页断言失败: currentUrl=' + url + ', stillOnLogin=' + stillOnLogin + ', hasSellerSignal=' + hasSellerSignal + ', hasLogout=' + hasLogout + ', text=' + text.slice(0, 180)); })()"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="SELLER_LOGIN_002" title="卖家工作台 seller 登录后退出应离开已登录状态" description="卖家工作台账号登录成功后访问统一退出地址，再确认不保留卖家工作台已登录状态。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="SELLER_LOGIN_002_LOGIN_FIRST" title="先登录进入卖家工作台 seller" group="seller_logout" tag="login,seller,p0,smoke,prepare">
+        <test_step action="navigate" data="GlobalValue.Env.seller_url"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="PassportLogin" data="SellerValidCredential"/>
+        <test_step action="wait" data="5"/>
+      </scenario>
+      <scenario id="SELLER_LOGIN_002_LOGOUT" title="执行卖家工作台 seller 退出登录" group="seller_logout" tag="login,seller,p0,smoke,logout" depends="SELLER_LOGIN_002_LOGIN_FIRST">
+        <test_step action="navigate" data="GlobalValue.Env.logout_url"/>
+        <test_step action="wait" data="3"/>
+      </scenario>
+      <scenario id="SELLER_LOGIN_002_ASSERT_LOGOUT" title="校验卖家工作台 seller 退出后离开已登录状态" group="seller_logout" tag="login,seller,p0,smoke,assert" depends="SELLER_LOGIN_002_LOGOUT">
+        <test_step action="evaluate" data="(() =&gt; { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name=&quot;username&quot;], input[name=&quot;password&quot;], input[type=&quot;password&quot;], #userName, #password'); const hasLoggedInSignal = /卖家|供应商|工作台|订单|报价|商品|发货|售后/.test(text) &amp;&amp; !/passport\/login|\/login/i.test(url); const loggedOut = hasLoginControl || /passport\/login|\/login|logout|登录|认证|未登录/i.test(url + ' ' + text) || !hasLoggedInSignal; if (loggedOut) { return 'seller-logout-success'; } throw new Error('卖家工作台退出后仍可能处于已登录状态，currentUrl=' + url + ', text=' + text.slice(0, 180)); })()"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="ADMIN_LOGIN_001" title="管理中心 admin 未登录直接访问应被认证拦截" description="未登录访问集配管理中心 admin 首页，不应进入已登录状态；允许跳转登录页、认证页、错误页或返回认证拦截提示。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="ADMIN_LOGIN_001_ACCESS_ADMIN" title="未登录访问管理中心 admin 首页" group="admin" tag="login,admin,p0,smoke,unauthenticated">
+        <test_step action="navigate" data="GlobalValue.Env.admin_url"/>
+        <test_step action="wait" data="2"/>
+      </scenario>
+      <scenario id="ADMIN_LOGIN_001_ASSERT_BLOCKED" title="校验管理中心未登录访问被认证拦截" group="admin" tag="login,admin,p0,smoke,assert" depends="ADMIN_LOGIN_001_ACCESS_ADMIN">
+        <test_step action="evaluate" data="(() =&gt; { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasHomeShell = !!document.querySelector('#iframeCon, .main-sidebar, .sidebar, .content-wrapper, .main-header, .el-menu, .ant-layout-sider'); const hasLoginControl = !!document.querySelector('input[name=&quot;username&quot;], input[name=&quot;password&quot;], input[type=&quot;password&quot;], #userName, #password'); const hasLogout = !!document.querySelector('a[href=&quot;/logout&quot;], a[href$=&quot;/logout&quot;], a[href*=&quot;logout&quot;]'); const blocked = hasLoginControl || /login|passport|登录|登入|认证|未登录|403|forbidden|unauthor/i.test(url + ' ' + text) || text.trim() === ''; if (hasHomeShell &amp;&amp; hasLogout) { throw new Error('未登录访问管理中心时进入了已登录首页，currentUrl=' + url); } if (blocked || !hasHomeShell) { return 'admin-unauthenticated-blocked'; } throw new Error('管理中心未登录访问后的页面状态无法确认，currentUrl=' + url + ', text=' + text.slice(0, 180)); })()"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="ADMIN_LOGIN_002" title="管理中心 admin 使用有效账号登录后进入首页" description="访问集配管理中心 admin 入口，使用管理中心有效账号登录，验证页面离开统一认证登录态并进入管理中心首页外壳。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="ADMIN_LOGIN_002_OPEN_LOGIN" title="打开管理中心 admin 登录入口" group="admin" tag="login,admin,p0,smoke,navigate">
+        <test_step action="navigate" data="GlobalValue.Env.admin_url"/>
+        <test_step action="wait" data="2"/>
+      </scenario>
+      <scenario id="ADMIN_LOGIN_002_SUBMIT_VALID" title="使用管理中心有效账号提交登录" group="admin" tag="login,admin,p0,smoke,submit" depends="ADMIN_LOGIN_002_OPEN_LOGIN">
+        <test_step action="type" model="PassportLogin" data="AdminValidCredential"/>
+        <test_step action="wait" data="5"/>
+      </scenario>
+      <scenario id="ADMIN_LOGIN_002_ASSERT_HOME" title="校验进入管理中心 admin 首页" group="admin" tag="login,admin,p0,smoke,assert" depends="ADMIN_LOGIN_002_SUBMIT_VALID">
+        <test_step action="evaluate" data="(() =&gt; { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLogout = !!document.querySelector('a[href=&quot;/logout&quot;], a[href$=&quot;/logout&quot;], a[href*=&quot;logout&quot;]') || /退出|注销|logout/i.test(text); const hasUserLogin = !!document.querySelector('#userLogin'); const hasHomeShell = !!document.querySelector('#iframeCon, .main-sidebar, .sidebar, .content-wrapper, .main-header, .el-menu, .ant-layout-sider'); const hasLoginControl = !!document.querySelector('input[name=&quot;username&quot;], input[name=&quot;password&quot;], input[type=&quot;password&quot;], #userName, #password'); const stillOnLogin = hasLoginControl || /passport\/login|\/login/i.test(url); const hasAdminSignal = /\/admin|管理中心|运营|系统|菜单|集配|开思/i.test(url + ' ' + text); if (!stillOnLogin &amp;&amp; (hasHomeShell || hasLogout || hasUserLogin || hasAdminSignal)) { return 'admin-login-success'; } throw new Error('管理中心登录成功页断言失败: currentUrl=' + url + ', hasLogout=' + hasLogout + ', hasUserLogin=' + hasUserLogin + ', hasHomeShell=' + hasHomeShell + ', stillOnLogin=' + stillOnLogin + ', text=' + text.slice(0, 180)); })()"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="ADMIN_LOGIN_003" title="管理中心 admin 登录后退出应离开已登录状态" description="管理中心账号登录成功后访问统一退出地址，再确认页面不再保留管理中心已登录状态。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="ADMIN_LOGIN_003_LOGIN_FIRST" title="先登录进入管理中心 admin 首页" group="admin_logout" tag="login,admin,p0,smoke,prepare">
+        <test_step action="navigate" data="GlobalValue.Env.admin_url"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="PassportLogin" data="AdminValidCredential"/>
+        <test_step action="wait" data="5"/>
+      </scenario>
+      <scenario id="ADMIN_LOGIN_003_LOGOUT" title="执行管理中心 admin 退出登录" group="admin_logout" tag="login,admin,p0,smoke,logout" depends="ADMIN_LOGIN_003_LOGIN_FIRST">
+        <test_step action="navigate" data="GlobalValue.Env.logout_url"/>
+        <test_step action="wait" data="3"/>
+      </scenario>
+      <scenario id="ADMIN_LOGIN_003_ASSERT_LOGOUT" title="校验管理中心 admin 退出后离开已登录状态" group="admin_logout" tag="login,admin,p0,smoke,assert" depends="ADMIN_LOGIN_003_LOGOUT">
+        <test_step action="evaluate" data="(() =&gt; { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasHomeShell = !!document.querySelector('#iframeCon, .main-sidebar, .sidebar, .content-wrapper, .main-header, .el-menu, .ant-layout-sider'); const hasLogout = !!document.querySelector('a[href=&quot;/logout&quot;], a[href$=&quot;/logout&quot;], a[href*=&quot;logout&quot;]') || /退出|注销|logout/i.test(text); const hasLoginControl = !!document.querySelector('input[name=&quot;username&quot;], input[name=&quot;password&quot;], input[type=&quot;password&quot;], #userName, #password'); const loggedOut = hasLoginControl || /login|passport|登录|登入|logout|认证|未登录/i.test(url + ' ' + text) || !hasHomeShell; if (loggedOut &amp;&amp; !hasLogout) { return 'admin-logout-success'; } throw new Error('管理中心退出后仍可能停留在已登录状态，currentUrl=' + url + ', hasHomeShell=' + hasHomeShell + ', hasLogout=' + hasLogout + ', text=' + text.slice(0, 180)); })()"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+</cases>

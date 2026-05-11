@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalvalue>
+  <group name="DefaultValue">
+    <var name="BrowserType" value="chromium"/>
+    <var name="WaitTime" value="10"/>
+    <var name="Headless" value="false"/>
+  </group>
+  <group name="Env">
+    <var name="base_url" value="https://f2b-beta.casstime.com/"/>
+    <var name="buyer_url" value="https://f2b-beta.casstime.com/buyer#/"/>
+    <var name="seller_url" value="https://f2b-beta.casstime.com/seller#/"/>
+    <var name="admin_url" value="https://f2b-beta.casstime.com/admin#"/>
+    <var name="logout_url" value="https://f2b-beta.casstime.com/logout"/>
+  </group>
+  <group name="BuyerLogin">
+    <var name="username" value="17621866086"/>
+    <var name="password" value="A.123456"/>
+  </group>
+  <group name="SellerLogin">
+    <var name="username" value="15152005981"/>
+    <var name="password" value="Cass1713"/>
+  </group>
+  <group name="AdminLogin">
+    <var name="username" value="18819450973"/>
+    <var name="password" value="Cass1713"/>
+  </group>
+</globalvalue>

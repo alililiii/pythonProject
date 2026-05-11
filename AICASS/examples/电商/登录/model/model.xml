@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+  <model name="PassportLogin" type="ui" driver_type="web">
+    <element name="loginModePassword">
+      <type>tab</type>
+      <location type="css" priority="1">span[type='PASSWORD']</location>
+      <location type="xpath" priority="2">(//*[self::span or self::div or self::button][normalize-space(.)='账号登录'] | //*[self::span or self::div or self::button][contains(normalize-space(.),'账号') and contains(normalize-space(.),'登录')])[1]</location>
+      <location type="text" priority="3">账号登录</location>
+      <desc>账号登录页签</desc>
+    </element>
+    <element name="username">
+      <type>input</type>
+      <location type="id" priority="1">userName</location>
+      <location type="id" priority="2">username</location>
+      <location type="name" priority="3">username</location>
+      <location type="css" priority="4">input[name='username']</location>
+      <location type="css" priority="5">input[type='text']</location>
+      <desc>用户名输入框</desc>
+    </element>
+    <element name="password">
+      <type>input</type>
+      <location type="id" priority="1">password</location>
+      <location type="name" priority="2">password</location>
+      <location type="css" priority="3">input[name='password']</location>
+      <location type="css" priority="4">input[type='password']</location>
+      <desc>密码输入框</desc>
+    </element>
+    <element name="agreement">
+      <type>checkbox</type>
+      <location type="css" priority="1">.bre-login-privacy-modal_entry-checkbox</location>
+      <location type="css" priority="2">#privacy-agreement-list .br-checkbox__title</location>
+      <location type="css" priority="3">#privacy-agreement-list</location>
+      <location type="css" priority="4">label.br-checkbox .br-checkbox__title</location>
+      <location type="css" priority="5">label.br-checkbox</location>
+      <location type="text" priority="6">登录即代表您同意</location>
+      <desc>同意协议复选框</desc>
+    </element>
+    <element name="submit">
+      <type>button</type>
+      <location type="css" priority="1">input.btn-submit</location>
+      <location type="css" priority="2">.btn-submit</location>
+      <location type="xpath" priority="3">//*[self::button or self::input][normalize-space(@value)='登录' or normalize-space(.)='登录']</location>
+      <location type="text" priority="4">登录</location>
+      <desc>登录按钮</desc>
+    </element>
+  </model>
+</models>

@@ -1,0 +1,177 @@
+2026-05-11 10:46:58,079 [INFO] 执行用例 1/4: MALL_LOGIN_001 - 维修厂 mall 使用有效账号登录后进入维修厂商城
+2026-05-11 10:46:58,191 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:46:58,191 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:46:58,191 [INFO] 执行用例 3/4: SELLER_LOGIN_001 - 供应商 seller 使用有效账号登录后进入供应商中心
+2026-05-11 10:46:58,653 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\recordings\MALL_LOGIN_001_20260511_104658_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-11 10:46:58,653 [INFO]   [1] scenario MALL_LOGIN_001_OPEN_LOGIN - 打开维修厂 mall 登录入口 (group=mall, tag=['login', 'mall', 'p0', 'smoke', 'navigate'])
+2026-05-11 10:46:58,654 [DEBUG]   [1] navigate
+2026-05-11 10:46:58,654 [DEBUG] 数据解析: 'GlobalValue.Env.mall_url' -> 'https://ec-hwbeta.casstime.com/mall'
+2026-05-11 10:46:58,654 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/mall)
+2026-05-11 10:46:58,654 [INFO] 导航: https://ec-hwbeta.casstime.com/mall
+2026-05-11 10:46:58,754 [INFO] Playwright 原生录制已启动: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\recordings\SELLER_LOGIN_001_20260511_104658_01.webm (分辨率: {'width': 1920, 'height': 1080})
+2026-05-11 10:46:58,755 [INFO]   [1] scenario SELLER_LOGIN_001_OPEN_LOGIN - 打开供应商 seller 登录入口 (group=seller, tag=['login', 'seller', 'p0', 'smoke', 'navigate'])
+2026-05-11 10:46:58,755 [DEBUG]   [1] navigate
+2026-05-11 10:46:58,755 [DEBUG] 数据解析: 'GlobalValue.Env.seller_url' -> 'https://ec-hwbeta.casstime.com/seller'
+2026-05-11 10:46:58,755 [INFO] 执行关键字: navigate(data=https://ec-hwbeta.casstime.com/seller)
+2026-05-11 10:46:58,755 [INFO] 导航: https://ec-hwbeta.casstime.com/seller
+2026-05-11 10:47:00,462 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/seller
+2026-05-11 10:47:00,463 [DEBUG] navigate 成功
+2026-05-11 10:47:00,463 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-11 10:47:00,463 [DEBUG]   history[0]=True
+2026-05-11 10:47:00,541 [DEBUG] 导航成功: https://ec-hwbeta.casstime.com/mall
+2026-05-11 10:47:00,541 [DEBUG] navigate 成功
+2026-05-11 10:47:00,541 [INFO] [STEP] action=navigate model=- status=OK source=keyword_result
+2026-05-11 10:47:00,541 [DEBUG]   history[0]=True
+2026-05-11 10:47:00,569 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_OPEN_LOGIN_打开供应商_seller_登录入口\01_20260511_104700.png
+2026-05-11 10:47:00,569 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_OPEN_LOGIN_打开供应商_seller_登录入口\01_20260511_104700.png
+2026-05-11 10:47:00,569 [DEBUG] 步骤等待 0.001s
+2026-05-11 10:47:00,571 [DEBUG]   [1] wait
+2026-05-11 10:47:00,571 [INFO] 执行关键字: wait(data=2)
+2026-05-11 10:47:00,571 [INFO] 等待: 2秒
+2026-05-11 10:47:00,656 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\MALL_LOGIN_001_MALL_LOGIN_001_OPEN_LOGIN_打开维修厂_mall_登录入口\01_20260511_104700.png
+2026-05-11 10:47:00,656 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\MALL_LOGIN_001_MALL_LOGIN_001_OPEN_LOGIN_打开维修厂_mall_登录入口\01_20260511_104700.png
+2026-05-11 10:47:00,656 [DEBUG] 步骤等待 0.001s
+2026-05-11 10:47:00,658 [DEBUG]   [1] wait
+2026-05-11 10:47:00,658 [INFO] 执行关键字: wait(data=2)
+2026-05-11 10:47:00,658 [INFO] 等待: 2秒
+2026-05-11 10:47:02,572 [DEBUG] wait 成功
+2026-05-11 10:47:02,572 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-11 10:47:02,572 [DEBUG]   history[1]=True
+2026-05-11 10:47:02,572 [INFO]   [2] scenario SELLER_LOGIN_001_SUBMIT_VALID - 使用供应商有效账号提交登录 (group=seller, tag=['login', 'seller', 'p0', 'smoke', 'submit'])
+2026-05-11 10:47:02,572 [DEBUG]   [2] type
+2026-05-11 10:47:02,572 [INFO] 执行关键字: type(model=PassportLogin, data=SellerValidCredential)
+2026-05-11 10:47:02,572 [INFO] 批量输入: 模型=PassportLogin, DataID=SellerValidCredential
+2026-05-11 10:47:02,572 [DEBUG] loginModePassword: click css=span[type='PASSWORD']
+2026-05-11 10:47:02,572 [DEBUG] 点击元素: css=span[type='PASSWORD'] -> span[type='PASSWORD']
+2026-05-11 10:47:02,635 [DEBUG]   ↳ 定位器 css=span[type='PASSWORD'] 成功 (priority=1)
+2026-05-11 10:47:02,635 [DEBUG] username: id=userName <- 'ksseller'
+2026-05-11 10:47:02,635 [DEBUG] 输入文本: id=userName -> #userName
+2026-05-11 10:47:02,658 [DEBUG]   ↳ 定位器 id=userName 成功 (priority=1)
+2026-05-11 10:47:02,658 [DEBUG] wait 成功
+2026-05-11 10:47:02,658 [DEBUG] password: id=password <- 'Init@1125'
+2026-05-11 10:47:02,658 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-11 10:47:02,658 [DEBUG] 输入文本: id=password -> #password
+2026-05-11 10:47:02,659 [DEBUG]   history[1]=True
+2026-05-11 10:47:02,659 [INFO]   [2] scenario MALL_LOGIN_001_SUBMIT_VALID - 使用维修厂有效账号提交登录 (group=mall, tag=['login', 'mall', 'p0', 'smoke', 'submit'])
+2026-05-11 10:47:02,659 [DEBUG]   [2] type
+2026-05-11 10:47:02,659 [INFO] 执行关键字: type(model=PassportLogin, data=MallValidCredential)
+2026-05-11 10:47:02,659 [INFO] 批量输入: 模型=PassportLogin, DataID=MallValidCredential
+2026-05-11 10:47:02,659 [DEBUG] loginModePassword: click css=span[type='PASSWORD']
+2026-05-11 10:47:02,659 [DEBUG] 点击元素: css=span[type='PASSWORD'] -> span[type='PASSWORD']
+2026-05-11 10:47:02,685 [DEBUG]   ↳ 定位器 id=password 成功 (priority=1)
+2026-05-11 10:47:02,686 [DEBUG] agreement: click css=.bre-login-privacy-modal_entry-checkbox
+2026-05-11 10:47:02,686 [DEBUG] 点击元素: css=.bre-login-privacy-modal_entry-checkbox -> .bre-login-privacy-modal_entry-checkbox
+2026-05-11 10:47:02,737 [DEBUG]   ↳ 定位器 css=span[type='PASSWORD'] 成功 (priority=1)
+2026-05-11 10:47:02,737 [DEBUG] username: id=userName <- '13119909586'
+2026-05-11 10:47:02,737 [DEBUG] 输入文本: id=userName -> #userName
+2026-05-11 10:47:02,755 [DEBUG]   ↳ 定位器 css=.bre-login-privacy-modal_entry-checkbox 成功 (priority=1)
+2026-05-11 10:47:02,755 [DEBUG] submit: click css=input.btn-submit
+2026-05-11 10:47:02,755 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-11 10:47:02,768 [DEBUG]   ↳ 定位器 id=userName 成功 (priority=1)
+2026-05-11 10:47:02,768 [DEBUG] password: id=password <- '123456Aa'
+2026-05-11 10:47:02,768 [DEBUG] 输入文本: id=password -> #password
+2026-05-11 10:47:02,798 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-11 10:47:02,798 [DEBUG] type 成功
+2026-05-11 10:47:02,798 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-11 10:47:02,798 [DEBUG]   history[2]={'loginModePassword': 'click', 'username': 'ksseller', 'password': 'Init@1125', 'agreement': 'click', 'submit': 'click'}
+2026-05-11 10:47:02,805 [DEBUG]   ↳ 定位器 id=password 成功 (priority=1)
+2026-05-11 10:47:02,805 [DEBUG] agreement: click css=.bre-login-privacy-modal_entry-checkbox
+2026-05-11 10:47:02,806 [DEBUG] 点击元素: css=.bre-login-privacy-modal_entry-checkbox -> .bre-login-privacy-modal_entry-checkbox
+2026-05-11 10:47:02,865 [DEBUG]   ↳ 定位器 css=.bre-login-privacy-modal_entry-checkbox 成功 (priority=1)
+2026-05-11 10:47:02,865 [DEBUG] submit: click css=input.btn-submit
+2026-05-11 10:47:02,865 [DEBUG] 点击元素: css=input.btn-submit -> input.btn-submit
+2026-05-11 10:47:02,909 [DEBUG]   ↳ 定位器 css=input.btn-submit 成功 (priority=1)
+2026-05-11 10:47:02,909 [DEBUG] type 成功
+2026-05-11 10:47:02,909 [INFO] [STEP] action=type model=PassportLogin status=OK source=keyword_result
+2026-05-11 10:47:02,909 [DEBUG]   history[2]={'loginModePassword': 'click', 'username': '13119909586', 'password': '123456Aa', 'agreement': 'click', 'submit': 'click'}
+2026-05-11 10:47:03,011 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_SUBMIT_VALID_使用供应商有效账号提交登录\02_20260511_104702.png
+2026-05-11 10:47:03,011 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\SELLER_LOGIN_001_SELLER_LOGIN_001_SUBMIT_VALID_使用供应商有效账号提交登录\02_20260511_104702.png
+2026-05-11 10:47:03,011 [DEBUG] 步骤等待 0.001s
+2026-05-11 10:47:03,012 [DEBUG]   [2] wait
+2026-05-11 10:47:03,012 [INFO] 执行关键字: wait(data=5)
+2026-05-11 10:47:03,012 [INFO] 等待: 5秒
+2026-05-11 10:47:03,012 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\MALL_LOGIN_001_MALL_LOGIN_001_SUBMIT_VALID_使用维修厂有效账号提交登录\02_20260511_104702.png
+2026-05-11 10:47:03,013 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\MALL_LOGIN_001_MALL_LOGIN_001_SUBMIT_VALID_使用维修厂有效账号提交登录\02_20260511_104702.png
+2026-05-11 10:47:03,013 [DEBUG] 步骤等待 0.001s
+2026-05-11 10:47:03,014 [DEBUG]   [2] wait
+2026-05-11 10:47:03,014 [INFO] 执行关键字: wait(data=5)
+2026-05-11 10:47:03,014 [INFO] 等待: 5秒
+2026-05-11 10:47:08,013 [DEBUG] wait 成功
+2026-05-11 10:47:08,013 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-11 10:47:08,013 [DEBUG]   history[3]=True
+2026-05-11 10:47:08,013 [INFO]   [3] scenario SELLER_LOGIN_001_ASSERT_HOME - 校验进入供应商 seller 已登录页面 (group=seller, tag=['login', 'seller', 'p0', 'smoke', 'assert'])
+2026-05-11 10:47:08,013 [DEBUG]   [3] evaluate
+2026-05-11 10:47:08,013 [INFO] 执行关键字: evaluate(data=(() => { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name="username"], input[name="password"], input[type="password"], #userName, #password'); const stillOnLogin = hasLoginControl || /passport\/login|\/login/i.test(url); const hasSellerSignal = /\/seller|供应商|卖家|店铺|订单|报价|商品|发货|售后/i.test(url + ' ' + text); const hasLogout = /退出|注销|logout/i.test(url + ' ' + text) || !!document.querySelector('a[href*="logout"], button[onclick*="logout"]'); if (!stillOnLogin && hasSellerSignal) { return 'seller-login-success'; } if (!stillOnLogin && hasLogout) { return 'seller-login-success-with-logout'; } throw new Error('供应商 seller 登录成功页断言失败: currentUrl=' + url + ', stillOnLogin=' + stillOnLogin + ', hasSellerSignal=' + hasSellerSignal + ', hasLogout=' + hasLogout + ', text=' + text.slice(0, 180)); })())
+2026-05-11 10:47:08,014 [INFO] 执行 JS: (() => { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name="username"], input[name="password"], input[t
+2026-05-11 10:47:08,014 [DEBUG] wait 成功
+2026-05-11 10:47:08,014 [INFO] [STEP] action=wait model=- status=OK source=keyword_result
+2026-05-11 10:47:08,014 [DEBUG]   history[3]=True
+2026-05-11 10:47:08,015 [INFO]   [3] scenario MALL_LOGIN_001_ASSERT_HOME - 校验进入维修厂 mall 已登录页面 (group=mall, tag=['login', 'mall', 'p0', 'smoke', 'assert'])
+2026-05-11 10:47:08,015 [DEBUG]   [3] evaluate
+2026-05-11 10:47:08,015 [INFO] 执行关键字: evaluate(data=(() => { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name="username"], input[name="password"], input[type="password"], #userName, #password'); const stillOnLogin = hasLoginControl || /passport\/login|\/login/i.test(url); const hasMallSignal = /\/mall|\/market|\/agentBuy|购物车|我的订单|发布询价|询价|商城|维修厂|报价|商品/i.test(url + ' ' + text); const hasLogout = /退出|注销|logout/i.test(url + ' ' + text) || !!document.querySelector('a[href*="logout"], button[onclick*="logout"]'); if (!stillOnLogin && hasMallSignal) { return 'mall-login-success'; } if (!stillOnLogin && hasLogout) { return 'mall-login-success-with-logout'; } throw new Error('维修厂 mall 登录成功页断言失败: currentUrl=' + url + ', stillOnLogin=' + stillOnLogin + ', hasMallSignal=' + hasMallSignal + ', hasLogout=' + hasLogout + ', text=' + text.slice(0, 180)); })())
+2026-05-11 10:47:08,015 [INFO] 执行 JS: (() => { const text = document.body ? document.body.innerText : ''; const url = location.href; const hasLoginControl = !!document.querySelector('input[name="username"], input[name="password"], input[t
+2026-05-11 10:47:08,023 [INFO] JS 结果: mall-login-success
+2026-05-11 10:47:08,023 [DEBUG] evaluate 成功
+2026-05-11 10:47:08,023 [INFO] [STEP] action=evaluate model=- status=OK source=evaluate
+2026-05-11 10:47:08,023 [DEBUG]   history[4]='mall-login-success'
+2026-05-11 10:47:08,027 [ERROR] ❌ 驱动操作失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-11 10:47:08,027 [ERROR] ❌ 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+2026-05-11 10:47:08,028 [ERROR] 用例阶段失败: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-11 10:47:08,076 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\SELLER_LOGIN_001_20260511_104708_failure.png
+2026-05-11 10:47:08,076 [INFO] 失败截图已保存: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\SELLER_LOGIN_001_20260511_104708_failure.png
+2026-05-11 10:47:08,076 [DEBUG]   [1] close
+2026-05-11 10:47:08,076 [INFO] 执行关键字: close()
+2026-05-11 10:47:08,076 [INFO] 关闭浏览器
+2026-05-11 10:47:08,078 [DEBUG] 截图成功: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\MALL_LOGIN_001_MALL_LOGIN_001_ASSERT_HOME_校验进入维修厂_mall_已登录页面\03_20260511_104708.png
+2026-05-11 10:47:08,078 [DEBUG] 步骤截图: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\screenshots\MALL_LOGIN_001_MALL_LOGIN_001_ASSERT_HOME_校验进入维修厂_mall_已登录页面\03_20260511_104708.png
+2026-05-11 10:47:08,078 [DEBUG] 步骤等待 0.001s
+2026-05-11 10:47:08,079 [DEBUG]   [1] close
+2026-05-11 10:47:08,080 [INFO] 执行关键字: close()
+2026-05-11 10:47:08,080 [INFO] 关闭浏览器
+2026-05-11 10:47:09,376 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\recordings\MALL_LOGIN_001_20260511_104658_01.webm
+2026-05-11 10:47:09,422 [DEBUG] close 成功
+2026-05-11 10:47:09,422 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-11 10:47:09,422 [DEBUG]   history[5]=True
+2026-05-11 10:47:09,423 [INFO] 浏览器已关闭
+2026-05-11 10:47:09,424 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\execution_summary.json
+2026-05-11 10:47:09,424 [INFO]   PASS (11.345s)
+2026-05-11 10:47:09,424 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:47:09,424 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:47:09,424 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:47:09,435 [INFO] 结果已写入 rodski_20260511_104658/result.xml: 总计 4 条, 通过 1 条, 失败 0 条, 通过率 25.0%
+2026-05-11 10:47:09,557 [INFO] Playwright 原生录制已保存: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\recordings\SELLER_LOGIN_001_20260511_104658_01.webm
+2026-05-11 10:47:09,608 [DEBUG] close 成功
+2026-05-11 10:47:09,608 [INFO] [STEP] action=close model=- status=OK source=keyword_result
+2026-05-11 10:47:09,608 [DEBUG]   history[4]=True
+2026-05-11 10:47:09,608 [INFO] 浏览器已关闭
+2026-05-11 10:47:09,609 [INFO] execution_summary.json 已写入: D:\Documents\pythonProject\AICASS\examples\电商\登录\result\rodski_20260511_104658\execution_summary.json
+2026-05-11 10:47:09,609 [INFO]   FAIL (11.417s)
+2026-05-11 10:47:09,609 [ERROR]   错误: [SKI313] 关键字 'evaluate' 重试 1 次后仍失败: [SKI302] JavaScript 执行失败: Page.evaluate: Error: 供应商 seller 登录成功页断言失败: currentUrl=http://ec-hwbeta.casstime.com:443/passport/login?error=e1, stillOnLogin=true, hasSellerSignal=false, hasLogout=false, text=400 Bad Request
+The plain HTTP request was sent to HTTPS port
+    at eval (eval at evaluate (:234:30), <anonymous>:1:697)
+    at eval (eval at evaluate (:234:30), <anonymous>:1:891)
+    at eval (<anonymous>)
+    at UtilityScript.evaluate (<anonymous>:234:30)
+    at UtilityScript.<anonymous> (<anonymous>:1:44)
+  keyword: evaluate
+2026-05-11 10:47:09,609 [INFO]   SKIP (plan_not_selected)
+2026-05-11 10:47:09,620 [INFO] 结果已写入 rodski_20260511_104658/result.xml: 总计 4 条, 通过 0 条, 失败 1 条, 通过率 0.0%
