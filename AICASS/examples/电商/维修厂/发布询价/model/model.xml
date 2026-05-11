@@ -80,6 +80,20 @@
       <location type="xpath" priority="3">(//*[self::textarea or self::input][contains(@placeholder,'配件') or contains(@placeholder,'零件') or contains(@placeholder,'OE')])[1]</location>
       <desc>首个配件名称输入框回车提交</desc>
     </element>
+    <element name="partNameInputSecond" type="web">
+      <type>textarea</type>
+      <location type="xpath" priority="1">//table//tbody/tr[2]/td[2]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="2">//table//tbody/tr[2]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="3">(//*[self::textarea or self::input][contains(@placeholder,'配件') or contains(@placeholder,'零件') or contains(@placeholder,'OE')])[2]</location>
+      <desc>第二个配件名称输入框</desc>
+    </element>
+    <element name="partNameInputSecondSubmit" type="web">
+      <type>textarea</type>
+      <location type="xpath" priority="1">//table//tbody/tr[2]/td[2]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="2">//table//tbody/tr[2]//*[self::textarea or self::input][not(@disabled)]</location>
+      <location type="xpath" priority="3">(//*[self::textarea or self::input][contains(@placeholder,'配件') or contains(@placeholder,'零件') or contains(@placeholder,'OE')])[2]</location>
+      <desc>第二个配件名称输入框回车提交</desc>
+    </element>
   </model>
 
   <model name="InquiryPublishAction">
