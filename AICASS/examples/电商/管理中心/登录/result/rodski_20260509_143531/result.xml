@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<testresult>
-  <summary total="3" passed="0" failed="0" skipped="3" errors="0" pass_rate="0.0%" total_time="0.00s" average_time="0.00s" start_time="2026-05-09 14:35:31" end_time="2026-05-09 14:35:31"/>
-  <results>
-    <result case_id="LOGIN_001" title="未登录直接访问管理中心首页应被认证拦截" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 14:35:31"/>
-    <result case_id="LOGIN_002" title="使用有效账号登录后进入管理中心首页" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 14:35:31"/>
-    <result case_id="LOGIN_003" title="登录后点击退出应清除会话并离开管理中心首页" status="SKIP" execution_time="0" retries="0" start_time="" end_time="" error_type="" error_message="plan_not_selected" screenshot_path="" recording_path="" updated_at="2026-05-09 14:35:31"/>
-  </results>
-</testresult>
