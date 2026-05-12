@@ -2,9 +2,9 @@
 
 ## RodSki 用例任务（常驻）
 
-涉及 `case/*.xml`、`model/*.xml`、`data/globalvalue.xml`、`data/data.sqlite`、`plan/*.xml` 或 RodSki 用例生成/审查时，动手前必须先读取 `TEST_CASE_WRITING_GUIDE.md` 和目标模块现有文件风格。
+涉及 `case/*.xml`、`model/*.xml`、`data/globalvalue.xml`、`data/data.sqlite`、`plan/*.xml` 或 RodSki 用例生成/审查时，动手前必须先读取 `TEST_CASE_WRITING_GUIDE.md` （注意迭代更新的内容模块）和目标模块现有文件风格。
 
-- RodSki CLI 优先使用 `/Users/zella/TestCase/myenv/bin/rodski`，先执行 `--version` 确认版本。
+- RodSki CLI 优先使用 `D:\Documents\pythonProject\venv\Scripts\rodski.exe`，先执行 `--version` 确认版本。
 - 始终保持“关键字 + 模型 + 数据”三元结构：Case 只编排动作，Model 定义元素/接口字段，数据进入 `data/data.sqlite`，全局变量只放 `data/globalvalue.xml`。
 - 禁止生成 `open`、`http_get`、`http_post`、`assert_json`、`assert_status` 等旧式/伪关键字；导航用 `navigate`，接口用 `send` + `verify`。
 - UI 原子操作（如 click、hover、select、key_press、drag、scroll）不要写成 `test_step@action`，应写入数据行并由 `type` 批量执行。

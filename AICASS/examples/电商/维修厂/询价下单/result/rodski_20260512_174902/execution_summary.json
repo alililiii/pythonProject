@@ -1,0 +1,87 @@
+{
+  "case": "garage_publish_inquiry_add_cart_and_order",
+  "steps": [
+    {
+      "index": 1,
+      "action": "navigate",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 2,
+      "action": "type",
+      "model": "ECAgentBuyLoginPage",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "accountTab": "click",
+        "username": "13119909586",
+        "password": "123456Aa",
+        "agreeCheckbox": "click",
+        "loginBtn": "click"
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 3,
+      "action": "wait",
+      "model": "",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    },
+    {
+      "index": 4,
+      "action": "verify",
+      "model": "LoginSuccessCheck",
+      "phase": "预处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "publishInquiryTab": "发布询价",
+        "_verify_passed": true,
+        "passed": true
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 5,
+      "action": "type",
+      "model": "InquiryFlow",
+      "phase": "用例/GARAGE_INQUIRY_CART_ORDER_001_PUBLISH",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": {
+        "vinInput": "LBVFR790XBSD31722",
+        "vinInputSubmit": "key_press【Enter】",
+        "duplicateVinNewInquiryBtn": "click",
+        "partInputFirst": "61612458015",
+        "partInputFirstSubmit": "key_press【Enter】",
+        "cancelPlatformRecommendBtn": "",
+        "manualMerchantOption": "",
+        "publishInquiryBtn": ""
+      },
+      "named_writes": {}
+    },
+    {
+      "index": 6,
+      "action": "close",
+      "model": "",
+      "phase": "后处理",
+      "status": "ok",
+      "return_source": "keyword_result",
+      "return_value": true,
+      "named_writes": {}
+    }
+  ],
+  "context_snapshot": {
+    "named": {}
+  }
+}

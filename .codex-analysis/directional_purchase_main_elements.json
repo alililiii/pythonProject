@@ -1,0 +1,1761 @@
+{
+  "main": {
+    "url": "https://ec-hwbeta.casstime.com/seller#/order/directional-purchase",
+    "title": "定向采购",
+    "bodyText": "商家工作台 首页0 报价员常用菜单 报价管理 订单列表 定向采购 发货管理 售后列表管理 休息日设置 配销宝 快捷译码报价 快捷收款 同行调货管理 新 商家服务市场 全量菜单0 费全量0 采购管理 采购计划 采购订单 库存管理 库存查询 库位管理 入库作业 出库作业 安全库存管理 盘点管理 调拨管理 调拨计划 移位管理 料号管理 备货进度 库存概览 召回计划 云仓备货管理 备货清单上传 备货计划 权限测试 发货作业 出库作业 库存查询 安全库存 ERP对接管理 库存对接 经营分析 经营分析 店铺商品分析 异常监控 等级权益 下单跟进 评价管理 店铺绩效 到货通知 员工绩效 销量分析 品牌魔方 概览 供应商运营看板 品牌供需热点 商品品类运营看板 开思参谋 新 商机风向标 选品探测器 发票管理 新 开票管理 新 收票管理 金融服务 备货融资 商品管理 添加商品 批量上传 全部商品 商城商品 商品诊断 套件关系列表 价格设置 销售库存维护 区域客群定价 批量修改商品 配套件查询 替换件关系维护 品牌件关系维护 价格分类 基础分类查询 到店价配置 最小起订金额 报价管理 报价管理 跟单管理 我的纠错 译码管理 休息日设置 报价规则管理 咨询报价 订单管理 订单列表 定向采购 发货管理 无订单发货 溯源码绑定管理 订货管理 订货管理 发货计划 预采购进度 售后管理 售后政策配置 售后列表管理 故障单管理 限售规则查询 退货单 特殊售后政策配置 物流管理 物流费单据打印 物流服务 促销管理 促销规则管理 优惠券管理 促销活动管理 包邮服务管理 满赠活动管理 现付优惠配置 赠品管理 商品类优惠 活动关系管理 财务管理 账单流水统计 开思对账单 交易流水 电子对账单 订单结算查询 指定收款账户 融资申请 收费政策查询 融资收款记录 收款清单 客户开票资料 开思钱包 账单垫款确认 月结订单 订单汇总明细 客户管理 客户管理 同行销售管理 订单管理 发货管理 发货单管理 售后管理 定向采购 同行采购管理 询价管理 订单管理 收货管理 售后管理 同行调货配置 溯源标签管理 采购/订单 溯源码库存查询 店铺设置 自动审单设置 品牌查询 共享仓运营管理 用户黑名单 销售区域管理 退货地址维护 物流公司 钉箱费设置 开票业务配置 店铺基本信息配置 推荐商品设置 店内分类设置 服务商列表 XXX 仓库管理 分店数据同步配置 数据中心管理 账号管理 商家入驻 合约管理 员工账号管理 注销下线 下载&反馈 融资7788 融资12345 我要反馈 我的反馈 3A 开思商城客服热线：400-168-6600 返回商城我的积分 0反馈帮助中心学习中心消息 下载 深圳开思内部测试店铺-修改(SZCASS01) 电子目录 沟通 陶智-测试店铺1 定向采购您可以通过此功能给指定的维修厂采购员选择商品并下单，系统将推送对应的采购单给采购员 定向采购流程:1为客户挑选商品2 提交采购清单给客户3 客户审核及支付 选择客户: * 客户信息： 输入客户信息会自动带出收货信息，选择客户后才可编辑收货信息哦~ * 维修厂： 请选择 * 收货人： * 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区 * 详细地址： * 手机号： 固定号码： 选择车辆品牌: * 选择车品牌： 请选择车辆品牌 无具体车品牌（机油、轮胎、蓄电池等通用件） 客户发票需求 需要发票 不需要发票 选择商品：可手动录入或批量粘贴商品行，最多可添加200个商品！ 查看批量操作指南>不存在的商品可新增商品后录入。 新增商品|清空全部商品 序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作 1 请选择 现货 已选择 0种商品，共0件 总价（不包含运费)：￥0.00下一步 Copyright © 2015-现在 CassTime. ICP证:粤ICP备15084413号-1督查举报邮箱：jiancha@casstime.com Hello! 退出账号 陶智-测试店铺1(13477807820) 店铺：深圳开思内部测试店铺-修改(SZCASS01) 店铺等级店铺预览",
+    "inputs": [
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "搜索关键字",
+        "text": "",
+        "className": "bre-accordion-search__input seller-sidebar-search__input",
+        "disabled": false
+      },
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "请输入维修厂名称、客户账号、客户名称或手机号",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": false
+      },
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": true
+      },
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": true
+      },
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": true
+      },
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": true
+      },
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "输零件号查询已有商品",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": false
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": false
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": false
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": false
+      },
+      {
+        "tag": "input",
+        "type": "text",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": true
+      },
+      {
+        "tag": "input",
+        "type": "",
+        "value": "",
+        "placeholder": "",
+        "text": "",
+        "className": "br-input__input",
+        "disabled": false
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "a",
+        "text": "首页0",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "报价员常用菜单",
+        "className": "bre-accordion-menu__controller bre-accordion-menu__controller--active bre-accordion-menu__controller--expanded bre-accordion-menu__controller--choose seller-sidebar-menu__controller seller-sidebar-menu__controller--active seller-sidebar-menu__controller--expanded seller-sidebar-menu__controller--choose bre-accordion--choose",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "报价管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订单列表",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "定向采购",
+        "className": "bre-accordion-menu__controller bre-accordion-menu__controller--active",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "发货管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "售后列表管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "休息日设置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "配销宝",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "快捷译码报价",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "快捷收款",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "同行调货管理 新",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商家服务市场",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "全量菜单0",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "费全量0",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "采购管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "采购计划",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "采购订单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "库存管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "库存查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "库位管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "入库作业",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "出库作业",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "安全库存管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "盘点管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "调拨管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "调拨计划",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "移位管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "料号管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "备货进度",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "库存概览",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "召回计划",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "云仓备货管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "备货清单上传",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "备货计划",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "权限测试",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "发货作业",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "出库作业",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "库存查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "安全库存",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "ERP对接管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "库存对接",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "经营分析",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "经营分析",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "店铺商品分析",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "异常监控",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "等级权益",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "下单跟进",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "评价管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "店铺绩效",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "到货通知",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "员工绩效",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "销量分析",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "品牌魔方",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "概览",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "供应商运营看板",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "品牌供需热点",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商品品类运营看板",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "开思参谋 新",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商机风向标",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "选品探测器",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "发票管理 新",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "开票管理 新",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "收票管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "金融服务",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "备货融资",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商品管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "添加商品",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "批量上传",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "全部商品",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商城商品",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商品诊断",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "套件关系列表",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "价格设置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "销售库存维护",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "区域客群定价",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "批量修改商品",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "配套件查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "替换件关系维护",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "品牌件关系维护",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "价格分类",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "基础分类查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "到店价配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "最小起订金额",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "报价管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "报价管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "跟单管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "我的纠错",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "译码管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "休息日设置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "报价规则管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "咨询报价",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订单管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订单列表",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "定向采购",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "发货管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "无订单发货",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "溯源码绑定管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订货管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订货管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "发货计划",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "预采购进度",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "售后管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "售后政策配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "售后列表管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "故障单管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "限售规则查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "退货单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "特殊售后政策配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "物流管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "物流费单据打印",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "物流服务",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "促销管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "促销规则管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "优惠券管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "促销活动管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "包邮服务管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "满赠活动管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "现付优惠配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "赠品管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商品类优惠",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "活动关系管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "财务管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "账单流水统计",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "开思对账单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "交易流水",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "电子对账单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订单结算查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "指定收款账户",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "融资申请",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "收费政策查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "融资收款记录",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "收款清单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "客户开票资料",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "开思钱包",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "账单垫款确认",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "月结订单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订单汇总明细",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "客户管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "客户管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "同行销售管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订单管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "发货管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "发货单管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "售后管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "定向采购",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "同行采购管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "询价管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "订单管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "收货管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "售后管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "同行调货配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "溯源标签管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "采购/订单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "溯源码库存查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "店铺设置",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "自动审单设置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "品牌查询",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "共享仓运营管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "用户黑名单",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "销售区域管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "退货地址维护",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "物流公司",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "钉箱费设置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "开票业务配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "店铺基本信息配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "推荐商品设置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "店内分类设置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "服务商列表",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "XXX",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "仓库管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "分店数据同步配置",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "数据中心管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "账号管理",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "商家入驻",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "合约管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "员工账号管理",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "注销下线",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "下载&反馈",
+        "className": "bre-accordion-menu__controller seller-sidebar-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "融资7788",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "融资12345",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "我要反馈",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "我的反馈",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "3A",
+        "className": "bre-accordion-menu__controller",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "查看批量操作指南>",
+        "className": "productTable_handbook__3wkQ9",
+        "disabled": false
+      },
+      {
+        "tag": "button",
+        "text": "下一步",
+        "className": "br-button productTable_nextStep__3tTLD",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "ICP证:粤ICP备15084413号-1",
+        "className": "seller-footer-copyright-link",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "店铺等级",
+        "className": "seller-topbar__drawer__store__level__btn",
+        "disabled": false
+      },
+      {
+        "tag": "a",
+        "text": "店铺预览",
+        "className": "seller-topbar__drawer__store__preview__btn",
+        "disabled": false
+      }
+    ],
+    "labels": [
+      "无具体车品牌（机油、轮胎、蓄电池等通用件）",
+      "需要发票",
+      "不需要发票",
+      "序号",
+      "零件号",
+      "品牌",
+      "品质",
+      "商品信息",
+      "单价(￥)",
+      "钉箱费",
+      "数量",
+      "发货仓",
+      "小计(￥)",
+      "是否现货",
+      "调货时间(天)",
+      "备注",
+      "操作",
+      "1",
+      "请选择",
+      "现货"
+    ],
+    "tableHeaders": [
+      "序号",
+      "零件号",
+      "品牌",
+      "品质",
+      "商品信息",
+      "单价(￥)",
+      "钉箱费",
+      "数量",
+      "发货仓",
+      "小计(￥)",
+      "是否现货",
+      "调货时间(天)",
+      "备注",
+      "操作"
+    ],
+    "requiredTexts": [
+      "* 客户信息：",
+      "*",
+      "* 维修厂： 请选择",
+      "* 维修厂：",
+      "* 维修厂：",
+      "*",
+      "* 收货人：",
+      "* 收货人：",
+      "*",
+      "* 所在地区：",
+      "*",
+      "* 详细地址：",
+      "* 详细地址：",
+      "*",
+      "* 手机号：",
+      "* 手机号：",
+      "*",
+      "* 选择车品牌： 请选择车辆品牌",
+      "* 选择车品牌：",
+      "* 选择车品牌：",
+      "*"
+    ],
+    "warnings": [
+      "商家工作台 首页0 报价员常用菜单 报价管理 订单列表 定向采购 发货管理 售后列表管理 休息日设置 配销宝 快捷译码报价 快捷收款 同行调货管理 新 商家服务市场 全量菜单0 费全量0 采购管理 采购计划 采购订单 库存管理 库存查询 库位管理 入库作业 出库作业 安全库存管理 盘点管理 调拨管理 调拨计划 移位管理 料号管理 备货进度 库存概览 召回计划 云仓备货管理 备货清单上传 备货计划 权限测试 发货作业 出库作业 库存查询 安全库存 ERP对接管理 库存对接 经营分析 经营分析 店铺商品分析 异常监控 等级权益 下单跟进 评价管理 店铺绩效 到货通知 员工绩效 销量分析 品牌魔方 概览 供应商运营看板 品牌供需热点 商品品类运营看板 开思参谋 新 商机风向标 选品探测器 发票管理 新 开票管理 新 收票管理 金融服务 备货融资 商品管理 添加商品 批量上传 全部商品 商城商品 商品诊断 套件关系列表 价格设置 销售库存维护 区域客群定价 批量修改商品 配套件查询 替换件关系维护 品牌件关系维护 价格分类 基础分类查询 到店价配置 最小起订金额 报价管理 报价管理 跟单管理 我的纠错 译码管理 休息日设置 报价规则管理 咨询报价 订单管理 订单列表 定向采购 发货管理 无订单发货 溯源码绑定管理 订货管理 订货管理 发货计划 预采购进度 售后管理 售后政策配置 售后列表管理 故障单管理 限售规则查询 退货单 特殊售后政策配置 物流管理 物流费单据打印 物流服务 促销管理 促销规则管理 优惠券管理 促销活动管理 包邮服务管理 满赠活动管理 现付优惠配置 赠品管理 商品类优惠 活动关系管理 财务管理 账单流水统计 开思对账单 交易流水 电子对账单 订单结算查询 指定收款账户 融资申请 收费政策查询 融资收款记录 收款清单 客户开票资料 开思钱包 账单垫款确认 月结订单 订单汇总明细 客户管理 客户管理 同行销售管理 订单管理 发货管理 发货单管理 售后管理 定向采购 同行采购管理 询价管理 订单管理 收货管理 售后管理 同行调货配置 溯源标签管理 采购/订单 溯源码库存查询 店铺设置 自动审单设置 品牌查询 共享仓运营管理 用户黑名单 销售区域管理 退货地址维护 物流公司 钉箱费设置 开票业务配置 店铺基本信息配置 推荐商品设置 店内分类设置 服务商列表 XXX 仓库管理 分店数据同步配置 数据中心管理 账号管理 商家入驻 合约管理 员工账号管理 注销下线 下载&反馈 融资7788 融资12345 我要反馈 我的反馈 3A 开思商城客服热线：400-168-6600 返回商城我的积分 0反馈帮助中心学习中心消息 下载 深圳开思内部测试店铺-修改(SZCASS01) 电子目录 沟通 陶智-测试店铺1 定向采购您可以通过此功能给指定的维修厂采购员选择商品并下单，系统将推送对应的采购单给采购员 定向采购流程:1为客户挑选商品2 提交采购清单给客户3 客户审核及支付 选择客户: * 客户信息： 输入客户信息会自动带出收货信息，选择客户后才可编辑收货信息哦~ * 维修厂： 请选择 * 收货人： * 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区 * 详细地址： * 手机号： 固定号码： 选择车辆品牌: * 选择车品牌： 请选择车辆品牌 无具体车品牌（机油、轮胎、蓄电池等通用件） 客户发票需求 需要发票 不需要发票 选择商品：可手动录入或批量粘贴商品行，最多可添加200个商品！ 查看批量操作指南>不存在的商品可新增商品后录入。 新增商品|清空全部商品 序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作 1 请选择 现货 已选择 0种商品，共0件 总价（不包含运费)：￥0.00下一步 Copyright © 2015-现在 CassTime. ICP证:粤ICP备15084413号-1督查举报邮箱：jiancha@casstime.com",
+      "商家工作台 首页0 报价员常用菜单 报价管理 订单列表 定向采购 发货管理 售后列表管理 休息日设置 配销宝 快捷译码报价 快捷收款 同行调货管理 新 商家服务市场 全量菜单0 费全量0 采购管理 采购计划 采购订单 库存管理 库存查询 库位管理 入库作业 出库作业 安全库存管理 盘点管理 调拨管理 调拨计划 移位管理 料号管理 备货进度 库存概览 召回计划 云仓备货管理 备货清单上传 备货计划 权限测试 发货作业 出库作业 库存查询 安全库存 ERP对接管理 库存对接 经营分析 经营分析 店铺商品分析 异常监控 等级权益 下单跟进 评价管理 店铺绩效 到货通知 员工绩效 销量分析 品牌魔方 概览 供应商运营看板 品牌供需热点 商品品类运营看板 开思参谋 新 商机风向标 选品探测器 发票管理 新 开票管理 新 收票管理 金融服务 备货融资 商品管理 添加商品 批量上传 全部商品 商城商品 商品诊断 套件关系列表 价格设置 销售库存维护 区域客群定价 批量修改商品 配套件查询 替换件关系维护 品牌件关系维护 价格分类 基础分类查询 到店价配置 最小起订金额 报价管理 报价管理 跟单管理 我的纠错 译码管理 休息日设置 报价规则管理 咨询报价 订单管理 订单列表 定向采购 发货管理 无订单发货 溯源码绑定管理 订货管理 订货管理 发货计划 预采购进度 售后管理 售后政策配置 售后列表管理 故障单管理 限售规则查询 退货单 特殊售后政策配置 物流管理 物流费单据打印 物流服务 促销管理 促销规则管理 优惠券管理 促销活动管理 包邮服务管理 满赠活动管理 现付优惠配置 赠品管理 商品类优惠 活动关系管理 财务管理 账单流水统计 开思对账单 交易流水 电子对账单 订单结算查询 指定收款账户 融资申请 收费政策查询 融资收款记录 收款清单 客户开票资料 开思钱包 账单垫款确认 月结订单 订单汇总明细 客户管理 客户管理 同行销售管理 订单管理 发货管理 发货单管理 售后管理 定向采购 同行采购管理 询价管理 订单管理 收货管理 售后管理 同行调货配置 溯源标签管理 采购/订单 溯源码库存查询 店铺设置 自动审单设置 品牌查询 共享仓运营管理 用户黑名单 销售区域管理 退货地址维护 物流公司 钉箱费设置 开票业务配置 店铺基本信息配置 推荐商品设置 店内分类设置 服务商列表 XXX 仓库管理 分店数据同步配置 数据中心管理 账号管理 商家入驻 合约管理 员工账号管理 注销下线 下载&反馈 融资7788 融资12345 我要反馈 我的反馈 3A",
+      "首页0 报价员常用菜单 报价管理 订单列表 定向采购 发货管理 售后列表管理 休息日设置 配销宝 快捷译码报价 快捷收款 同行调货管理 新 商家服务市场 全量菜单0 费全量0 采购管理 采购计划 采购订单 库存管理 库存查询 库位管理 入库作业 出库作业 安全库存管理 盘点管理 调拨管理 调拨计划 移位管理 料号管理 备货进度 库存概览 召回计划 云仓备货管理 备货清单上传 备货计划 权限测试 发货作业 出库作业 库存查询 安全库存 ERP对接管理 库存对接 经营分析 经营分析 店铺商品分析 异常监控 等级权益 下单跟进 评价管理 店铺绩效 到货通知 员工绩效 销量分析 品牌魔方 概览 供应商运营看板 品牌供需热点 商品品类运营看板 开思参谋 新 商机风向标 选品探测器 发票管理 新 开票管理 新 收票管理 金融服务 备货融资 商品管理 添加商品 批量上传 全部商品 商城商品 商品诊断 套件关系列表 价格设置 销售库存维护 区域客群定价 批量修改商品 配套件查询 替换件关系维护 品牌件关系维护 价格分类 基础分类查询 到店价配置 最小起订金额 报价管理 报价管理 跟单管理 我的纠错 译码管理 休息日设置 报价规则管理 咨询报价 订单管理 订单列表 定向采购 发货管理 无订单发货 溯源码绑定管理 订货管理 订货管理 发货计划 预采购进度 售后管理 售后政策配置 售后列表管理 故障单管理 限售规则查询 退货单 特殊售后政策配置 物流管理 物流费单据打印 物流服务 促销管理 促销规则管理 优惠券管理 促销活动管理 包邮服务管理 满赠活动管理 现付优惠配置 赠品管理 商品类优惠 活动关系管理 财务管理 账单流水统计 开思对账单 交易流水 电子对账单 订单结算查询 指定收款账户 融资申请 收费政策查询 融资收款记录 收款清单 客户开票资料 开思钱包 账单垫款确认 月结订单 订单汇总明细 客户管理 客户管理 同行销售管理 订单管理 发货管理 发货单管理 售后管理 定向采购 同行采购管理 询价管理 订单管理 收货管理 售后管理 同行调货配置 溯源标签管理 采购/订单 溯源码库存查询 店铺设置 自动审单设置 品牌查询 共享仓运营管理 用户黑名单 销售区域管理 退货地址维护 物流公司 钉箱费设置 开票业务配置 店铺基本信息配置 推荐商品设置 店内分类设置 服务商列表 XXX 仓库管理 分店数据同步配置 数据中心管理 账号管理 商家入驻 合约管理 员工账号管理 注销下线 下载&反馈 融资7788 融资12345 我要反馈 我的反馈 3A",
+      "经营分析 经营分析 店铺商品分析 异常监控 等级权益 下单跟进 评价管理 店铺绩效 到货通知 员工绩效 销量分析",
+      "经营分析 店铺商品分析 异常监控 等级权益 下单跟进 评价管理 店铺绩效 到货通知 员工绩效 销量分析",
+      "店铺商品分析",
+      "品牌魔方 概览 供应商运营看板 品牌供需热点 商品品类运营看板",
+      "概览 供应商运营看板 品牌供需热点 商品品类运营看板",
+      "商品品类运营看板",
+      "商品管理 添加商品 批量上传 全部商品 商城商品 商品诊断 套件关系列表 价格设置 销售库存维护 区域客群定价 批量修改商品 配套件查询 替换件关系维护 品牌件关系维护 价格分类 基础分类查询 到店价配置 最小起订金额",
+      "商品管理",
+      "添加商品 批量上传 全部商品 商城商品 商品诊断 套件关系列表 价格设置 销售库存维护 区域客群定价 批量修改商品 配套件查询 替换件关系维护 品牌件关系维护 价格分类 基础分类查询 到店价配置 最小起订金额",
+      "添加商品",
+      "全部商品",
+      "商城商品",
+      "商品诊断",
+      "批量修改商品",
+      "促销管理 促销规则管理 优惠券管理 促销活动管理 包邮服务管理 满赠活动管理 现付优惠配置 赠品管理 商品类优惠 活动关系管理",
+      "促销规则管理 优惠券管理 促销活动管理 包邮服务管理 满赠活动管理 现付优惠配置 赠品管理 商品类优惠 活动关系管理",
+      "商品类优惠",
+      "店铺设置 自动审单设置 品牌查询 共享仓运营管理 用户黑名单 销售区域管理 退货地址维护 物流公司 钉箱费设置 开票业务配置 店铺基本信息配置 推荐商品设置 店内分类设置 服务商列表 XXX 仓库管理 分店数据同步配置 数据中心管理",
+      "自动审单设置 品牌查询 共享仓运营管理 用户黑名单 销售区域管理 退货地址维护 物流公司 钉箱费设置 开票业务配置 店铺基本信息配置 推荐商品设置 店内分类设置 服务商列表 XXX 仓库管理 分店数据同步配置 数据中心管理",
+      "推荐商品设置",
+      "定向采购您可以通过此功能给指定的维修厂采购员选择商品并下单，系统将推送对应的采购单给采购员 定向采购流程:1为客户挑选商品2 提交采购清单给客户3 客户审核及支付 选择客户: * 客户信息： 输入客户信息会自动带出收货信息，选择客户后才可编辑收货信息哦~ * 维修厂： 请选择 * 收货人： * 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区 * 详细地址： * 手机号： 固定号码： 选择车辆品牌: * 选择车品牌： 请选择车辆品牌 无具体车品牌（机油、轮胎、蓄电池等通用件） 客户发票需求 需要发票 不需要发票 选择商品：可手动录入或批量粘贴商品行，最多可添加200个商品！ 查看批量操作指南>不存在的商品可新增商品后录入。 新增商品|清空全部商品 序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作 1 请选择 现货 已选择 0种商品，共0件 总价（不包含运费)：￥0.00下一步 Copyright © 2015-现在 CassTime. ICP证:粤ICP备15084413号-1督查举报邮箱：jiancha@casstime.com",
+      "定向采购您可以通过此功能给指定的维修厂采购员选择商品并下单，系统将推送对应的采购单给采购员",
+      "您可以通过此功能给指定的维修厂采购员选择商品并下单，系统将推送对应的采购单给采购员",
+      "定向采购流程:1为客户挑选商品2 提交采购清单给客户3 客户审核及支付 选择客户: * 客户信息： 输入客户信息会自动带出收货信息，选择客户后才可编辑收货信息哦~ * 维修厂： 请选择 * 收货人： * 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区 * 详细地址： * 手机号： 固定号码： 选择车辆品牌: * 选择车品牌： 请选择车辆品牌 无具体车品牌（机油、轮胎、蓄电池等通用件） 客户发票需求 需要发票 不需要发票 选择商品：可手动录入或批量粘贴商品行，最多可添加200个商品！ 查看批量操作指南>不存在的商品可新增商品后录入。 新增商品|清空全部商品 序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作 1 请选择 现货 已选择 0种商品，共0件 总价（不包含运费)：￥0.00下一步",
+      "定向采购流程:1为客户挑选商品2 提交采购清单给客户3 客户审核及支付 选择客户: * 客户信息： 输入客户信息会自动带出收货信息，选择客户后才可编辑收货信息哦~ * 维修厂： 请选择 * 收货人： * 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区 * 详细地址： * 手机号： 固定号码：",
+      "定向采购流程:1为客户挑选商品2 提交采购清单给客户3 客户审核及支付",
+      "1为客户挑选商品",
+      "为客户挑选商品",
+      "选择客户: * 客户信息： 输入客户信息会自动带出收货信息，选择客户后才可编辑收货信息哦~ * 维修厂： 请选择 * 收货人： * 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区 * 详细地址： * 手机号： 固定号码：",
+      "* 维修厂： 请选择",
+      "请选择",
+      "* 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区",
+      "请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区",
+      "请输入四级地址",
+      "* 选择车品牌： 请选择车辆品牌",
+      "请选择车辆品牌",
+      "选择商品：可手动录入或批量粘贴商品行，最多可添加200个商品！ 查看批量操作指南>不存在的商品可新增商品后录入。 新增商品|清空全部商品 序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作 1 请选择 现货 已选择 0种商品，共0件 总价（不包含运费)：￥0.00下一步",
+      "选择商品：可手动录入或批量粘贴商品行，最多可添加200个商品！ 查看批量操作指南>不存在的商品可新增商品后录入。 新增商品|清空全部商品",
+      "选择商品：",
+      "可手动录入或批量粘贴商品行，最多可添加200个商品！",
+      "不存在的商品可新增商品后录入。",
+      "新增商品|清空全部商品",
+      "新增商品",
+      "清空全部商品",
+      "序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作 1 请选择 现货",
+      "序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作",
+      "商品信息",
+      "1 请选择 现货",
+      "已选择 0种商品，共0件 总价（不包含运费)：￥0.00下一步",
+      "种商品，共",
+      "件 总价（不包含运费)："
+    ]
+  },
+  "interactions": [
+    {
+      "trigger": "查看批量操作指南",
+      "snapshot": {
+        "text": "商家工作台 首页0 报价员常用菜单 报价管理 订单列表 定向采购 发货管理 售后列表管理 休息日设置 配销宝 快捷译码报价 快捷收款 同行调货管理 新 商家服务市场 全量菜单0 费全量0 采购管理 采购计划 采购订单 库存管理 库存查询 库位管理 入库作业 出库作业 安全库存管理 盘点管理 调拨管理 调拨计划 移位管理 料号管理 备货进度 库存概览 召回计划 云仓备货管理 备货清单上传 备货计划 权限测试 发货作业 出库作业 库存查询 安全库存 ERP对接管理 库存对接 经营分析 经营分析 店铺商品分析 异常监控 等级权益 下单跟进 评价管理 店铺绩效 到货通知 员工绩效 销量分析 品牌魔方 概览 供应商运营看板 品牌供需热点 商品品类运营看板 开思参谋 新 商机风向标 选品探测器 发票管理 新 开票管理 新 收票管理 金融服务 备货融资 商品管理 添加商品 批量上传 全部商品 商城商品 商品诊断 套件关系列表 价格设置 销售库存维护 区域客群定价 批量修改商品 配套件查询 替换件关系维护 品牌件关系维护 价格分类 基础分类查询 到店价配置 最小起订金额 报价管理 报价管理 跟单管理 我的纠错 译码管理 休息日设置 报价规则管理 咨询报价 订单管理 订单列表 定向采购 发货管理 无订单发货 溯源码绑定管理 订货管理 订货管理 发货计划 预采购进度 售后管理 售后政策配置 售后列表管理 故障单管理 限售规则查询 退货单 特殊售后政策配置 物流管理 物流费单据打印 物流服务 促销管理 促销规则管理 优惠券管理 促销活动管理 包邮服务管理 满赠活动管理 现付优惠配置 赠品管理 商品类优惠 活动关系管理 财务管理 账单流水统计 开思对账单 交易流水 电子对账单 订单结算查询 指定收款账户 融资申请 收费政策查询 融资收款记录 收款清单 客户开票资料 开思钱包 账单垫款确认 月结订单 订单汇总明细 客户管理 客户管理 同行销售管理 订单管理 发货管理 发货单管理 售后管理 定向采购 同行采购管理 询价管理 订单管理 收货管理 售后管理 同行调货配置 溯源标签管理 采购/订单 溯源码库存查询 店铺设置 自动审单设置 品牌查询 共享仓运营管理 用户黑名单 销售区域管理 退货地址维护 物流公司 钉箱费设置 开票业务配置 店铺基本信息配置 推荐商品设置 店内分类设置 服务商列表 XXX 仓库管理 分店数据同步配置 数据中心管理 账号管理 商家入驻 合约管理 员工账号管理 注销下线 下载&反馈 融资7788 融资12345 我要反馈 我的反馈 3A 开思商城客服热线：400-168-6600 返回商城我的积分 0反馈帮助中心学习中心消息 下载 深圳开思内部测试店铺-修改(SZCASS01) 电子目录 沟通 陶智-测试店铺1 定向采购您可以通过此功能给指定的维修厂采购员选择商品并下单，系统将推送对应的采购单给采购员 定向采购流程:1为客户挑选商品2 提交采购清单给客户3 客户审核及支付 选择客户: * 客户信息： 输入客户信息会自动带出收货信息，选择客户后才可编辑收货信息哦~ * 维修厂： 请选择 * 收货人： * 所在地区： 请输入四级地址 省份 城市 县区 街道 北京市天津市河北省山西省内蒙古自治区辽宁省吉林省黑龙江省上海市江苏省浙江省安徽省福建省江西省山东省河南省湖北省湖南省广东省广西壮族自治区海南省重庆市四川省贵州省云南省西藏自治区陕西省甘肃省青海省宁夏回族自治区新疆维吾尔自治区台湾省香港特别行政区澳门特别行政区 * 详细地址： * 手机号： 固定号码： 选择车辆品牌: * 选择车品牌： 请选择车辆品牌 无具体车品牌（机油、轮胎、蓄电池等通用件） 客户发票需求 需要发票 不需要发票 选择商品：可手动录入或批量粘贴商品行，最多可添加200个商品！ 查看批量操作指南>不存在的商品可新增商品后录入。 新增商品|清空全部商品 序号 零件号 品牌 品质 商品信息 单价(￥) 钉箱费 数量 发货仓 小计(￥) 是否现货 调货时间(天) 备注 操作 1 请选择 现货 已选择 0种商品，共0件 总价（不包含运费)：￥0.00下一步 Copyright © 2015-现在 CassTime. ICP证:粤ICP备15084413号-1督查举报邮箱：jiancha@casstime.com Hello! 退出账号 陶智-测试店铺1(13477807820) 店铺：深圳开思内部测试店铺-修改(SZCASS01) 店铺等级店铺预览 批量操作指南",
+        "dialogs": [],
+        "inputs": [
+          {
+            "placeholder": "搜索关键字",
+            "value": "",
+            "disabled": false
+          },
+          {
+            "placeholder": "请输入维修厂名称、客户账号、客户名称或手机号",
+            "value": "",
+            "disabled": false
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": true
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": true
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": true
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": true
+          },
+          {
+            "placeholder": "输零件号查询已有商品",
+            "value": "",
+            "disabled": false
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": false
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": false
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": false
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": true
+          },
+          {
+            "placeholder": "",
+            "value": "",
+            "disabled": false
+          }
+        ],
+        "buttons": [
+          "客户管理",
+          "同行销售管理",
+          "订单管理",
+          "发货管理",
+          "发货单管理",
+          "售后管理",
+          "定向采购",
+          "同行采购管理",
+          "询价管理",
+          "订单管理",
+          "收货管理",
+          "售后管理",
+          "同行调货配置",
+          "溯源标签管理",
+          "采购/订单",
+          "溯源码库存查询",
+          "店铺设置",
+          "自动审单设置",
+          "品牌查询",
+          "共享仓运营管理",
+          "用户黑名单",
+          "销售区域管理",
+          "退货地址维护",
+          "物流公司",
+          "钉箱费设置",
+          "开票业务配置",
+          "店铺基本信息配置",
+          "推荐商品设置",
+          "店内分类设置",
+          "服务商列表",
+          "XXX",
+          "仓库管理",
+          "分店数据同步配置",
+          "数据中心管理",
+          "账号管理",
+          "商家入驻",
+          "合约管理",
+          "员工账号管理",
+          "注销下线",
+          "下载&反馈",
+          "融资7788",
+          "融资12345",
+          "我要反馈",
+          "我的反馈",
+          "3A",
+          "查看批量操作指南>",
+          "下一步",
+          "ICP证:粤ICP备15084413号-1",
+          "店铺等级",
+          "店铺预览"
+        ]
+      }
+    },
+    {
+      "trigger": "新增商品",
+      "error": "TimeoutError('Locator.click: Timeout 3000ms exceeded.\\nCall log:\\n  - waiting for get_by_text(\"新增商品\").last\\n  -     - locator resolved to <i class=\"br-icon icon-add productTable_icon__3kBTX\">新增商品</i>\\n  -   - attempting click action\\n  -     2 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -     - waiting 20ms\\n  -     2 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -       - waiting 100ms\\n  -     6 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -       - waiting 500ms\\n')"
+    },
+    {
+      "trigger": "清空全部商品",
+      "error": "TimeoutError('Locator.click: Timeout 3000ms exceeded.\\nCall log:\\n  - waiting for get_by_text(\"清空全部商品\").last\\n  -     - locator resolved to <i class=\"br-icon icon-trash productTable_icon__3kBTX\">清空全部商品</i>\\n  -   - attempting click action\\n  -     2 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -     - waiting 20ms\\n  -     2 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -       - waiting 100ms\\n  -     6 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -       - waiting 500ms\\n')"
+    },
+    {
+      "trigger": "下一步",
+      "error": "TimeoutError('Locator.click: Timeout 3000ms exceeded.\\nCall log:\\n  - waiting for get_by_text(\"下一步\").last\\n  -     - locator resolved to <span class=\"br-button__content\">下一步</span>\\n  -   - attempting click action\\n  -     2 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -     - waiting 20ms\\n  -     2 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -       - waiting 100ms\\n  -     6 × waiting for element to be visible, enabled and stable\\n  -       - element is visible, enabled and stable\\n  -       - scrolling into view if needed\\n  -       - done scrolling\\n  -       - <div class=\"br-modal ↵           \">…</div> intercepts pointer events\\n  -     - retrying click action\\n  -       - waiting 500ms\\n')"
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://tags.growingio.com/products/9d2350559e69271a/web/ec-hwbeta.casstime.com/settings/general",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/infrastructure-fe/micro-frontend/microfe-seller-base/static/react/react.production.min.js?version=1678436053801",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/infrastructure-fe/micro-frontend/microfe-seller-base/static/react-dom/react-dom.production.min.js?version=1678436053801",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/member/seller/menus?storeId=",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/member/seller/top-bar?storeId=",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://ec-hwbeta.casstime.com/merchant/seller/customer-tag/notice",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/member/seller/user-default-store",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/member/seller/stores/listByUserLoginId",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/merchant/seller/index/getCompanyLevel",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/css/main.352157dd.css",
+      "resourceType": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/main.04207698.js",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/0.083be078.chunk.js",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/1.ca5b746c.chunk.js",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/2.6b8f1b56.chunk.js",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/css/3.38447d4d.chunk.css",
+      "resourceType": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/3.11d88a55.chunk.js",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/css/17.42011051.chunk.css",
+      "resourceType": "stylesheet"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/17.4b62e230.chunk.js",
+      "resourceType": "script"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/media/tip.99b0deca.svg",
+      "resourceType": "image"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/address-web/geo/cascader?parentgeoid=CHN",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/verify/supplierOffline",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/check/is-agent-store",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/car-brands",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/getSupplierInvoiceConfig",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "GET",
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/isShow/transactionPriceTitle",
+      "resourceType": "xhr"
+    },
+    {
+      "method": "POST",
+      "url": "https://fe-log.cassmall.com/logstores/cass-log/track?APIVersion=0.6.0",
+      "resourceType": "ping"
+    },
+    {
+      "method": "GET",
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/media/picture.f31d2d39.png",
+      "resourceType": "image"
+    },
+    {
+      "method": "POST",
+      "url": "https://fe-log.cassmall.com/logstores/cass-log/track?APIVersion=0.6.0",
+      "resourceType": "ping"
+    }
+  ],
+  "responses": [
+    {
+      "status": 200,
+      "url": "https://tags.growingio.com/products/9d2350559e69271a/web/ec-hwbeta.casstime.com/settings/general"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/infrastructure-fe/micro-frontend/microfe-seller-base/static/react/react.production.min.js?version=1678436053801"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/infrastructure-fe/micro-frontend/microfe-seller-base/static/react-dom/react-dom.production.min.js?version=1678436053801"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/css/main.352157dd.css"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/main.04207698.js"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/css/3.38447d4d.chunk.css"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/css/17.42011051.chunk.css"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/0.083be078.chunk.js"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/2.6b8f1b56.chunk.js"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/3.11d88a55.chunk.js"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/1.ca5b746c.chunk.js"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/js/17.4b62e230.chunk.js"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/media/tip.99b0deca.svg"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/member/seller/menus?storeId="
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/member/seller/top-bar?storeId="
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/member/seller/user-default-store"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/member/seller/stores/listByUserLoginId"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/merchant/seller/index/getCompanyLevel"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/address-web/geo/cascader?parentgeoid=CHN"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/verify/supplierOffline"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/check/is-agent-store"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/car-brands"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/merchant/seller/customer-tag/notice"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/getSupplierInvoiceConfig"
+    },
+    {
+      "status": 200,
+      "url": "https://ec-hwbeta.casstime.com/orders/seller/directional/isShow/transactionPriceTitle"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-log.cassmall.com/logstores/cass-log/track?APIVersion=0.6.0"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-cdn.cassmall.com/cassmall/www/beta-kunlun/seller/sos/icec-cloud-order-seller-react/static/media/picture.f31d2d39.png"
+    },
+    {
+      "status": 200,
+      "url": "https://fe-log.cassmall.com/logstores/cass-log/track?APIVersion=0.6.0"
+    }
+  ]
+}
