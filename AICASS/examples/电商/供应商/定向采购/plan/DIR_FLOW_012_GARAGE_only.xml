@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="DIR_FLOW_012_GARAGE_only" title="Only DIR-FLOW-012-GARAGE" kind="suite" default_execute="否">
+  <case id="DIR-FLOW-012-GARAGE" execute="是"/>
+</test_plan>

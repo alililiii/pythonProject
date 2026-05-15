@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="project_full"
+           title="集配登录前置全量计划"
+           kind="suite"
+           execute="是"
+           default_execute="否">
+  <case id="BUYER_LOGIN_001" execute="是"/>
+  <case id="SELLER_LOGIN_001" execute="是"/>
+  <case id="ADMIN_LOGIN_002" execute="是"/>
+</test_plan>

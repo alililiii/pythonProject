@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases tags="garage,cancel-order">
+  <case execute="是" id="GARAGE-CANCEL-001" title="维修厂取消订单" description="维修厂登录→导航到订单详情页→点击取消订单→选择其他原因并输入自动化测试→确定→校验订单状态变为已取消。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.mall_portal_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="GarageCredential"/>
+      <test_step action="wait" data="10"/>
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="进入订单详情页" group="navigate" tag="navigate,p0">
+        <test_step action="evaluate" data="CancelOrderScript.SetOrderNo.script"/>
+        <test_step action="evaluate" data="CancelOrderScript.NavigateDetail.script"/>
+        <test_step action="wait" data="8"/>
+      </scenario>
+      <scenario id="S002" title="点击取消订单按钮" group="cancel" tag="cancel,p0" depends="S001">
+        <test_step action="evaluate" data="CancelOrderScript.ClickCancel.script"/>
+        <test_step action="wait" data="3"/>
+      </scenario>
+      <scenario id="S003" title="选择取消原因并确认" group="confirm" tag="cancel,p0" depends="S002">
+        <test_step action="evaluate" data="CancelOrderScript.ConfirmCancel.script"/>
+      </scenario>
+      <scenario id="S004" title="校验订单状态为已取消" group="assert" tag="assert,p0" depends="S003">
+        <test_step action="evaluate" data="CancelOrderScript.AssertCancelled.script"/>
+        <test_step action="screenshot" data="screenshots/GARAGE_CANCEL_001_result.png"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+</cases>

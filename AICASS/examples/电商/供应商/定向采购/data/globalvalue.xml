@@ -9,6 +9,9 @@
     <var name="base_url" value="https://ec-hwbeta.casstime.com"/>
     <var name="seller_url" value="https://ec-hwbeta.casstime.com/seller"/>
     <var name="directional_purchase_url" value="https://ec-hwbeta.casstime.com/seller#/order/directional-purchase"/>
+    <var name="mall_url" value="https://ec-hwbeta.casstime.com/mall"/>
+    <var name="mall_portal_url" value="https://ec-hwbeta.casstime.com/market/portal"/>
+    <var name="mall_order_tracking_url" value="https://ec-hwbeta.casstime.com/mall#/order/order-tracking"/>
     <var name="logout_url" value="https://ec-hwbeta.casstime.com/logout"/>
   </group>
   <group name="DataSource">

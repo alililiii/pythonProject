@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<globalvalue>
+  <group name="DefaultValue">
+    <var name="BrowserType" value="chromium"/>
+    <var name="WaitTime" value="10"/>
+    <var name="Headless" value="false"/>
+  </group>
+  <group name="Env">
+    <var name="base_url" value="https://ec-hwbeta.casstime.com"/>
+    <var name="seller_url" value="https://ec-hwbeta.casstime.com/seller"/>
+    <var name="order_list_url" value="https://ec-hwbeta.casstime.com/seller#/order/order-list"/>
+  </group>
+  <group name="TestData">
+    <var name="order_no" value="S2604300001837"/>
+  </group>
+</globalvalue>

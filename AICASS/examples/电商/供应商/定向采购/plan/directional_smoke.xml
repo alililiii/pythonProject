@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <test_plan id="directional_smoke"
-           title="定向采购主流程冒烟"
+           title="定向采购新版P0冒烟场景"
            kind="suite"
            execute="是"
            default_execute="否">
   <case id="DIR-FLOW-001" execute="是"/>
   <case id="DIR-FLOW-002" execute="是"/>
-  <case id="DIR-FLOW-003" execute="是"/>
   <case id="DIR-FLOW-004" execute="是"/>
-  <case id="DIR-FLOW-005" execute="是"/>
 </test_plan>

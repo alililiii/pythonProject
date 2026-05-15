@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="__codex_DIR_FLOW_001_002" title="Only DIR-FLOW-001 and DIR-FLOW-002" kind="suite" default_execute="否">
+  <case id="DIR-FLOW-001" execute="是"/>
+  <case id="DIR-FLOW-002" execute="是"/>
+</test_plan>

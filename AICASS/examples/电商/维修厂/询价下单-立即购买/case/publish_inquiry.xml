@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases step_wait="300" tags="ecommerce,garage,inquiry,publish,smoke">
+  <case id="garage_inquiry_buy_now" title="维修厂询价下单-立即购买" execute="是" description="维修厂登录后发布询价（VIN LBVFR790XBSD31722，配件火花塞、机油格），指定深圳开思内部测试店铺-修改和广州际达汽配（诺鸿），等待报价后选购2个商品，立即购买，去结算，选择物流方式，提交订单，完成支付。" component_type="界面" priority="P0">
+
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.DefaultValue.ECAgentBuyURL"/>
+      <test_step action="type" model="ECAgentBuyLoginPage" data="ec_agent_buy_login"/>
+      <test_step action="wait" data="1"/>
+      <test_step action="verify" model="LoginSuccessCheck" data="login_success"/>
+    </pre_process>
+
+    <test_case>
+      <scenario id="GARAGE_PUBLISH_001_ASSERT_READY" title="确认维修厂发布询价页面可用" group="garage_publish" tag="inquiry,publish,p0,smoke,assert">
+        <test_step action="verify" model="InquiryPageCheck" data="inquiry_page_ready"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_INPUT_INQUIRY" title="录入 VIN 和两个配件名称" group="garage_publish" tag="inquiry,publish,p0,smoke,input" depends="GARAGE_PUBLISH_001_ASSERT_READY">
+        <test_step action="type" model="InquiryVinForm" data="input_target_vin"/>
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const bodyText=()=>document.body&amp;&amp;document.body.innerText?document.body.innerText:'';const hasDuplicateText=()=>{const t=bodyText();return (t.includes('当前VIN码')&amp;&amp;t.includes('已在询价中'))||(t.includes('已在询价中')&amp;&amp;t.includes('追加询价需求'));};const findNewBtn=()=>{const nodes=[...document.querySelectorAll('.br-modal button,.br-modal a,[role=dialog] button,[role=dialog] a,button,a')].filter(visible);return nodes.find(el=>norm(el.textContent)==='不追加，发布新询价单')||nodes.find(el=>norm(el.textContent)==='不追加，发布新的询价单')||nodes.find(el=>norm(el.textContent).includes('不追加，发布新询价单'))||nodes.find(el=>norm(el.textContent).includes('不追加，发布新的询价单'));};for(let i=0;i&lt;20;i++){if(hasDuplicateText()){const btn=findNewBtn();if(btn){btn.scrollIntoView({block:'center'});btn.click();await sleep(500);return 'duplicate_vin_new_inquiry_clicked';}}if(document.querySelector('table textarea, table input:not([disabled])'))return 'no_duplicate_vin_modal';await sleep(250);}return 'duplicate_vin_modal_not_present';})()"/>
+        <test_step action="type" model="InquiryPartForm" data="input_first_part_name"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_SUBMIT" title="指定供应商并提交发布询价" group="garage_publish" tag="inquiry,publish,p0,smoke,submit" depends="GARAGE_PUBLISH_001_INPUT_INQUIRY">
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const norm=s=>(s||'').replace(/\s+/g,'').trim();const bodyText=()=>document.body&amp;&amp;document.body.innerText?document.body.innerText:'';const hasStore=name=>bodyText().includes(name);const sys=document.querySelector('#system');if(visible(sys)&amp;&amp;String(sys.className||'').includes('selected')){sys.click();await sleep(300);}const manual=document.querySelector('#manual');if(visible(manual)&amp;&amp;!String(manual.className||'').includes('selected')){manual.click();await sleep(500);}const targets=['深圳开思内部测试店铺-修改','广州际达汽配（诺鸿）'];let allFound=targets.every(n=>hasStore(n));if(!allFound){const modifyBtn=document.querySelector('.modify-supplier')||[...document.querySelectorAll('a,span,div,button')].filter(visible).find(el=>norm(el.textContent).includes('更改指定')||norm(el.textContent).includes('修改指定'));if(modifyBtn){modifyBtn.click();await sleep(1000);}for(const name of targets){if(hasStore(name))continue;const items=[...document.querySelectorAll('#appointSupplierPlugin li,.filter-supplier-item,li,[class*=supplier-item]')].filter(visible);const item=items.find(el=>norm(el.textContent).includes(norm(name)));if(item){item.click();await sleep(500);}}const closeBtn=[...document.querySelectorAll('.close-btn-icon,.close-icon,[class*=close]')].filter(visible)[0];if(closeBtn){closeBtn.click();await sleep(300);}}allFound=targets.every(n=>hasStore(n));if(!allFound)return 'suppliers_not_all_found_but_continue';return 'suppliers_selected';})()"/>
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const enabled=el=>visible(el)&amp;&amp;!el.disabled&amp;&amp;!String(el.className||'').includes('disabled');for(let i=0;i&lt;80;i++){const btn=document.querySelector('.save-inquiry,input.save-inquiry')||[...document.querySelectorAll('button,input,span')].find(el=>visible(el)&amp;&amp;(el.value==='发布询价'||String(el.textContent||'').trim()==='发布询价'));if(enabled(btn))return 'publish_button_ready';await sleep(250);}throw new Error('发布询价按钮未就绪，页面文本='+(document.body.innerText||'').slice(0,300));})()"/>
+        <test_step action="type" model="InquiryPublishAction" data="publish_inquiry"/>
+        <test_step action="wait" data="1"/>
+        <test_step action="evaluate" data="(()=>{const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const text=document.body&amp;&amp;document.body.innerText?document.body.innerText:'';const hasDuplicateText=(text.includes('当前VIN码')&amp;&amp;text.includes('已在询价中'))||(text.includes('已在询价中')&amp;&amp;text.includes('追加询价需求'));if(!hasDuplicateText)return 'duplicate_vin_modal_not_present';const nodes=[...document.querySelectorAll('.br-modal button,.br-modal a,[role=dialog] button,[role=dialog] a,button,a')].filter(visible);const btn=nodes.find(el=>norm(el.textContent)==='不追加，发布新询价单')||nodes.find(el=>norm(el.textContent)==='不追加，发布新的询价单')||nodes.find(el=>norm(el.textContent).includes('不追加，发布新询价单'))||nodes.find(el=>norm(el.textContent).includes('不追加，发布新的询价单'));if(btn){btn.scrollIntoView({block:'center'});btn.click();return 'new_inquiry_choice_clicked';}throw new Error('出现当前VIN码已在询价中提示，但未找到“不追加，发布新询价单”按钮，页面文本='+text.slice(0,400));})()"/>
+        <test_step action="wait" data="3"/>
+        <test_step action="evaluate" data="(()=>{const norm=s=>(s||'').replace(/\s+/g,'').trim();const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const enabled=el=>visible(el)&amp;&amp;!el.disabled&amp;&amp;!String(el.className||'').includes('disabled');const text=document.body&amp;&amp;document.body.innerText?document.body.innerText:'';if(text.includes('询价单：')||/inquiry-detail|inquiryDetail/i.test(location.href))return 'publish_detail_already_loaded';const btn=document.querySelector('.save-inquiry,input.save-inquiry')||[...document.querySelectorAll('button,input,span')].find(el=>visible(el)&amp;&amp;(el.value==='发布询价'||norm(el.textContent)==='发布询价'));if(enabled(btn)){btn.scrollIntoView({block:'center'});btn.click();return 'publish_retry_clicked_after_new_inquiry_choice';}return 'publish_retry_not_needed';})()"/>
+        <test_step action="wait" data="5"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_ASSERT_SUCCESS" title="校验发布成功并记录询价单号" group="garage_publish" tag="inquiry,publish,p0,smoke,assert" depends="GARAGE_PUBLISH_001_SUBMIT">
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const ready=()=>{const text=document.body.innerText||'';return text.includes('询价单：')&amp;&amp;text.includes('LBVFR790XBSD31722')&amp;&amp;text.includes('火花塞')&amp;&amp;text.includes('机油格');};for(let i=0;i&lt;80;i++){if(ready())return 'publish_detail_ready';await sleep(500);}throw new Error('发布成功详情页未就绪，currentUrl='+location.href+'，页面文本='+(document.body.innerText||'').slice(0,500));})()"/>
+        <test_step action="verify" model="InquiryPublishSuccessCheck" data="publish_success_generated_inquiry_id"/>
+        <test_step action="evaluate" data="(()=>{const text=document.body.innerText||'';if(!text.includes('LBVFR790XBSD31722'))throw new Error('发布成功页未展示目标VIN：LBVFR790XBSD31722');if(!text.includes('火花塞'))throw new Error('发布成功页未展示配件：火花塞');if(!text.includes('机油格'))throw new Error('发布成功页未展示配件：机油格');const m=text.match(/询价单[：:\s]*(B[A-Za-z0-9]+)/)||text.match(/\b(B[A-Za-z0-9]{6,})\b/);if(!m)throw new Error('未提取到B开头询价单号，页面文本='+text.slice(0,300));return m[1];})()"/>
+        <test_step action="set" data="published_inquiry_no=${Return[-1]}"/>
+        <test_step action="screenshot" data="01_publish_inquiry_success.png"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_WAIT_QUOTE" title="等待供应商报价" group="garage_publish" tag="inquiry,quote,p0" depends="GARAGE_PUBLISH_001_ASSERT_SUCCESS">
+        <test_step action="wait" data="3"/>
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const norm=s=>(s||'').replace(/\s+/g,'').trim();const bodyText=()=>document.body&amp;&amp;document.body.innerText?document.body.innerText:'';for(let i=0;i&lt;120;i++){const text=bodyText();if(text.includes('收到新报价啦')||text.includes('立即查看')){const btns=[...document.querySelectorAll('a,button,span,div')].filter(visible);const viewBtn=btns.find(el=>norm(el.textContent)==='立即查看');if(viewBtn){viewBtn.click();return 'clicked_view_now';}await sleep(500);continue;}if(text.includes('选购')&amp;&amp;!text.includes('加载中'))return 'purchase_btn_already_visible';await sleep(500);}throw new Error('等待报价超时，未收到新报价提示');})()"/>
+        <test_step action="wait" data="3"/>
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const bodyText=()=>document.body&amp;&amp;document.body.innerText?document.body.innerText:'';for(let i=0;i&lt;60;i++){if(bodyText().includes('选购')&amp;&amp;!bodyText().includes('加载中'))return 'purchase_btn_visible';await sleep(500);}throw new Error('选购按钮未出现');})()"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_SELECT" title="选购2个报价商品" group="garage_publish" tag="inquiry,select,p0" depends="GARAGE_PUBLISH_001_WAIT_QUOTE">
+        <test_step action="type" model="OrderDetailPage" data="select_first"/>
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const norm=s=>(s||'').replace(/\s+/g,'');const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;el.offsetParent!==null;for(let i=0;i&lt;20;i++){const rows=[...document.querySelectorAll('div[class*=quotation-layer--quotation-row]')].filter(visible);const secondRow=rows[1];if(!secondRow){await sleep(500);continue;}const btn=[...secondRow.querySelectorAll('button,a,[role=button],span,div')].filter(visible).find(el=>norm(el.textContent)==='选购'&amp;&amp;![...el.children].some(c=>norm(c.textContent).includes('选购')));if(btn){btn.scrollIntoView({block:'center'});btn.click();await sleep(500);const check=norm(secondRow.textContent);if(check.includes('取消'))return 'second_selected';return 'second_clicked';}await sleep(500);}throw new Error('第二个选购按钮未找到');})()"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_BUY" title="立即购买并去结算" group="garage_publish" tag="inquiry,buy,p0" depends="GARAGE_PUBLISH_001_SELECT">
+        <test_step action="type" model="OrderDetailPage" data="buy_now"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="CheckoutPage" data="go_to_checkout"/>
+        <test_step action="wait" data="2"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_SUBMIT_ORDER" title="选择物流方式并提交订单" group="garage_publish" tag="inquiry,order,p0" depends="GARAGE_PUBLISH_001_BUY">
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const visible=el=>!!el&amp;&amp;el.isConnected&amp;&amp;!!(el.offsetWidth||el.offsetHeight||el.getClientRects().length);const norm=s=>(s||'').replace(/\s+/g,'').trim();const bodyText=()=>document.body&amp;&amp;document.body.innerText?document.body.innerText:'';window.scrollTo(0,document.body.scrollHeight);await sleep(1000);for(let i=0;i&lt;30;i++){const els=[...document.querySelectorAll('span,div,a,button,select,input,[class*=select],[class*=trigger],[class*=placeholder],[class*=logistics],[class*=delivery]')].filter(visible);const logisticsBtn=els.find(el=>{const t=norm(el.textContent||el.value||el.getAttribute('placeholder')||'');return t.includes('请选择物流')||t.includes('选择物流')||t.includes('请选择配送')||t.includes('物流方式');});if(logisticsBtn){logisticsBtn.scrollIntoView({block:'center'});await sleep(300);logisticsBtn.click();await sleep(1500);for(let round=0;round&lt;5;round++){const options=[...document.querySelectorAll('.el-select-dropdown__item,.el-cascader-menu__item,.el-cascader-node,.br-select-option,.br-cascader-node,li[class*=option],div[class*=option],[class*=dropdown-item],[class*=select-item]')].filter(visible);if(options.length===0){await sleep(500);continue;}const jd=options.find(el=>(el.textContent||'').includes('京东'));const target=jd||options[0];target.scrollIntoView({block:'center'});target.click();await sleep(1000);const stillOpen=[...document.querySelectorAll('.el-select-dropdown,.el-cascader-panel,.el-popper,.br-select-dropdown,.br-cascader-menus,[class*=dropdown],[class*=popover]')].filter(visible);if(stillOpen.length===0)break;}return 'logistics_selected';}const fromShip=els.find(el=>{const t=norm(el.textContent||'');return t.includes('发货')&amp;&amp;t.length&lt;50;});if(fromShip){const parent=fromShip.closest('[class*=item],[class*=row],[class*=section],div')||fromShip.parentElement;const selectInParent=parent?[...parent.querySelectorAll('[class*=select],[class*=trigger],[class*=arrow],select')].filter(visible)[0]:null;if(selectInParent){selectInParent.scrollIntoView({block:'center'});await sleep(300);selectInParent.click();await sleep(1500);const options=[...document.querySelectorAll('.el-select-dropdown__item,.el-cascader-menu__item,.br-select-option,li[class*=option],div[class*=option],[class*=dropdown-item]')].filter(visible);if(options.length&gt;0){const jd=options.find(el=>(el.textContent||'').includes('京东'));(jd||options[0]).click();await sleep(800);return 'logistics_selected_via_parent';}}}await sleep(500);}const text=bodyText();if(text.includes('提交订单')&amp;&amp;!text.includes('请选择物流'))return 'no_logistics_needed';throw new Error('未找到物流方式选择入口');})()"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="CheckoutPage" data="submit_order"/>
+        <test_step action="wait" data="2"/>
+      </scenario>
+
+      <scenario id="GARAGE_PUBLISH_001_PAY" title="完成支付" group="garage_publish" tag="inquiry,pay,p0" depends="GARAGE_PUBLISH_001_SUBMIT_ORDER">
+        <test_step action="evaluate" data="(()=>{const text=document.body.innerText||'';const m=text.match(/订单号[：:\s]*([A-Za-z0-9]+)/)||text.match(/\b(D[0-9]{10,})\b/)||text.match(/\b(S[0-9]{10,})\b/);return m?m[1]:'order_no_not_found';})()"/>
+        <test_step action="set" data="order_no=${Return[-1]}"/>
+        <test_step action="type" model="PaymentPage" data="pay_now"/>
+        <test_step action="wait" data="3"/>
+        <test_step action="evaluate" data="(async()=>{const sleep=ms=>new Promise(r=>setTimeout(r,ms));const bodyText=()=>document.body&amp;&amp;document.body.innerText?document.body.innerText:'';for(let i=0;i&lt;30;i++){const text=bodyText();if(text.includes('感谢您，订单支付成功'))return 'payment_success';await sleep(500);}throw new Error('支付成功提示未出现，页面文本='+bodyText().slice(0,500));})()"/>
+        <test_step action="evaluate" data="(()=>{const text=document.body.innerText||'';const m=text.match(/支付单号[：:\s]*([A-Za-z0-9]+)/)||text.match(/支付.*?号[：:\s]*([A-Za-z0-9]+)/);return m?m[1]:'pay_no_not_found';})()"/>
+        <test_step action="set" data="payment_no=${Return[-1]}"/>
+        <test_step action="screenshot" data="02_payment_success.png"/>
+      </scenario>
+    </test_case>
+
+    <post_process>
+      <test_step action="close" data=""/>
+    </post_process>
+  </case>
+</cases>

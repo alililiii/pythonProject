@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<models>
+  <model name="PassportLogin">
+    <element name="loginModePassword" type="web">
+      <type>button</type>
+      <location type="css" priority="1">span[type='PASSWORD']</location>
+      <desc>密码登录模式切换</desc>
+    </element>
+    <element name="username" type="web">
+      <type>input</type>
+      <location type="id">userName</location>
+      <desc>用户名输入框</desc>
+    </element>
+    <element name="password" type="web">
+      <type>input</type>
+      <location type="id">password</location>
+      <desc>密码输入框</desc>
+    </element>
+    <element name="agreement" type="web">
+      <type>button</type>
+      <location type="css">.bre-login-privacy-modal_entry-checkbox</location>
+      <desc>同意协议复选框</desc>
+    </element>
+    <element name="submit" type="web">
+      <type>button</type>
+      <location type="css">input.btn-submit</location>
+      <desc>登录按钮</desc>
+    </element>
+  </model>
+</models>

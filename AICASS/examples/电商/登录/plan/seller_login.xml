@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="seller_login"
+           title="电商供应商登录前置计划"
+           kind="suite"
+           execute="是"
+           default_execute="否">
+  <case id="SELLER_LOGIN_001" execute="是"/>
+</test_plan>

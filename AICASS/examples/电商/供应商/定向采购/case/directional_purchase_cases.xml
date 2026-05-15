@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cases step_wait="1" tags="directional-purchase,seller,main-flow">
-  <case execute="是" id="DIR-FLOW-001" title="供应商为维修厂下单：现货商品 + 需要发票" description="主流程：供应商选择维修厂客户、车辆品牌、需要发票，添加Excel商品数据中的现货商品并生成供应商端采购清单草稿；默认不点击最终提交，避免产生真实业务数据。" component_type="界面" priority="P0">
+<cases step_wait="1" tags="directional-purchase,seller,updated-scenarios">
+  <case execute="是" id="DIR-FLOW-001" title="供应商为维修厂下单：选择车品牌 +需要发票 + 现货商品 + 无钉箱费 +包邮" description="完整链路：登录→进入定向采购页→选择维修厂客户→选择车品牌→勾选需要发票→输入零件号 12120037244 添加商品→维护价格 222、钉箱费 0、数量 1、选择发货仓、现货→点击下一步进入填写并核对订单信息页→勾选商家包邮→点击提交订单。" component_type="界面" priority="P0">
     <pre_process>
       <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
       <test_step action="wait" data="2"/>
@@ -8,18 +8,21 @@
       <test_step action="wait" data="8"/>
     </pre_process>
     <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
+      <scenario id="S001" title="加载定向采购页面" group="prepare" tag="page,p0">
         <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
         <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
       </scenario>
-      <scenario id="S002" title="填写现货商品需要发票采购草稿" group="main-flow" tag="spot,invoice,p0" depends="S001">
+      <scenario id="S002" title="填写客户/品牌/发票/商品/价格/数量/发货仓/现货" group="main-flow" tag="main-flow,p0" depends="S001">
         <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_001.script"/>
       </scenario>
-      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft,p0" depends="S002">
+      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft" depends="S002">
         <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
       </scenario>
-      <scenario id="S004" title="截图留存主流程草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_001_invoice_spot_draft.png"/>
+      <scenario id="S004" title="点击下一步进入填写并核对订单信息页，勾选商家包邮并提交订单" group="submit" tag="submit,p0" depends="S003">
+        <test_step action="evaluate" data="DirectionalScript.SubmitOrderFlow.script"/>
+      </scenario>
+      <scenario id="S005" title="截图留存订单提交结果" group="evidence" tag="screenshot" depends="S004">
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_001_submitted.png"/>
       </scenario>
     </test_case>
     <post_process>
@@ -27,7 +30,7 @@
     </post_process>
   </case>
 
-  <case execute="是" id="DIR-FLOW-002" title="供应商为维修厂下单：现货商品 + 不需要发票" description="主流程：供应商选择维修厂客户、车辆品牌、不需要发票，添加Excel商品数据中的现货商品并生成采购清单草稿；默认不点击最终提交。" component_type="界面" priority="P0">
+  <case execute="是" id="DIR-FLOW-002" title="供应商为维修厂下单：勾选无具体车品牌 + 不需要发票 + 调货商品 + 有钉箱费 + 商家发运" description="完整链路：登录→进入定向采购页→选择维修厂客户→勾选无具体车品牌→不需要发票→输入零件号 12120037244 添加商品→维护价格 213、钉箱费 10、数量 1、选择发货仓、调货→点击下一步进入填写并核对订单信息页→选择商家发运→选择物流方式→点击提交订单→校验订单号。" component_type="界面" priority="P0">
     <pre_process>
       <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
       <test_step action="wait" data="2"/>
@@ -35,18 +38,21 @@
       <test_step action="wait" data="8"/>
     </pre_process>
     <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
+      <scenario id="S001" title="加载定向采购页面" group="prepare" tag="page,p0">
         <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
         <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
       </scenario>
-      <scenario id="S002" title="填写现货商品不开票采购草稿" group="main-flow" tag="spot,no-invoice,p0" depends="S001">
+      <scenario id="S002" title="填写客户/无具体车品牌/不需要发票/商品/价格/钉箱费/数量/发货仓/调货" group="main-flow" tag="main-flow,p0" depends="S001">
         <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_002.script"/>
       </scenario>
-      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft,p0" depends="S002">
+      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft" depends="S002">
         <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
       </scenario>
-      <scenario id="S004" title="截图留存主流程草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_002_no_invoice_spot_draft.png"/>
+      <scenario id="S004" title="点击下一步进入核对页，选择商家发运和物流方式并提交订单" group="submit" tag="submit,p0" depends="S003">
+        <test_step action="evaluate" data="DirectionalScript.SubmitOrderFlow.script"/>
+      </scenario>
+      <scenario id="S005" title="截图留存订单提交结果" group="evidence" tag="screenshot" depends="S004">
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_002_submitted.png"/>
       </scenario>
     </test_case>
     <post_process>
@@ -54,7 +60,7 @@
     </post_process>
   </case>
 
-  <case execute="是" id="DIR-FLOW-003" title="调货商品下定向采购单" description="主流程：供应商选择维修厂客户和地址，添加调货商品并填写预计调货时间，校验供应商端采购清单草稿；默认不点击最终提交。" component_type="界面" priority="P0">
+  <case execute="是" id="DIR-FLOW-004" title="供应商为维修厂下单：多商品相同仓库混合下单" description="完整链路：登录→进入定向采购页→选择维修厂客户→选择车品牌→需要发票→添加商品 12120037244 和 A 028 545 30 26→维护价格 222、钉箱费 12、数量各 1、选择发货仓、现货→点击下一步→勾选商家包邮→选择物流方式→提交订单→校验订单号。" component_type="界面" priority="P0">
     <pre_process>
       <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
       <test_step action="wait" data="2"/>
@@ -62,45 +68,21 @@
       <test_step action="wait" data="8"/>
     </pre_process>
     <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
+      <scenario id="S001" title="加载定向采购页面" group="prepare" tag="page,p0">
         <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
         <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
       </scenario>
-      <scenario id="S002" title="填写调货商品采购草稿" group="main-flow" tag="transfer,p0" depends="S001">
-        <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_003.script"/>
-      </scenario>
-      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft,p0" depends="S002">
-        <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
-      </scenario>
-      <scenario id="S004" title="截图留存主流程草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_003_transfer_draft.png"/>
-      </scenario>
-    </test_case>
-    <post_process>
-      <test_step action="close"/>
-    </post_process>
-  </case>
-
-  <case execute="是" id="DIR-FLOW-004" title="多商品混合下单" description="主流程：同一维修厂客户下录入多个商品，覆盖现货、调货和不同品牌品质商品，校验采购清单草稿汇总；默认不点击最终提交。" component_type="界面" priority="P0">
-    <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="SellerPrimaryCredential"/>
-      <test_step action="wait" data="8"/>
-    </pre_process>
-    <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
-        <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
-        <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
-      </scenario>
-      <scenario id="S002" title="填写多商品混合采购草稿" group="main-flow" tag="multi-item,p0" depends="S001">
+      <scenario id="S002" title="填写客户/车品牌/发票/两个商品/价格/钉箱费/数量/发货仓/现货" group="main-flow" tag="main-flow,p0" depends="S001">
         <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_004.script"/>
       </scenario>
-      <scenario id="S003" title="校验多商品采购草稿汇总" group="assertion" tag="draft,p0" depends="S002">
+      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft" depends="S002">
         <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
       </scenario>
-      <scenario id="S004" title="截图留存主流程草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_004_multi_item_draft.png"/>
+      <scenario id="S004" title="点击下一步进入核对页，勾选商家包邮选择物流方式并提交订单" group="submit" tag="submit,p0" depends="S003">
+        <test_step action="evaluate" data="DirectionalScript.SubmitOrderFlow.script"/>
+      </scenario>
+      <scenario id="S005" title="截图留存订单提交结果" group="evidence" tag="screenshot" depends="S004">
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_004_submitted.png"/>
       </scenario>
     </test_case>
     <post_process>
@@ -108,7 +90,7 @@
     </post_process>
   </case>
 
-  <case execute="是" id="DIR-FLOW-005" title="通用件不选择具体车品牌下单" description="主流程：供应商勾选无具体车品牌，添加Excel商品数据中的通用件商品，校验采购清单草稿；默认不点击最终提交。" component_type="界面" priority="P0">
+  <case execute="是" id="DIR-FLOW-006" title="供应商为维修厂下单：多商品不同仓库混合下单" description="完整链路：登录→进入定向采购页→选择维修厂客户→选择车品牌→不需要发票→添加商品 12120037244（广州塔仓）和 A 028 545 30 26（深圳福田仓）→维护价格 222、钉箱费 23、数量各 1、现货→点击下一步→勾选商家包邮→分别选择各仓物流方式→提交订单→校验订单号。" component_type="界面" priority="P1">
     <pre_process>
       <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
       <test_step action="wait" data="2"/>
@@ -116,45 +98,21 @@
       <test_step action="wait" data="8"/>
     </pre_process>
     <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
+      <scenario id="S001" title="加载定向采购页面" group="prepare" tag="page,p1">
         <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
         <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
       </scenario>
-      <scenario id="S002" title="填写通用件采购草稿" group="main-flow" tag="common-part,p0" depends="S001">
-        <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_005.script"/>
-      </scenario>
-      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft,p0" depends="S002">
-        <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
-      </scenario>
-      <scenario id="S004" title="截图留存主流程草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_005_common_part_draft.png"/>
-      </scenario>
-    </test_case>
-    <post_process>
-      <test_step action="close"/>
-    </post_process>
-  </case>
-
-  <case execute="是" id="DIR-FLOW-006" title="轮胎商品下单并保存尺寸属性" description="主流程：添加Excel商品数据中的轮胎/规格类商品，校验采购清单草稿可识别商品信息；默认不点击最终提交。" component_type="界面" priority="P1">
-    <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="SellerPrimaryCredential"/>
-      <test_step action="wait" data="8"/>
-    </pre_process>
-    <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p1">
-        <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
-        <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
-      </scenario>
-      <scenario id="S002" title="填写轮胎商品采购草稿" group="main-flow" tag="tyre,p1" depends="S001">
+      <scenario id="S002" title="填写客户/车品牌/不需要发票/两个商品不同仓库/价格/钉箱费/数量/现货" group="main-flow" tag="main-flow,p1" depends="S001">
         <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_006.script"/>
       </scenario>
-      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft,p1" depends="S002">
+      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft" depends="S002">
         <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
       </scenario>
-      <scenario id="S004" title="截图留存主流程草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_006_tyre_draft.png"/>
+      <scenario id="S004" title="点击下一步进入核对页，勾选商家包邮分别选择各仓物流方式并提交订单" group="submit" tag="submit,p1" depends="S003">
+        <test_step action="evaluate" data="DirectionalScript.SubmitOrderFlow.script"/>
+      </scenario>
+      <scenario id="S005" title="截图留存订单提交结果" group="evidence" tag="screenshot" depends="S004">
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_006_submitted.png"/>
       </scenario>
     </test_case>
     <post_process>
@@ -162,7 +120,7 @@
     </post_process>
   </case>
 
-  <case execute="是" id="DIR-FLOW-007" title="机油商品下单并保存源产地/购买渠道属性" description="主流程：添加Excel商品数据中的机油/通用件商品，校验采购清单草稿可识别商品信息；默认不点击最终提交。" component_type="界面" priority="P1">
+  <case execute="是" id="DIR-FLOW-007" title="供应商为维修厂下单：现货商品 + 调货商品" description="完整链路：登录→进入定向采购页→选择维修厂客户→勾选无具体车品牌→需要发票→添加商品 12120037244（现货）和 A 028 545 30 26（调货）→维护价格 222、钉箱费 0、数量各 1、选择发货仓→点击下一步→勾选商家包邮→选择物流方式→提交订单→校验订单号。" component_type="界面" priority="P1">
     <pre_process>
       <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
       <test_step action="wait" data="2"/>
@@ -170,18 +128,21 @@
       <test_step action="wait" data="8"/>
     </pre_process>
     <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p1">
+      <scenario id="S001" title="加载定向采购页面" group="prepare" tag="page,p1">
         <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
         <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
       </scenario>
-      <scenario id="S002" title="填写机油商品采购草稿" group="main-flow" tag="oil,p1" depends="S001">
+      <scenario id="S002" title="填写客户/无具体车品牌/需要发票/两个商品现货+调货/价格/钉箱费/数量/发货仓" group="main-flow" tag="main-flow,p1" depends="S001">
         <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_007.script"/>
       </scenario>
-      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft,p1" depends="S002">
+      <scenario id="S003" title="校验采购草稿商品与金额区块" group="assertion" tag="draft" depends="S002">
         <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
       </scenario>
-      <scenario id="S004" title="截图留存主流程草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_007_oil_draft.png"/>
+      <scenario id="S004" title="点击下一步进入核对页，勾选商家包邮选择物流方式并提交订单" group="submit" tag="submit,p1" depends="S003">
+        <test_step action="evaluate" data="DirectionalScript.SubmitOrderFlow.script"/>
+      </scenario>
+      <scenario id="S005" title="截图留存订单提交结果" group="evidence" tag="screenshot" depends="S004">
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_007_submitted.png"/>
       </scenario>
     </test_case>
     <post_process>
@@ -189,92 +150,9 @@
     </post_process>
   </case>
 
-  <case execute="否" id="DIR-FLOW-008" title="批量粘贴 200 条商品后下单" description="主流程关闭态：批量粘贴200条商品会进入采购清单提交链路，需确认测试客户和商品数据后再开启执行。" component_type="界面" priority="P0">
-    <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="SellerPrimaryCredential"/>
-      <test_step action="wait" data="8"/>
-    </pre_process>
+  <case execute="是" id="DIR-FLOW-011" title="供应商为维修厂下单，维修厂查看订单" description="完整链路：供应商登录→定向采购下单→保存订单号→导航到维修厂首页→登录维修厂→点击订单跟踪→更多条件→输入订单编号→查询→点击订单详情→校验。" component_type="界面" priority="P2">
     <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
-        <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
-        <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
-      </scenario>
-      <scenario id="S002" title="填充200条商品批量采购场景" group="main-flow" tag="batch-200,p0" depends="S001">
-        <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_008.script"/>
-      </scenario>
-      <scenario id="S003" title="校验批量采购草稿汇总" group="assertion" tag="draft,p0" depends="S002">
-        <test_step action="evaluate" data="DirectionalScript.DraftAssert.script"/>
-      </scenario>
-      <scenario id="S004" title="截图留存批量场景草稿" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_008_batch_200_draft.png"/>
-      </scenario>
-    </test_case>
-    <post_process>
-      <test_step action="close"/>
-    </post_process>
-  </case>
-
-  <case execute="否" id="DIR-FLOW-009" title="超过 200 条商品提交" description="主流程关闭态：201条商品提交用于验证商品上限处理，需确认不会误提交业务数据后再开启执行。" component_type="界面" priority="P0">
-    <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="SellerPrimaryCredential"/>
-      <test_step action="wait" data="8"/>
-    </pre_process>
-    <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
-        <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
-        <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
-      </scenario>
-      <scenario id="S002" title="填充201条商品上限场景" group="main-flow" tag="batch-201,p0" depends="S001">
-        <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_009.script"/>
-      </scenario>
-      <scenario id="S003" title="校验超过上限的处理结果" group="assertion" tag="limit,p0" depends="S002">
-        <test_step action="evaluate" data="DirectionalScript.BatchLimitAssert.script"/>
-      </scenario>
-      <scenario id="S004" title="截图留存上限场景结果" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_009_batch_201_limit.png"/>
-      </scenario>
-    </test_case>
-    <post_process>
-      <test_step action="close"/>
-    </post_process>
-  </case>
-
-  <case execute="否" id="DIR-FLOW-010" title="同一客户二次编辑采购清单后重新提交" description="主流程关闭态：会对同一客户提交两次采购清单，用于验证后端复用主单并清理旧明细；需确认测试数据后再开启执行。" component_type="界面" priority="P0">
-    <pre_process>
-      <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
-      <test_step action="wait" data="2"/>
-      <test_step action="type" model="PassportLogin" data="SellerPrimaryCredential"/>
-      <test_step action="wait" data="8"/>
-    </pre_process>
-    <test_case>
-      <scenario id="S001" title="加载定向采购主流程页面" group="prepare" tag="page,p0">
-        <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
-        <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
-      </scenario>
-      <scenario id="S002" title="第一次填写并提交采购清单" group="main-flow" tag="resubmit,p0" depends="S001">
-        <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_010_FIRST.script"/>
-        <test_step action="evaluate" data="DirectionalScript.SubmitNextStep.script"/>
-      </scenario>
-      <scenario id="S003" title="第二次编辑并重新提交采购清单" group="main-flow" tag="resubmit,p0" depends="S002">
-        <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_010_SECOND.script"/>
-        <test_step action="evaluate" data="DirectionalScript.SubmitNextStep.script"/>
-      </scenario>
-      <scenario id="S004" title="截图留存二次提交结果" group="evidence" tag="screenshot" depends="S003">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_010_resubmit_result.png"/>
-      </scenario>
-    </test_case>
-    <post_process>
-      <test_step action="close"/>
-    </post_process>
-  </case>
-
-  <case execute="否" id="DIR-FLOW-011" title="客户审核采购单并支付成功" description="主流程关闭态：需要供应商先提交采购清单，再切换客户侧审核并支付；会生成正式订单，需明确授权后开启执行。" component_type="界面" priority="P0">
-    <test_case>
-      <scenario id="S001" title="供应商提交采购清单给客户" group="seller-submit" tag="submit,p0,creates-data">
+      <scenario id="S001" title="供应商登录并提交定向采购订单" group="seller-submit" tag="submit,p2">
         <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
         <test_step action="wait" data="2"/>
         <test_step action="type" model="PassportLogin" data="SellerPrimaryCredential"/>
@@ -282,13 +160,24 @@
         <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
         <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
         <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_011.script"/>
-        <test_step action="evaluate" data="DirectionalScript.SubmitNextStep.script"/>
+        <test_step action="evaluate" data="DirectionalScript.SubmitOrderFlow.script"/>
       </scenario>
-      <scenario id="S002" title="客户审核并支付采购单" group="customer-pay" tag="pay,p0,creates-order" depends="S001">
-        <test_step action="evaluate" data="DirectionalScript.CustomerAuditPayTodo.script"/>
+      <scenario id="S002" title="退出供应商账号，登录维修厂账号进入首页点击订单跟踪" group="garage-login" tag="garage,p2" depends="S001">
+        <test_step action="evaluate" data="((() => { const orderNo = window.__directionalLastSubmit &amp;&amp; window.__directionalLastSubmit.orderNo; localStorage.setItem('__garageOrderNo', orderNo); return orderNo; })())"/>
+        <test_step action="navigate" data="GlobalValue.Env.logout_url"/>
+        <test_step action="wait" data="3"/>
+        <test_step action="navigate" data="GlobalValue.Env.mall_portal_url"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="PassportLogin" data="GarageLoginCredential"/>
+        <test_step action="wait" data="10"/>
+        <test_step action="evaluate" data="((async () => { const sleep = ms => new Promise(r => setTimeout(r, ms)); const visible = el => !!el &amp;&amp; el.isConnected &amp;&amp; !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length); const q = sel => [...document.querySelectorAll(sel)].filter(visible); const norm = s => String(s || '').replace(/\s+/g, ' ').trim(); for (let i = 0; i &lt; 30; i++){ const link = q('a,span,div,button').find(el => { const t = norm(el.innerText || el.textContent || ''); return t === '订单跟踪'; }); if (link){ link.click(); return 'clicked'; } await sleep(500); } throw new Error('订单跟踪 not found'); })())"/>
+        <test_step action="wait" data="5"/>
       </scenario>
-      <scenario id="S003" title="截图留存支付结果" group="evidence" tag="screenshot" depends="S002">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_011_customer_pay_result.png"/>
+      <scenario id="S003" title="更多条件搜索订单号并进入订单详情校验" group="garage-verify" tag="garage,verify,p2" depends="S002">
+        <test_step action="evaluate" data="DirectionalScript.GarageOrderTracking.script"/>
+      </scenario>
+      <scenario id="S004" title="截图留存维修厂订单详情" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_011_garage_detail.png"/>
       </scenario>
     </test_case>
     <post_process>
@@ -296,9 +185,9 @@
     </post_process>
   </case>
 
-  <case execute="否" id="DIR-FLOW-012" title="客户拒绝或不支付采购单" description="主流程关闭态：需要供应商提交采购清单，再切换客户侧拒绝、取消或不支付；默认关闭避免产生待处理业务数据。" component_type="界面" priority="P1">
+  <case execute="是" id="DIR-FLOW-012" title="供应商为维修厂下单，维修厂取消订单" description="完整链路：供应商登录→定向采购下单→退出供应商→维修厂登录首页→点击订单跟踪→更多条件→输入订单编号→查询→点击取消订单→选择取消原因→确定→校验已取消。" component_type="界面" priority="P2">
     <test_case>
-      <scenario id="S001" title="供应商提交采购清单给客户" group="seller-submit" tag="submit,p1,creates-data">
+      <scenario id="S001" title="供应商登录并提交定向采购订单" group="seller-submit" tag="submit,p2">
         <test_step action="navigate" data="GlobalValue.Env.directional_purchase_url"/>
         <test_step action="wait" data="2"/>
         <test_step action="type" model="PassportLogin" data="SellerPrimaryCredential"/>
@@ -306,17 +195,59 @@
         <test_step action="evaluate" data="DirectionalScript.ScenarioEngine.script"/>
         <test_step action="evaluate" data="DirectionalScript.PageReady.script"/>
         <test_step action="evaluate" data="DirectionalScenario.DIR_FLOW_012.script"/>
-        <test_step action="evaluate" data="DirectionalScript.SubmitNextStep.script"/>
+        <test_step action="evaluate" data="DirectionalScript.SubmitOrderFlow.script"/>
       </scenario>
-      <scenario id="S002" title="客户拒绝或保持不支付" group="customer-review" tag="reject,no-pay,p1" depends="S001">
-        <test_step action="evaluate" data="DirectionalScript.CustomerRejectTodo.script"/>
+      <scenario id="S002" title="退出供应商账号，登录维修厂账号进入首页点击订单跟踪" group="garage-login" tag="garage,p2" depends="S001">
+        <test_step action="evaluate" data="((() => { const orderNo = window.__directionalLastSubmit &amp;&amp; window.__directionalLastSubmit.orderNo; localStorage.setItem('__garageOrderNo', orderNo); return orderNo; })())"/>
+        <test_step action="navigate" data="GlobalValue.Env.logout_url"/>
+        <test_step action="wait" data="3"/>
+        <test_step action="navigate" data="GlobalValue.Env.mall_portal_url"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="PassportLogin" data="GarageLoginCredential"/>
+        <test_step action="wait" data="10"/>
+        <test_step action="evaluate" data="((async () => { const sleep = ms => new Promise(r => setTimeout(r, ms)); const visible = el => !!el &amp;&amp; el.isConnected &amp;&amp; !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length); const q = sel => [...document.querySelectorAll(sel)].filter(visible); const norm = s => String(s || '').replace(/\s+/g, ' ').trim(); for (let i = 0; i &lt; 30; i++){ const link = q('a,span,div,button').find(el => { const t = norm(el.innerText || el.textContent || ''); return t === '订单跟踪'; }); if (link){ link.click(); return 'clicked'; } await sleep(500); } throw new Error('订单跟踪 not found'); })())"/>
+        <test_step action="wait" data="5"/>
       </scenario>
-      <scenario id="S003" title="截图留存拒绝或未支付结果" group="evidence" tag="screenshot" depends="S002">
-        <test_step action="screenshot" data="screenshots/DIR_FLOW_012_customer_reject_result.png"/>
+      <scenario id="S003" title="查询订单并取消" group="garage-cancel" tag="garage,cancel,p2" depends="S002">
+        <test_step action="evaluate" data="DirectionalScript.GarageCancelOrder.script"/>
+      </scenario>
+      <scenario id="S004" title="截图留存取消结果" group="evidence" tag="screenshot" depends="S003">
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_012_cancelled.png"/>
       </scenario>
     </test_case>
     <post_process>
       <test_step action="close"/>
     </post_process>
   </case>
+
+  <case execute="是" id="DIR-FLOW-012-GARAGE" title="维修厂取消订单（仅维修厂端调试）" description="维修厂登录→导航到订单详情页→点击取消订单→选择其他原因并输入→确定→校验订单状态变为已取消。" component_type="界面" priority="P2">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.mall_portal_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="GarageLoginCredential"/>
+      <test_step action="wait" data="10"/>
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="进入订单详情页" group="garage-navigate" tag="garage,p2">
+        <test_step action="evaluate" data="DirectionalScript.GarageSetOrderNo.script"/>
+        <test_step action="evaluate" data="DirectionalScript.GarageNavigateDetail.script"/>
+        <test_step action="wait" data="8"/>
+      </scenario>
+      <scenario id="S002" title="点击取消订单按钮" group="garage-cancel" tag="garage,cancel,p2" depends="S001">
+        <test_step action="evaluate" data="DirectionalScript.GarageClickCancel.script"/>
+        <test_step action="wait" data="3"/>
+      </scenario>
+      <scenario id="S003" title="选择取消原因并确认" group="garage-confirm" tag="garage,cancel,p2" depends="S002">
+        <test_step action="evaluate" data="DirectionalScript.GarageConfirmCancel.script"/>
+      </scenario>
+      <scenario id="S004" title="校验订单状态为已取消" group="garage-assert" tag="garage,assert,p2" depends="S003">
+        <test_step action="evaluate" data="DirectionalScript.GarageAssertCancelled.script"/>
+        <test_step action="screenshot" data="screenshots/DIR_FLOW_012_garage_cancelled.png"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
 </cases>

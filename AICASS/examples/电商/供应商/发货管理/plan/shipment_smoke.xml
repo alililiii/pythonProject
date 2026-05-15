@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="shipment_smoke"
+           title="发货管理P0冒烟"
+           kind="suite"
+           execute="是"
+           default_execute="否">
+  <case id="SHIPMENT_FLOW_001" execute="是"/>
+</test_plan>

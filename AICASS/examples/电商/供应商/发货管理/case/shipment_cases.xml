@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cases step_wait="1" tags="shipment-management,seller,wms,delivery-goods">
+  <case execute="是" id="SHIPMENT_FLOW_001" title="供应商发货管理：待寄件订单登记发货完成全链路" description="完整链路：供应商 seller 登录 -> 左侧菜单进入订单管理/发货管理 -> 在订单号筛选项输入目标订单号并查询 -> 切换待寄件 -> 勾选目标订单 -> 点击发货登记，如被未打印订单提示拦截则先点击打印订单，回原页再次点击发货登记 -> 进入发货登记页面点击仅登记不打印物流标签 -> 提示登记成功 -> 返回列表在已发货/已完成页签校验该订单不再处于待寄件。" component_type="界面" priority="P0">
+    <test_case>
+      <scenario id="S001" title="登录供应商 seller 并进入订单发货管理页" group="prepare" tag="seller,login,p0,prepare">
+        <test_step action="navigate" data="GlobalValue.Env.seller_url"/>
+        <test_step action="wait" data="2"/>
+        <test_step action="type" model="PassportLogin" data="SellerValidCredential"/>
+        <test_step action="wait" data="8"/>
+        <test_step action="evaluate" data="ShipmentScript.PageReady.script"/>
+        <test_step action="evaluate" data="(() =&gt; { const target = 'GlobalValue.ShipmentTarget.target_product_send_id'.trim(); if (!target) { throw new Error('未配置目标订单号 ShipmentTarget.target_product_send_id'); } localStorage.setItem('__shipmentTargetOrderNo', target); localStorage.setItem('__shipmentTargetProductSendId', target); localStorage.setItem('__shipmentTargetOrderSuffix', target.slice(-5)); return JSON.stringify({target: target, suffix: target.slice(-5)}); })()"/>
+      </scenario>
+      <scenario id="S002" title="按订单号查询待寄件目标订单并进入发货登记页" group="main-flow" tag="shipment,to-send,p0" depends="S001">
+        <test_step action="evaluate" data="ShipmentScript.OpenFirstToSendDetail.script"/>
+      </scenario>
+      <scenario id="S003" title="在发货登记页点击仅登记不打印物流标签并等待登记成功" group="main-flow" tag="shipment,complete,p0" depends="S002">
+        <test_step action="evaluate" data="ShipmentScript.CompleteShipment.script"/>
+      </scenario>
+      <scenario id="S004" title="回到发货管理列表校验订单已不在待寄件" group="assertion" tag="shipment,assert,p0" depends="S003">
+        <test_step action="evaluate" data="ShipmentScript.AssertCompleted.script"/>
+      </scenario>
+      <scenario id="S005" title="截图留存发货完成结果" group="evidence" tag="shipment,screenshot" depends="S004">
+        <test_step action="screenshot" data="screenshots/SHIPMENT_FLOW_001_completed.png"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="SHIPMENT_PROBE_001" title="供应商订单发货管理页面结构探测" description="复用电商 seller 登录链路进入订单发货管理页，针对指定订单号探测真实搜索、页签、列表和操作区域结构，用于修正正式发货用例。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.seller_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="SellerValidCredential"/>
+      <test_step action="wait" data="8"/>
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="探测订单发货管理页结构并记录指定订单候选结果" group="probe" tag="probe,shipment,p0">
+        <test_step action="evaluate" data="(() =&gt; { const target = 'GlobalValue.ShipmentTarget.target_product_send_id'.trim(); if (!target) { throw new Error('未配置目标单号 ShipmentTarget.target_product_send_id'); } localStorage.setItem('__shipmentTargetOrderNo', target); localStorage.setItem('__shipmentTargetProductSendId', target); localStorage.setItem('__shipmentTargetOrderSuffix', target.slice(-5)); return JSON.stringify({target: target, suffix: target.slice(-5)}); })()"/>
+        <test_step action="evaluate" data="ShipmentScript.SidebarProbe.script"/>
+        <test_step action="evaluate" data="ShipmentScript.PageReady.script"/>
+        <test_step action="evaluate" data="ShipmentScript.ProbeCreateDetail.script"/>
+        <test_step action="screenshot" data="screenshots/SHIPMENT_PROBE_001_page.png"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+
+  <case execute="是" id="SHIPMENT_PROBE_READY_001" title="供应商订单发货管理待寄件阶段探测" description="复用电商 seller 登录链路进入订单发货管理页，在待寄件阶段重新搜索指定订单并探测发货登记、在线下运单和订单号入口的真实后续动作，用于补齐正式发货链路。" component_type="界面" priority="P0">
+    <pre_process>
+      <test_step action="navigate" data="GlobalValue.Env.seller_url"/>
+      <test_step action="wait" data="2"/>
+      <test_step action="type" model="PassportLogin" data="SellerValidCredential"/>
+      <test_step action="wait" data="8"/>
+    </pre_process>
+    <test_case>
+      <scenario id="S001" title="探测待寄件阶段目标订单和发货登记后续动作" group="probe" tag="probe,shipment,ready-stage,p0">
+        <test_step action="evaluate" data="(() =&gt; { const target = 'GlobalValue.ShipmentTarget.target_product_send_id'.trim(); if (!target) { throw new Error('未配置目标单号 ShipmentTarget.target_product_send_id'); } localStorage.setItem('__shipmentTargetOrderNo', target); localStorage.setItem('__shipmentTargetProductSendId', target); localStorage.setItem('__shipmentTargetOrderSuffix', target.slice(-5)); return JSON.stringify({target: target, suffix: target.slice(-5)}); })()"/>
+        <test_step action="evaluate" data="ShipmentScript.PageReady.script"/>
+        <test_step action="evaluate" data="ShipmentScript.ProbeReadyStage.script"/>
+        <test_step action="screenshot" data="screenshots/SHIPMENT_PROBE_READY_001_page.png"/>
+      </scenario>
+    </test_case>
+    <post_process>
+      <test_step action="close"/>
+    </post_process>
+  </case>
+</cases>

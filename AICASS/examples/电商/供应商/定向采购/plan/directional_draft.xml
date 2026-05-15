@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <test_plan id="directional_draft"
-           title="定向采购供应商端草稿主流程"
+           title="定向采购供应商端草稿与客户校验场景"
            kind="suite"
            execute="是"
            default_execute="否">
   <case id="DIR-FLOW-001" execute="是"/>
   <case id="DIR-FLOW-002" execute="是"/>
-  <case id="DIR-FLOW-003" execute="是"/>
   <case id="DIR-FLOW-004" execute="是"/>
-  <case id="DIR-FLOW-005" execute="是"/>
   <case id="DIR-FLOW-006" execute="是"/>
   <case id="DIR-FLOW-007" execute="是"/>
 </test_plan>

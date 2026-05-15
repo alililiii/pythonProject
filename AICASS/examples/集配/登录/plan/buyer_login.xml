@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan id="buyer_login"
+           title="集配买家登录前置计划"
+           kind="suite"
+           execute="是"
+           default_execute="否">
+  <case id="BUYER_LOGIN_001" execute="是"/>
+</test_plan>
